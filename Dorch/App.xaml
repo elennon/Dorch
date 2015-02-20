@@ -1,0 +1,10 @@
+﻿<Application
+    x:Class="Dorch.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vm="using:Dorch.ViewModel"
+    xmlns:local="using:Dorch">
+    <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator"  />
+    </Application.Resources>
+</Application>

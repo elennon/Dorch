@@ -1,0 +1,11 @@
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\Dorch.csprojResolveAssemblyReference.cache
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\App.g.i.cs
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\App.g.cs
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\View\MainPage.g.i.cs
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\View\MainPage.g.cs
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\XamlTypeInfo.g.cs
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\XamlSaveStateFile.xml
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\App.xaml
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\View\MainPage.xaml
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\App.xbf
+c:\users\ed\documents\visual studio 2013\Projects\Dorch\Dorch\obj\Debug\View\MainPage.xbf

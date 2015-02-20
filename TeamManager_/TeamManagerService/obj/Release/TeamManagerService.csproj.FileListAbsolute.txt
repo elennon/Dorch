@@ -1,0 +1,268 @@
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\TeamManagerService.dll.config
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\TeamManagerService.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\TeamManagerService.pdb
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Autofac.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\AutoMapper.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\AutoMapper.Net4.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\EntityFramework.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\EntityFramework.SqlServer.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Data.Edm.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Data.OData.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Google.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.ServiceBus.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Entity.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Tables.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Newtonsoft.Json.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Owin.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\RazorEngine.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Net.Http.Formatting.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Spatial.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Cors.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Cors.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.OData.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Owin.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Tracing.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Razor.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Entity.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Tables.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\EntityFramework.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\EntityFramework.SqlServer.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.OData.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Cors.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Autofac.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Net.Http.Formatting.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Tracing.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\RazorEngine.pdb
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\RazorEngine.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Newtonsoft.Json.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Http.Owin.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Google.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Web.Razor.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.ServiceBus.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\AutoMapper.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Data.Edm.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\Microsoft.Data.OData.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\System.Spatial.xml
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\de\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\es\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\fr\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\it\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ja\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ko\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\ru\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hans\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.dll
+C:\Projects\TestPush\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.pdb
+C:\Projects\TestPush\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.csprojResolveAssemblyReference.cache
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\TeamManagerService.dll.config
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\TeamManagerService.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\TeamManagerService.pdb
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Autofac.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\AutoMapper.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\AutoMapper.Net4.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\EntityFramework.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\EntityFramework.SqlServer.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Data.Edm.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Data.OData.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.ActiveDirectory.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Jwt.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.ServiceBus.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Entity.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Tables.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Newtonsoft.Json.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Owin.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\RazorEngine.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Net.Http.Formatting.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Spatial.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Cors.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Cors.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.OData.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Owin.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Tracing.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Razor.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Entity.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Mobile.Service.Tables.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\EntityFramework.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\EntityFramework.SqlServer.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.OData.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Cors.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Autofac.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Net.Http.Formatting.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Tracing.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\RazorEngine.pdb
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\RazorEngine.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Newtonsoft.Json.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Http.Owin.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.ActiveDirectory.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Owin.Security.Jwt.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Web.Razor.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.ServiceBus.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.WindowsAzure.Configuration.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\AutoMapper.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Data.Edm.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\Microsoft.Data.OData.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\System.Spatial.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.Entity.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.WindowsAzure.Mobile.Service.Tables.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\de\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\es\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\fr\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\it\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ja\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ko\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.csprojResolveAssemblyReference.cache
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Release\TeamManagerService.pdb

@@ -1,0 +1,79 @@
+﻿<common:BindablePage
+    x:Class="Dorch.View.AddTeam"
+    xmlns:common="using:Dorch.Common"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dorch.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+    DataContext="{Binding Source={StaticResource Locator}, Path=AddTeamViewModel}"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid x:Name="LayoutRoot">
+
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Title Panel -->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="19,0,0,0">
+            <TextBlock Text="Team Manager" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+        </StackPanel>
+
+        <!--TODO: Content should be placed within the following grid-->
+
+
+        <TextBlock Text="Team Name:" Grid.Row="1" VerticalAlignment="Center" Margin= "14,0,0,0" Style="{StaticResource BaseTextBlockStyle}"/>
+        <TextBox x:Name="txtTeamName" Text="{Binding TeamName, Mode=TwoWay}" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" Width="190" Margin="10"/>
+
+        <TextBlock Text="Location:" Grid.Row="2" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+        <TextBox x:Name="txtLocation" Text="{Binding Location, Mode=TwoWay}" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Width="190" Margin="10"/>
+
+        
+        <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
+
+        <Button Content="Add Team" Grid.Row="4" Grid.Column="1" Command="{Binding AddTeamCommand}" ></Button>
+               
+        <Popup VerticalOffset="150" HorizontalOffset="165" x:Name="ppPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="ForestGreen"
+                BorderThickness="2" Width="250" Height="190">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Done" FontSize="16" HorizontalAlignment="Center" />
+                </StackPanel>
+            </Border>
+        </Popup>
+        
+    </Grid>
+    
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="True" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton  Icon="Edit"  Label="Toast" Command="{Binding ToastCommand}"  />  
+                
+            </CommandBar.PrimaryCommands>
+            
+        </CommandBar>
+    </Page.BottomAppBar>
+</common:BindablePage>
+

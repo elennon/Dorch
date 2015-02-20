@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-ja"
+"ResourceDimensions"		"language-ja-jp"
+
+[Files]
+"C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\split.language-ja.pri"			"resources.pri"
