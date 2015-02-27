@@ -25,6 +25,7 @@ namespace Dorch.ViewModel
             SimpleIoc.Default.Register<ViewTeamViewModel>();
             SimpleIoc.Default.Register<SignUpViewModel>();
             SimpleIoc.Default.Register<AddPlayerViewModel>();
+            SimpleIoc.Default.Register<AllPlayersViewModel>();
                 
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
@@ -39,6 +40,7 @@ namespace Dorch.ViewModel
             navigationService.Configure("ViewTeam", typeof(ViewTeam));
             navigationService.Configure("SignUp", typeof(SignUp));
             navigationService.Configure("AddPlayer", typeof(AddPlayer));
+            navigationService.Configure("ShowAllPlayers", typeof(ShowAllPlayers));
             return navigationService;
         }
 
@@ -75,6 +77,13 @@ namespace Dorch.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<AddPlayerViewModel>();
+            }
+        }
+        public AllPlayersViewModel AllPlayersViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<AllPlayersViewModel>();
             }
         }   
     }

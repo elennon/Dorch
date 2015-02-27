@@ -39,9 +39,12 @@ namespace Dorch.DAL
         }
 
         private MobileServiceCollection<Team, Team> teams;
-        private MobileServiceCollection<Player, Player> players; 
+        private MobileServiceCollection<Player, Player> players;
+        private MobileServiceCollection<RequestPending, RequestPending> requests;
+
         private IMobileServiceTable<Team> teamTable = App.MobileService.GetTable<Team>();
         private IMobileServiceTable<Player> playerTable = App.MobileService.GetTable<Player>();
+        private IMobileServiceTable<RequestPending> requestTable = App.MobileService.GetTable<RequestPending>();
 
         public async Task addNewTeamAsync(Team tm)
         {
@@ -53,27 +56,10 @@ namespace Dorch.DAL
             var tms = new List<Team>();
             ErrorMessage = null;
             try
-            {
-                //var tm = await teamTable.LookupAsync("t1");
-                //var dr = new Player { Id = "b77", PlayerName = "jefryy" };
-                //        //List<Team> uu = new List<Team>();
-                //        //uu.Add(tm);
-                //        //dr.Teams = uu;
-                ////await playerTable.InsertAsync(dr);
-
-                //var ft = await playerTable.LookupAsync("b77");
-
-                
-                //tm.Players.Add(ft);
-
-                //await teamTable.UpdateAsync(tm);
-
-                //var fit = await playerTable.LookupAsync("b77");
-
+            {                
                 teams = await teamTable.ToCollectionAsync();
                 foreach (var item in teams)
-                {
-                    if (item.Image == null) { item.Image = "Charlton.png"; }
+                {                    
                     tms.Add(item);
                 }
             }
@@ -87,6 +73,29 @@ namespace Dorch.DAL
             }           
             return tms;
         }
+
+        //public async Task<Team> GetATeamAsync(Team tm)
+        //{            
+        //    ErrorMessage = null;
+        //    try
+        //    {
+        //        var team = await teamTable.LookupAsync(tm);
+        //        foreach (var item in teams)
+        //        {
+        //            if (item.Image == null) { item.Image = "Charlton.png"; }
+        //            tms.Add(item);
+        //        }
+        //    }
+        //    catch (MobileServiceInvalidOperationException ex)
+        //    {
+        //        ErrorMessage = ex.Message;
+        //    }
+        //    catch (HttpRequestException ex2)
+        //    {
+        //        ErrorMessage = ex2.Message;
+        //    }
+        //    return tms;
+        //}
 
         public async Task UpdateTeamAsync(Team tm)
         {
@@ -107,8 +116,7 @@ namespace Dorch.DAL
             {
                 players = await playerTable.ToCollectionAsync();
                 foreach (var item in players)
-                {
-                    if (item.Image == null) { item.Image = "music.jpg"; }
+                {                    
                     pls.Add(item);
                 }
             }
@@ -123,16 +131,66 @@ namespace Dorch.DAL
             return pls;
         }
 
-        public async Task AddNewPlayerAsync(Player pl)
-        {
+        public async Task<bool> AddNewPlayerAsync(Player pl, Team tm)   // called from Add Player page. 
+        {                                                               // either be a request to someone new to db or already in db 
+            bool isNew = false;
             ErrorMessage = null;
             try
             {
-                var players = await playerTable.ToCollectionAsync();     // if its not a new player, just update to add this team to player's team list
-                if(!players.Contains(pl))
+                var players = await playerTable.ToCollectionAsync();
+                var plCheck = players.Where(a => a.Id == pl.Id).FirstOrDefault();   // first thing is chek if new to db.            
+                if(plCheck == null)
                 {
-                    await playerTable.InsertAsync(pl);
-                }                
+                    await playerTable.InsertAsync(pl);      // if its a new user -- add to player table
+                    isNew = true;
+                    RequestPending rp = new RequestPending { TeamId = tm.Id, PlayerId = pl.Id, Confirmed = false };
+                    await requestTable.InsertAsync(rp);
+                }
+                else           
+                {
+                    RequestPending rp = new RequestPending { TeamId = tm.Id, PlayerId = pl.Id, Confirmed = false };
+                    await requestTable.InsertAsync(rp);
+                }
+                return isNew;
+            }
+            catch (MobileServiceInvalidOperationException ex)
+            {
+                ErrorMessage = ex.Message;
+                return false;
+            }
+            catch (HttpRequestException ex2)
+            {
+                ErrorMessage = ex2.Message;
+                return false;
+            }
+        }
+
+        public async Task AddNewPlayerOnSignUpAsync(Player pl)    // this method to add a new user regestering for the first time (called from signIn page)
+        {                                                       // they're either responding to a request or just new
+            ErrorMessage = null;
+            try
+            {
+                var players = await playerTable.ToCollectionAsync();
+                var plCheck = players.Where(a => a.Id == pl.Id).FirstOrDefault();
+                if (plCheck == null)                // if null they'r new  
+                {
+                    await playerTable.InsertAsync(pl);                        
+                } 
+                else                                // else they recieved a request and need to be confirmed and added to requested team
+                {
+                    requests = await requestTable.ToCollectionAsync();
+                    var checkRequest = requests.Where(a => a.PlayerId == pl.Id && a.Confirmed == false).FirstOrDefault();
+                    if (checkRequest != null)
+                    {
+                        checkRequest.Confirmed = true;
+                        await requestTable.UpdateAsync(checkRequest);
+
+                        var tms = await GetTeamsAsync();
+                        Team tm2Update = tms.Where(a => a.Id == checkRequest.TeamId).FirstOrDefault();
+                        tm2Update.Players.Add(plCheck);
+                        await UpdateTeamAsync(tm2Update);
+                    }
+                }
             }
             catch (MobileServiceInvalidOperationException ex)
             {
@@ -143,6 +201,31 @@ namespace Dorch.DAL
                 ErrorMessage = ex2.Message;
             }
         }
+
+        public async Task SendRequest(RequestPending rp)
+        {
+            try
+            {
+                await requestTable.InsertAsync(rp);
+            }
+            catch (MobileServiceInvalidOperationException ex)
+            {
+                ErrorMessage = ex.Message;
+            }
+            catch (HttpRequestException ex2)
+            {
+                ErrorMessage = ex2.Message;
+            }           
+        }
+
+
+
+
+
+
+
+
+
 
         public void fillDb()
         {
@@ -157,10 +240,10 @@ namespace Dorch.DAL
             {
                 var cnt = db.Table<Team>().Count();
                 List<Team> tms = new List<Team>();
-                tms.Add(new Team { TeamName = "Friday Astro", Location = "Amenities  Centre", Image = "Charlton.png" });
-                tms.Add(new Team { TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre", Image = "fca.png" });
-                tms.Add(new Team { TeamName = "Astro Training", Location = "Amenities  Centre", Image = "Carpi.png" });
-                tms.Add(new Team { TeamName = "Wednesday Celbridge", Location = "Celbridge Astro", Image = "Malaga.png" });
+                tms.Add(new Team { TeamName = "Friday Astro", Location = "Amenities  Centre" });
+                tms.Add(new Team { TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre" });
+                tms.Add(new Team { TeamName = "Astro Training", Location = "Amenities  Centre"});
+                tms.Add(new Team { TeamName = "Wednesday Celbridge", Location = "Celbridge Astro" });
                 foreach (var item in tms)
                 {
                     db.Insert(item);
@@ -168,11 +251,11 @@ namespace Dorch.DAL
                 cnt = db.Table<Team>().Count();
 
                 List<Player> plys = new List<Player>();
-                plys.Add(new Player { PlayerName = "Mick Keane", PhNumber = "0876493789", Image = "music3.jpg" });
-                plys.Add(new Player { PlayerName = "Paddy Whelan", PhNumber = "0876493789", Image = "music2.jpg" });
-                plys.Add(new Player { PlayerName = "Liam Dempsey", PhNumber = "0876493789", Image = "music3.jpg" });
-                plys.Add(new Player { PlayerName = "Mark Brennan", PhNumber = "0876493789", Image = "music2.jpg" });
-                plys.Add(new Player { PlayerName = "John Dowling", PhNumber = "0876493789", Image = "music3.jpg" });
+                plys.Add(new Player { PlayerName = "Mick Keane", PhNumber = "0876493789" });
+                plys.Add(new Player { PlayerName = "Paddy Whelan", PhNumber = "0876493789" });
+                plys.Add(new Player { PlayerName = "Liam Dempsey", PhNumber = "0876493789" });
+                plys.Add(new Player { PlayerName = "Mark Brennan", PhNumber = "0876493789" });
+                plys.Add(new Player { PlayerName = "John Dowling", PhNumber = "0876493789" });
                 foreach (var item in plys)
                 {
                     db.Insert(item);

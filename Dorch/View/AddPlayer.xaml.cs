@@ -50,6 +50,6 @@ namespace Dorch.View
         private void NavigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
         }
-        
+
     }
 }

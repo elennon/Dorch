@@ -52,7 +52,7 @@
                 </Border>
 
                 <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
-                    <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Height="56" Width="56"/>
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
                 
                 <StackPanel Margin="13,0,0,0" Grid.Column="2"  >
@@ -71,7 +71,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
-                    <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Height="56" Width="56"/>
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
                 <Grid Grid.Column="1" >
                     <Grid.ColumnDefinitions>
@@ -103,7 +103,7 @@
                 </Border>
 
                 <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
-                    <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Height="56" Width="56"/>
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
 
                 <StackPanel Margin="13,0,0,0" Grid.Column="2"  >
@@ -222,9 +222,8 @@
                                 </i:Interaction.Behaviors>
                             </ListView>
                             
-                            <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,45,0,50">
-                                <TextBlock Text="Start sending"  FontSize="28" VerticalAlignment="Top" />
-                                <Button Margin="12,0,0,0" Content="Go Go Go" Command="{Binding StartCommand}" ></Button>
+                            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,50">                                
+                                <Button Margin="12,0,0,0" Content="Go Go Go" Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
                             </StackPanel>
                             <Border Grid.Row="5" Height="65"  ></Border>
 

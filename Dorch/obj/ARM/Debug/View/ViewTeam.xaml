@@ -35,7 +35,8 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="56" Width="41" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="56" Width="41" Margin="0,9.5,0,0" 
+                        Grid.Column="0" HorizontalAlignment="Left">
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                         <CheckBox >
                             <i:Interaction.Behaviors>                                
@@ -51,7 +52,7 @@
                 </Border>
 
                 <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
-                    <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Height="56" Width="56"/>
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
                 
                 <StackPanel Margin="13,0,0,0" Grid.Column="2"  >
@@ -62,7 +63,7 @@
             </Grid>
         </DataTemplate>
 
-        <DataTemplate x:Key="TwoLineItemTemplate">
+        <DataTemplate x:Key="TwoLineTemplate">
             <Grid Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -70,7 +71,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="0,9.5,0,0" Grid.Column="0" HorizontalAlignment="Left">
-                    <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Height="56" Width="56"/>
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
                 <Grid Grid.Column="1" >
                     <Grid.ColumnDefinitions>
@@ -86,6 +87,33 @@
             </Grid>
         </DataTemplate>
 
+        <DataTemplate x:Key="InOutTemplate">
+            <Grid Margin="10,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="56" Width="41" Margin="0,9.5,0,0" 
+                        Grid.Column="0" HorizontalAlignment="Left">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="{Binding InOutImage}" Stretch="UniformToFill" Height="46" Width="46"/>
+                    </StackPanel>
+                </Border>
+
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
+                    <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
+                </Border>
+
+                <StackPanel Margin="13,0,0,0" Grid.Column="2"  >
+                    <TextBlock Text="{Binding PlayerName}" Style="{ThemeResource ListViewItemTextBlockStyle}"/>
+                    <TextBlock Text="{Binding PhNumber}" Style="{ThemeResource ListViewItemSubheaderTextBlockStyle}"/>
+                </StackPanel>
+
+            </Grid>
+        </DataTemplate>
+
     </Page.Resources>
     
    
@@ -98,13 +126,13 @@
 
         <StackPanel Margin="0,20,0,30" >
             <StackPanel Orientation="Horizontal">
-                <TextBlock FontSize="38" FontFamily="Segoe WP Semibold" FontWeight="Bold" Text="{Binding TeamName}" />
+                <TextBlock FontSize="38" FontFamily="Segoe WP Semibold" FontWeight="Bold" Text="{Binding thisTeam.TeamName}" />
             </StackPanel>
         </StackPanel>
 
         <Hub x:Name="TeamHub" Grid.Row="1" >
-            
-            <HubSection Name="RegularsSection" Header="Regulars" Width="Auto"
+
+            <HubSection Name="PlayersSection" Header="Players" Width="Auto"
                          HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
                 <DataTemplate>
                     <ListView 
@@ -116,7 +144,7 @@
                                 HorizontalContentAlignment="Stretch"
                                 SelectionMode="None"
                                 IsItemClickEnabled="True"
-                                ItemsSource="{Binding Regulars}"
+                                ItemsSource="{Binding Players}"
                                 ItemTemplate="{StaticResource CheckboxTemplate}"                       
                                 ContinuumNavigationTransitionInfo.ExitElementContainer="True">
                         <i:Interaction.Behaviors>
@@ -164,7 +192,7 @@
                                 SelectionMode="None"
                                 IsItemClickEnabled="True"
                                 ItemsSource="{Binding ChosenPlayers}"
-                                ItemTemplate="{StaticResource TwoLineItemTemplate}"                       
+                                ItemTemplate="{StaticResource TwoLineTemplate}"                       
                                 ContinuumNavigationTransitionInfo.ExitElementContainer="True">
                                 <i:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="ItemClick">
@@ -185,7 +213,7 @@
                                 SelectionMode="None"
                                 IsItemClickEnabled="True"
                                 ItemsSource="{Binding ChosenSubs}"
-                                ItemTemplate="{StaticResource TwoLineItemTemplate}"                       
+                                ItemTemplate="{StaticResource TwoLineTemplate}"                       
                                 ContinuumNavigationTransitionInfo.ExitElementContainer="True">
                                 <i:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="ItemClick">
@@ -194,9 +222,8 @@
                                 </i:Interaction.Behaviors>
                             </ListView>
                             
-                            <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="0,45,0,50">
-                                <TextBlock Text="Start sending"  FontSize="28" VerticalAlignment="Top" />
-                                <Button Margin="12,0,0,0" Content="Go Go Go" Command="{Binding StartCommand}" ></Button>
+                            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,50">                                
+                                <Button Margin="12,0,0,0" Content="Go Go Go" Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
                             </StackPanel>
                             <Border Grid.Row="5" Height="65"  ></Border>
 
@@ -204,14 +231,48 @@
                     </ScrollViewer>
                 </DataTemplate>
             </HubSection>
-            
+
+            <HubSection Name="StatusSection" Header="Status" Width="Auto"
+                         HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                <DataTemplate>
+                    <ScrollViewer Height="500"
+                                  HorizontalScrollMode="Disabled" 
+                                  IsHoldingEnabled="True"
+                                  VerticalAlignment="Top" 
+                                  VerticalScrollBarVisibility="Visible" 
+                                  VerticalScrollMode="Enabled"
+                                  AllowDrop="False" 
+                                  BringIntoViewOnFocusChange="True"
+                              >
+                        <ListView 
+                                ScrollViewer.HorizontalScrollMode="Disabled" 
+                                ScrollViewer.IsHorizontalScrollChainingEnabled="True"
+                                ScrollViewer.IsVerticalScrollChainingEnabled="True"
+                                ScrollViewer.IsVerticalRailEnabled="True"
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"  
+                                HorizontalContentAlignment="Stretch"
+                                SelectionMode="None"
+                                IsItemClickEnabled="True"
+                                ItemsSource="{Binding StatusPlayers}"
+                                ItemTemplate="{StaticResource InOutTemplate}"                       
+                                ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                            <i:Interaction.Behaviors>
+                                <core:EventTriggerBehavior EventName="ItemClick">
+                                    <core:InvokeCommandAction Command="{Binding ItemSelectedCommand}" InputConverter="{StaticResource ItemClickedConverter}" />
+                                </core:EventTriggerBehavior>
+                            </i:Interaction.Behaviors>
+                        </ListView>
+                    </ScrollViewer>
+                </DataTemplate>
+            </HubSection>
+
         </Hub>       
     </Grid>
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.PrimaryCommands>
                 <AppBarButton Icon="Setting" Label="Setting" Command="{Binding StartCommand}"  />
-                <AppBarButton Icon="Add" Label="Add Player" Command="{Binding StartCommand}"  />
+                <AppBarButton Icon="Add" Label="Add Player" Command="{Binding AddPlayerCommand}"  />
             </CommandBar.PrimaryCommands>         
         </CommandBar>
     </Page.BottomAppBar>

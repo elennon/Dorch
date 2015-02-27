@@ -4,13 +4,22 @@
     <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
   </Roots.Interfaces>
   <Roots.PropertyPathNames>
-    <RootPropertyPathName Name="AddTeamViewModel" />
-    <RootPropertyPathName Name="AddTeamCommand" />
+    <RootPropertyPathName Name="AddPlayerViewModel" />
+    <RootPropertyPathName Name="AddPlayerCommand" />
     <RootPropertyPathName Name="Image" />
     <RootPropertyPathName Name="FilePickerCommand" />
+    <RootPropertyPathName Name="Phone" />
+    <RootPropertyPathName Name="PlayerName" />
+    <RootPropertyPathName Name="ContactsCommand" />
+    <RootPropertyPathName Name="ShowAllPlayersCommand" />
+    <RootPropertyPathName Name="AddTeamViewModel" />
+    <RootPropertyPathName Name="AddTeamCommand" />
+    <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="TeamName" />
     <RootPropertyPathName Name="ToastCommand" />
+    <RootPropertyPathName Name="thisTeam" />
+    <RootPropertyPathName Name="PlayerTargetNumber" />
     <RootPropertyPathName Name="MainPageViewModel" />
     <RootPropertyPathName Name="LoadCommand" />
     <RootPropertyPathName Name="DataContext" />
@@ -22,17 +31,28 @@
     <RootPropertyPathName Name="TextCommand" />
     <RootPropertyPathName Name="EditCommand" />
     <RootPropertyPathName Name="FillDbCommand" />
+    <RootPropertyPathName Name="AllPlayersViewModel" />
+    <RootPropertyPathName Name="Group" />
+    <RootPropertyPathName Name="BackgroundColour" />
+    <RootPropertyPathName Name="Title" />
+    <RootPropertyPathName Name="PhNumber" />
+    <RootPropertyPathName Name="PlayerImage" />
+    <RootPropertyPathName Name="PlayersViewSource" />
+    <RootPropertyPathName Name="View" />
+    <RootPropertyPathName Name="CollectionGroups" />
+    <RootPropertyPathName Name="RefreshCommand" />
     <RootPropertyPathName Name="SignUpViewModel" />
     <RootPropertyPathName Name="SetUpCommand" />
-    <RootPropertyPathName Name="PhNumber" />
+    <RootPropertyPathName Name="ImageNme" />
     <RootPropertyPathName Name="UserName" />
     <RootPropertyPathName Name="ViewTeamViewModel" />
-    <RootPropertyPathName Name="PlayerName" />
+    <RootPropertyPathName Name="InOutImage" />
     <RootPropertyPathName Name="PlayerSelectedCommand" />
+    <RootPropertyPathName Name="StatusPlayers" />
     <RootPropertyPathName Name="StartCommand" />
     <RootPropertyPathName Name="ChosenSubs" />
     <RootPropertyPathName Name="ChosenPlayers" />
-    <RootPropertyPathName Name="Regulars" />
+    <RootPropertyPathName Name="Players" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -42,9 +62,9 @@
     <RootType FullName="Dorch.Common.BindablePage">
       <RootProperty Name="DataContext" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
       <RootProperty Name="BottomAppBar" />
-      <RootProperty Name="Resources" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Source" />
@@ -82,31 +102,32 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Orientation" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
-      <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Inlines" />
       <RootProperty Name="CharacterSpacing" />
-      <RootProperty Name="FontFamily" />
+      <RootProperty Name="LineStackingStrategy" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Content" />
-      <RootProperty Name="Command" />
       <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
@@ -122,7 +143,38 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Child" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Content" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Padding" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RichTextBlock">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="LineHeight" />
+      <RootProperty Name="Blocks" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Paragraph">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run" />
+    <RootType FullName="Windows.UI.Xaml.Documents.InlineUIContainer">
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Command" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="IsSticky" />
@@ -134,7 +186,17 @@
       <RootProperty Name="Label" />
       <RootProperty Name="Command" />
     </RootType>
+    <RootType FullName="Dorch.View.AddPlayer" />
     <RootType FullName="Dorch.View.AddTeam" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Page">
+      <RootProperty Name="Background" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="DataContext" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="Name" />
+    </RootType>
+    <RootType FullName="Dorch.View.BlankPage1" />
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
       <RootMethod Name="GetBehaviors" />
       <RootMethod Name="SetBehaviors" />
@@ -175,6 +237,7 @@
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="SelectionMode" />
+      <RootProperty Name="GroupStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Height" />
@@ -198,11 +261,25 @@
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Dorch.View.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="DataContext" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
+    <RootType FullName="Windows.UI.Xaml.Controls.SemanticZoom">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="ZoomedInView" />
+      <RootProperty Name="ZoomedOutView" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
+      <RootProperty Name="HidesIfEmpty" />
+      <RootProperty Name="HeaderTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="IsSwipeEnabled" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="ItemsSource" />
+    </RootType>
+    <RootType FullName="Dorch.View.ShowAllPlayers" />
     <RootType FullName="Dorch.View.SignUp" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">

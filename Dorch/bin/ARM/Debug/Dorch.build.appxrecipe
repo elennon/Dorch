@@ -6,7 +6,7 @@
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
-    <PackageIdentityName>1d25d3a2-be75-4482-85fe-07742f11370f</PackageIdentityName>
+    <PackageIdentityName>476f9dd3-f701-42c0-b0a5-28579114eb20</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
@@ -49,6 +49,9 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit.dll">
+      <PackagePath>QKit.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\SQLite.Net-PCL.2.4.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
       <PackagePath>SQLite.Net.dll</PackagePath>
     </AppxPackagedFile>
@@ -61,8 +64,20 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\Microsoft.Net.Http.2.2.28\lib\wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.7.4\Redist\Debug\ARM\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.8.1\Redist\Debug\ARM\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\BadgeLogo.scale-100.png">
+      <PackagePath>Assets\BadgeLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\BadgeLogo.scale-140.png">
+      <PackagePath>Assets\BadgeLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\BadgeLogo.scale-240.png">
+      <PackagePath>Assets\BadgeLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\bin.png">
       <PackagePath>Assets\bin.png</PackagePath>
@@ -76,8 +91,72 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\fca.png">
       <PackagePath>Assets\fca.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp106.png">
+      <PackagePath>Assets\grp106.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp1152splash.png">
+      <PackagePath>Assets\grp1152splash.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp120.png">
+      <PackagePath>Assets\grp120.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp170.png">
+      <PackagePath>Assets\grp170.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp24.scale-100.png">
+      <PackagePath>Assets\grp24.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp24.scale-140.png">
+      <PackagePath>Assets\grp24.scale-140.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp24.scale-240.png">
+      <PackagePath>Assets\grp24.scale-240.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp310w.png">
+      <PackagePath>Assets\grp310w.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp33.png">
+      <PackagePath>Assets\grp33.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp434w.png">
+      <PackagePath>Assets\grp434w.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp44.png">
+      <PackagePath>Assets\grp44.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp480splash.png">
+      <PackagePath>Assets\grp480splash.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp50.png">
+      <PackagePath>Assets\grp50.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp58.png">
+      <PackagePath>Assets\grp58.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp62.png">
+      <PackagePath>Assets\grp62.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp672splash.png">
+      <PackagePath>Assets\grp672splash.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp70.png">
+      <PackagePath>Assets\grp70.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp71.png">
+      <PackagePath>Assets\grp71.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp744w.png">
+      <PackagePath>Assets\grp744w.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp99.png">
+      <PackagePath>Assets\grp99.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Logo.scale-140.png">
+      <PackagePath>Assets\Logo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Logo.scale-240.png">
@@ -87,24 +166,72 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Malaga.png">
       <PackagePath>Assets\Malaga.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\np24.png">
+      <PackagePath>Assets\np24.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\np33.png">
+      <PackagePath>Assets\np33.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\np58.png">
+      <PackagePath>Assets\np58.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\person-icon.png">
+      <PackagePath>Assets\person-icon.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SmallLogo.scale-140.png">
+      <PackagePath>Assets\SmallLogo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SplashScreen.scale-140.png">
+      <PackagePath>Assets\SplashScreen.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Square71x71Logo.scale-100.png">
+      <PackagePath>Assets\Square71x71Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Square71x71Logo.scale-140.png">
+      <PackagePath>Assets\Square71x71Logo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\StoreLogo.scale-140.png">
+      <PackagePath>Assets\StoreLogo.scale-140.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\WideLogo.scale-100.png">
+      <PackagePath>Assets\WideLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\WideLogo.scale-140.png">
+      <PackagePath>Assets\WideLogo.scale-140.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\WideLogo.scale-240.png">
@@ -120,11 +247,20 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\AddPlayer.xbf">
+      <PackagePath>View\AddPlayer.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\AddTeam.xbf">
       <PackagePath>View\AddTeam.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\BlankPage1.xbf">
+      <PackagePath>View\BlankPage1.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\ShowAllPlayers.xbf">
+      <PackagePath>View\ShowAllPlayers.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\SignUp.xbf">
       <PackagePath>View\SignUp.xbf</PackagePath>
@@ -134,6 +270,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Dorch.xr.xml">
       <PackagePath>Dorch.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit\QKit.xr.xml">
+      <PackagePath>QKit\QKit.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit\Themes\Generic.xbf">
+      <PackagePath>QKit\Themes\Generic.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>

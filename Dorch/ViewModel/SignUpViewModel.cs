@@ -34,14 +34,23 @@ namespace Dorch.ViewModel
             get { return _userName; }
             set { _userName = value; NotifyPropertyChanged("UserName"); }
         }
+
         private string _phNumber;
         public string PhNumber
         {
             get { return _phNumber; }
             set { _phNumber = value; NotifyPropertyChanged("PhNumber"); }
         }
-        private string _image;
-        public string Image
+
+        private string _imageNme;
+        public string ImageNme
+        {
+            get { return _imageNme; }
+            set { _imageNme = value; NotifyPropertyChanged("ImageNme"); }
+        }
+
+        private byte[] _image;
+        public byte[] Image
         {
             get { return _image; }
             set { _image = value; NotifyPropertyChanged("Image"); }
@@ -54,46 +63,12 @@ namespace Dorch.ViewModel
         {
             _navigationService = navigationService;
             UserName = "";
-            PhNumber = "";
-            Image = "";
+            PhNumber = "";            
             this.SetUpCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSetUpCommand);
-            this.FilePickerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnFilePickerCommand);
-            AddDefaultImages();
+            this.FilePickerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnFilePickerCommand);            
         }
 
-        private void AddDefaultImages()
-        {
-            List<string> samplePics = new List<string> { "Charlton.png", "fca.png", "Carpi.png", "Malaga.png", "music2.jpg", "music3.jpg" };
-            foreach (var item in samplePics)
-            {
-                CopyToStorage(item);
-            }
-        }
-
-        private async void CopyToStorage(string item)
-        {
-            try
-            {
-                string uri = "ms-appx:///Assets/" + item;
-                var urii = new System.Uri(uri);
-                StorageFile file = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(urii);
-                StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-                var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
-                try
-                {
-                    StorageFile t = await dataFolder.GetFileAsync(item);
-                }
-                catch (FileNotFoundException ex)
-                {
-                    CopyFile(file, dataFolder);
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
+       
         private void OnFilePickerCommand()
         {
             string ImagePath = string.Empty;
@@ -115,10 +90,10 @@ namespace Dorch.ViewModel
         {
             if (UserName == "") { ShowPop(); return; }
             else if (PhNumber == "") { ShowPop(); return; }
-            else if (Image == "") { Image = "Carpi.png"; }
+            
             string id = UserName + "," + PhNumber;
-            Player pl = new Player { Id = id, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = this.Image };
-            await repo.AddNewPlayerAsync(pl);
+            Player pl = new Player { Id = id, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = Image };
+            await repo.AddNewPlayerOnSignUpAsync(pl);   
 
             ((App)Application.Current).UserName = UserName;
             AppSettings.SaveSettingsValue(Constants.UserName, UserName);
@@ -127,7 +102,7 @@ namespace Dorch.ViewModel
             AppSettings.SaveSettingsValue(Constants.UserId, id);
             UserName = "";
             PhNumber = "";
-            Image = "";            
+            ImageNme = "";            
             _navigationService.NavigateTo("MainPage");
         }
 
@@ -163,31 +138,65 @@ namespace Dorch.ViewModel
 
                 view.Activated -= viewActivated;
                 //Image = args.Files[0].Name;
-                Image =await TransferToStorage(args.Files[0]);
+                Image = await ReadImage.GetImageBytes(args.Files[0]);
+                ImageNme = args.Files[0].DisplayName;
             }
         }
 
-        private async Task<string> TransferToStorage(object file)
-        {            
-            StorageFile stfile = (StorageFile)file;
-            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;          
-            var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
-            try
-            {
-                StorageFile t = await dataFolder.GetFileAsync(stfile.Name);
-                return stfile.Name;
-            }
-            catch (FileNotFoundException ex)
-            {
-                CopyFile(stfile,dataFolder);
-                return stfile.Name;
-            }            
-        }
+        //private async Task<string> TransferToStorage(object file)
+        //{            
+        //    StorageFile stfile = (StorageFile)file;
+        //    StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;          
+        //    var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
+        //    try
+        //    {
+        //        StorageFile t = await dataFolder.GetFileAsync(stfile.Name);
+        //        return stfile.Name;
+        //    }
+        //    catch (FileNotFoundException ex)
+        //    {
+        //        CopyFile(stfile,dataFolder);
+        //        return stfile.Name;
+        //    }            
+        //}
 
-        public async void CopyFile(StorageFile stfile, StorageFolder dest)
-        {
-            await stfile.CopyAsync(dest);
-        }
+        //public async void CopyFile(StorageFile stfile, StorageFolder dest)
+        //{
+        //    await stfile.CopyAsync(dest);
+        //}
+
+        //private void AddDefaultImages()
+        //{
+        //    List<string> samplePics = new List<string> { "Charlton.png", "fca.png", "Carpi.png", "Malaga.png", "person-icon.png" };
+        //    foreach (var item in samplePics)
+        //    {
+        //        CopyToStorage(item);
+        //    }
+        //}
+
+        //private async void CopyToStorage(string item)
+        //{
+        //    try
+        //    {
+        //        string uri = "ms-appx:///Assets/" + item;
+        //        var urii = new System.Uri(uri);
+        //        StorageFile file = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(urii);
+        //        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
+        //        var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
+        //        try
+        //        {
+        //            StorageFile t = await dataFolder.GetFileAsync(item);
+        //        }
+        //        catch (FileNotFoundException ex)
+        //        {
+        //            CopyFile(file, dataFolder);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
     }
 }

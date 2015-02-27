@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Dorch.Common;
+using SQLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,32 +16,45 @@ namespace Dorch.Model
         public string Id { get; set; }
         public string TeamName { get; set; }
         public string Location { get; set; }
-        public string Image { get; set; }
+        public byte[] TeamImage { get; set; }
         public string PlayerTargetNumber { get; set; }
         public ICollection<Player> Players { get; set; }
 
-        ImageSource userImage;
-        [Ignore]
-        public ImageSource ImageSource
+
+        public ImageSource ImgSource        // returns TeamImage byte[] as image source or default if null
         {
             get
             {
-                return (this.userImage);
+                return ReadImage.GetTeamImage(this.TeamImage);
             }
-            set
-            {
-                SetProperty(ref this.userImage, value);
-            }
+            protected set { }
         }
 
-        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
-        {
-            if (object.Equals(storage, value)) return false;
 
-            storage = value;
-            this.NotifyPropertyChanged(propertyName);
-            return true;
-        }
+
+
+        //ImageSource _ImgSource;
+        //[Ignore]
+        //public ImageSource ImgSource
+        //{
+        //    get
+        //    {
+        //        return (this.userImage);
+        //    }
+        //    set
+        //    {
+        //        SetProperty(ref this.userImage, value);
+        //    }
+        //}
+
+        //protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
+        //{
+        //    if (object.Equals(storage, value)) return false;
+
+        //    storage = value;
+        //    this.NotifyPropertyChanged(propertyName);
+        //    return true;
+        //}
         #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -30,5 +30,6 @@
   <Capabilities>
     <Capability Name="internetClientServer" />
     <Capability Name="picturesLibrary" />
+    <m3:Capability Name="contacts" />
   </Capabilities>
 </Package>

@@ -29,7 +29,7 @@ namespace Dorch.View
     {
         private NavigationHelper navigationHelper;
         public static AddTeam addTeamPage;
-        public TextBox txtNme, txtLoc;
+        public TextBox txtNme, txtLoc, txtSize;
         public Popup popup;
 
         public AddTeam()
@@ -39,7 +39,7 @@ namespace Dorch.View
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
             this.navigationHelper.SaveState += this.NavigationHelper_SaveState;
             addTeamPage = this;
-            txtLoc = txtLocation; txtNme = txtTeamName;
+            txtLoc = txtLocation; txtNme = txtTeamName; txtSize = txtTeamSize;
             popup = ppPopup;
         }
 

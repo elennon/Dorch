@@ -49,7 +49,7 @@
 
 
         <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ImageNme, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
 
         <Button Content="Done" Grid.Row="4" Grid.Column="1" Command="{Binding SetUpCommand}" ></Button>
 

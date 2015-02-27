@@ -28,11 +28,11 @@ namespace TeamManagerService
         protected override void Seed(TeamManagerContext context)
         {
             List<Player> plys = new List<Player>();
-            plys.Add(new Player { Id = "p1", PlayerName = "Mick Keane", PhNumber = "0876493789", Image = "music3.jpg" });
-            plys.Add(new Player { Id = "p2", PlayerName = "Paddy Whelan", PhNumber = "0876493789", Image = "music2.jpg" });
-            plys.Add(new Player { Id = "p3", PlayerName = "Liam Dempsey", PhNumber = "0876493789", Image = "music3.jpg" });
-            plys.Add(new Player { Id = "p4", PlayerName = "Mark Brennan", PhNumber = "0876493789", Image = "music2.jpg" });
-            plys.Add(new Player { Id = "p5", PlayerName = "John Dowling", PhNumber = "0876493789", Image = "music3.jpg" });
+            plys.Add(new Player { Id = "p1", PlayerName = "Mick Keane", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "p2", PlayerName = "Paddy Whelan", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "p3", PlayerName = "Liam Dempsey", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "p4", PlayerName = "Mark Brennan", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "p5", PlayerName = "John Dowling", PhNumber = "0876493789" });
             foreach (var item in plys)
             {
                 context.Set<Player>().Add(item);
@@ -47,45 +47,47 @@ namespace TeamManagerService
             {
                 context.Set<Team>().Add(item);
             }
+
+            RequestPending rp = new RequestPending { Id = "rp1", TeamId = "t1", PlayerId = "p1" };
           
             base.Seed(context);
         }
 
-        private static void PopulateJobEquipmentMergeTable(TeamManagerContext context)
-        {
-            AddMergeEntry(context, "t1", "p1");
-            AddMergeEntry(context, "t1", "p2");
-            AddMergeEntry(context, "t1", "p3");
-            AddMergeEntry(context, "t1", "p4");
-            AddMergeEntry(context, "t1", "p5");
-            AddMergeEntry(context, "t2", "p1");
-            AddMergeEntry(context, "t2", "p2");
-            AddMergeEntry(context, "t2", "p3");
-            AddMergeEntry(context, "t2", "p4");
-            AddMergeEntry(context, "t2", "p5");
-            AddMergeEntry(context, "t3", "p1");
-            AddMergeEntry(context, "t3", "p2");
-            AddMergeEntry(context, "t3", "p3");
-            AddMergeEntry(context, "t3", "p4");
-            AddMergeEntry(context, "t3", "p5");
-            AddMergeEntry(context, "t4", "p1");
-            AddMergeEntry(context, "t4", "p2");
-            AddMergeEntry(context, "t4", "p3");
-            AddMergeEntry(context, "t4", "p4");
-            AddMergeEntry(context, "t4", "p5");
-            AddMergeEntry(context, "t5", "p1");
-            AddMergeEntry(context, "t5", "p2");
-            AddMergeEntry(context, "t5", "p3");
-            AddMergeEntry(context, "t5", "p4");
-            AddMergeEntry(context, "t5", "p5");
-        }
+    //    private static void MergeTable(TeamManagerContext context)
+    //    {
+    //        AddMergeEntry(context, "t1", "p1");
+    //        AddMergeEntry(context, "t1", "p2");
+    //        AddMergeEntry(context, "t1", "p3");
+    //        AddMergeEntry(context, "t1", "p4");
+    //        AddMergeEntry(context, "t1", "p5");
+    //        AddMergeEntry(context, "t2", "p1");
+    //        AddMergeEntry(context, "t2", "p2");
+    //        AddMergeEntry(context, "t2", "p3");
+    //        AddMergeEntry(context, "t2", "p4");
+    //        AddMergeEntry(context, "t2", "p5");
+    //        AddMergeEntry(context, "t3", "p1");
+    //        AddMergeEntry(context, "t3", "p2");
+    //        AddMergeEntry(context, "t3", "p3");
+    //        AddMergeEntry(context, "t3", "p4");
+    //        AddMergeEntry(context, "t3", "p5");
+    //        AddMergeEntry(context, "t4", "p1");
+    //        AddMergeEntry(context, "t4", "p2");
+    //        AddMergeEntry(context, "t4", "p3");
+    //        AddMergeEntry(context, "t4", "p4");
+    //        AddMergeEntry(context, "t4", "p5");
+    //        AddMergeEntry(context, "t5", "p1");
+    //        AddMergeEntry(context, "t5", "p2");
+    //        AddMergeEntry(context, "t5", "p3");
+    //        AddMergeEntry(context, "t5", "p4");
+    //        AddMergeEntry(context, "t5", "p5");
+    //    }
 
-        private static void AddMergeEntry(TeamManagerContext context, string teamId, string playerId)
-        {
-            var team = context.Set<Team>().Single(j => j.Id == teamId);
-            var player = context.Set<Player>().Single(e => e.Id == playerId);
-            team.Players.Add(player);
-        }
+    //    private static void AddMergeEntry(TeamManagerContext context, string teamId, string playerId)
+    //    {
+    //        var team = context.Set<Team>().Single(j => j.Id == teamId);
+    //        var player = context.Set<Player>().Single(e => e.Id == playerId);
+    //        team.Players.Add(player);
+    //    }
     }
 }
 

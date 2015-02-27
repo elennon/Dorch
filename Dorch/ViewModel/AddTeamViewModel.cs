@@ -43,8 +43,22 @@ namespace Dorch.ViewModel
             get { return _location; }
             set { _location = value; NotifyPropertyChanged("Location"); }
         }
-        private string _image;
-        public string Image
+        private string _size;
+        public string TeamSize
+        {
+            get { return _size; }
+            set { _size = value; NotifyPropertyChanged("TeamSize"); }
+        }
+
+        private string _imageNme;
+        public string ImageNme
+        {
+            get { return _imageNme; }
+            set { _imageNme = value; NotifyPropertyChanged("ImageNme"); }
+        }
+
+        private byte[] _image;
+        public byte[] Image
         {
             get { return _image; }
             set { _image = value; NotifyPropertyChanged("Image"); }
@@ -61,7 +75,8 @@ namespace Dorch.ViewModel
             _navigationService = navigationService;
             TeamName = "";
             Location = "";
-            Image = "";
+            TeamSize = "";
+            ImageNme = "";
             this.AddTeamCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnAddTeamCommand);
             this.FilePickerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnFilePickerCommand);
             this.ToastCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnToastCommand);
@@ -111,13 +126,13 @@ namespace Dorch.ViewModel
         private async void OnAddTeamCommand()
         {
             if (TeamName == "") { Toast("Fill in name please."); return; }
-            else if (Location == "") { Toast("Fill in location please."); return; }
-            else if (Image == "") { Image = "Carpi.png"; }
-            Team tm = new Team { TeamName = this.TeamName, Location = this.Location, Image = this.Image };
+            else if (Location == "") { Toast("Fill in location please."); return; }       
+            Team tm = new Team { TeamName = this.TeamName, Location = this.Location, TeamImage = this.Image };
             await repo.addNewTeamAsync(tm);
             TeamName = "";
             Location = "";
-            Image = "";
+            TeamSize = "";
+            ImageNme = "";
             _navigationService.NavigateTo("MainPage");
         }
 
@@ -152,30 +167,9 @@ namespace Dorch.ViewModel
                 if (args.Files.Count == 0) return;
 
                 view.Activated -= viewActivated;
-                //Image = args.Files[0].Name;
-                Image = await TransferToStorage(args.Files[0]);
+                Image = await ReadImage.GetImageBytes(args.Files[0]);
+                ImageNme = args.Files[0].DisplayName;
             }
-        }
-
-        private async Task<string> TransferToStorage(object file)
-        {            
-            StorageFile stfile = (StorageFile)file;
-            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;          
-            var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
-            try
-            {
-                StorageFile t = await dataFolder.GetFileAsync(stfile.Name);
-                return stfile.Name;
-            }
-            catch (FileNotFoundException ex)
-            {
-                CopyFile(stfile,dataFolder);
-                return stfile.Name;
-            }            
-        }
-        public async void CopyFile(StorageFile stfile, StorageFolder dest)
-        {
-            await stfile.CopyAsync(dest);
         }
 
         public void Activate(object parameter)

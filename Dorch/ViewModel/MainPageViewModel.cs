@@ -14,6 +14,8 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Contacts;
+using Windows.Phone.PersonalInformation;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
@@ -74,29 +76,8 @@ namespace Dorch.ViewModel
         }
 
         private void OnTextCommand()
-        {
-            ////number@sendmode.com
-            //const string sender = "me@gmail.com";
-            //const string password = "mypassword4gmailacct";
-
-            //// find the carriers sms gateway for the recipent. txt.att.net is for AT&T customers.
-            //string carrierGateway = "txt.att.net";
-            //string telephoneNumer = "0876493789";
-
-            //// this is the recipents number @ carrierGateway that gmail use to deliver message.
-            //string recipent = string.Concat(new object[] { telephoneNumer, '@', carrierGateway });
-   
-            //// form the text message and send
-            //using (MailMessage textMessage = new MailMessage(sender, recipent, subject, message))
-            //{
-            //    using (SmtpClient textMessageClient = new SmtpClient("smtp.gmail.com", 587))
-            //    {
-            //        textMessageClient.UseDefaultCredentials = false;
-            //        textMessageClient.EnableSsl = true;
-            //        textMessageClient.Credentials = new NetworkCredential(sender, password);
-            //        textMessageClient.Send(textMessage);
-            //    }
-            //}
+        {           
+            _navigationService.NavigateTo("ShowAllPlayers");
         }
 
         private void OnItemSelectedCommand(Team obj)
@@ -136,8 +117,9 @@ namespace Dorch.ViewModel
             StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
             var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);                                   
             foreach (var item in Teams)
-            {                                
-                item.ImageSource = await MakeImage(item.Image, dataFolder);
+            {
+           //     item.ImageSource = await ReadImage.MakeImage(item.Image, dataFolder);
+                //item.ImageSource = await MakeImage(item.Image, dataFolder);
             }
         }
 

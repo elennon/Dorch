@@ -8,10 +8,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel;
 using Windows.Storage;
+using Windows.Storage.Streams;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
@@ -128,37 +131,12 @@ namespace Dorch.ViewModel
             //throw new NotImplementedException();
         }
 
-        private async void OnLoadCommand(RoutedEventArgs obj)
+        private void OnLoadCommand(RoutedEventArgs obj)
         {
-            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-            var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
-            foreach (var item in Players)
-            {
-                item.ImageSource = await MakeImage(item.Image, dataFolder);
-            }
-        }
-
-        async Task<ImageSource> MakeImage(string fileName, StorageFolder folder)
-        {
-            BitmapImage bitmapImage = null;
-            try
-            {
-                StorageFile file = await folder.GetFileAsync(fileName);
-                if (file != null)
-                {
-                    bitmapImage = new BitmapImage();
-
-                    using (var stream = await file.OpenReadAsync())
-                    {
-                        await bitmapImage.SetSourceAsync(stream);
-                    }
-                }
-                return (bitmapImage);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            //foreach (var item in Players)
+            //{
+            //    item.PlayerImage = ReadImage.GetImage(item.Image);
+            //}
         }
 
         #region INotifyPropertyChanged Members
@@ -190,5 +168,6 @@ namespace Dorch.ViewModel
             
         }
 
+        
     }
 }

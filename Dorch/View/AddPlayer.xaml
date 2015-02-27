@@ -12,7 +12,10 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-
+    <Page.Resources>
+        
+    </Page.Resources>
+    
     <Grid x:Name="LayoutRoot">
 
         <Grid.ChildrenTransitions>
@@ -23,14 +26,15 @@
 
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="1.3*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.4*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
@@ -39,21 +43,47 @@
             <TextBlock Text="Team Manager" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
-        <!--TODO: Content should be placed within the following grid-->
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Margin="19,0,19,0" >
+            
+            <RichTextBlock FontSize="20" LineHeight="40">
+                <Paragraph Foreground="White" FontFamily="Segoe UI Light">
+                    <Run>You can choose from another </Run>
+                    <InlineUIContainer>
+                        
+                        <HyperlinkButton Command="{Binding ShowAllPlayersCommand}"  Content="Team" BorderBrush="Beige" 
+                                         FontSize="26" FontWeight="SemiBold" Padding="9,4,6,-6"  >                                                                                           
+                        </HyperlinkButton>
+                    </InlineUIContainer>
+                    <Run>, or from your </Run>
+                    <InlineUIContainer>
+                        <HyperlinkButton Command="{Binding ContactsListCommand}" Content="Contacts" 
+                            FontSize="26" FontWeight="SemiBold" Padding="10,-4,8,-8" >
+                        </HyperlinkButton>
+                    </InlineUIContainer>
+                    <Run>, or fill the form below.</Run>
+                </Paragraph>
+            </RichTextBlock>
+        </StackPanel>
 
 
-        <TextBlock Text="Player Name:" Grid.Row="1" VerticalAlignment="Center" Margin= "14,0,0,0" Style="{StaticResource BaseTextBlockStyle}"/>
-        <TextBox x:Name="txtPlayerName" Text="{Binding PlayerName, Mode=TwoWay}" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" Width="190" Margin="10"/>
+        <TextBlock Text="Player Name:" Grid.Row="2" VerticalAlignment="Center" Margin= "14,0,0,0" Style="{StaticResource BaseTextBlockStyle}"/>
+        <TextBox x:Name="txtPlayerName" Text="{Binding PlayerName, Mode=TwoWay}" Grid.Column="1" 
+                 Grid.Row="2"  VerticalAlignment="Center" Width="220" Margin="0"/>
 
-        <TextBlock Text="Mobile No:" Grid.Row="2" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
-        <TextBox x:Name="txtPhoneNo" Text="{Binding Phone, Mode=TwoWay}" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Width="190" Margin="10"/>
+        <TextBlock Text="Mobile No:" Grid.Row="3" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+        <TextBox x:Name="txtPhoneNo" Text="{Binding Phone, Mode=TwoWay}" Grid.Column="1" Grid.Row="3"  
+                 VerticalAlignment="Center" Width="220" Margin="10"/>
 
+        <StackPanel Grid.Row="4" Margin="14,0,0,0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Content="Add an image" VerticalAlignment="Center"  Command="{Binding FilePickerCommand}" ></Button>
+            <TextBlock Grid.Row="3" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190"
+                       Style="{StaticResource BaseTextBlockStyle}" Margin="20,0,0,0">xxx</TextBlock>
+        </StackPanel>
 
-        <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
-
-        <Button Content="Add Player" Grid.Row="4" Grid.Column="1" Command="{Binding AddPlayerCommand}" ></Button>
-
+        <StackPanel Grid.Row="6" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
+            <Button Content="Add New Player" VerticalAlignment="Top"  Command="{Binding AddPlayerCommand}" ></Button>
+        </StackPanel>
+            
         <Popup VerticalOffset="150" HorizontalOffset="165" x:Name="ppPopup">
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="ForestGreen"
@@ -68,7 +98,7 @@
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.PrimaryCommands>
-                <AppBarButton  Icon="Edit"  Label="Toast" Command="{Binding ToastCommand}"  />
+                <AppBarButton  Icon="Edit"  Label="Toast" Command="{Binding ShowAllPlayersCommand}"  />
             </CommandBar.PrimaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

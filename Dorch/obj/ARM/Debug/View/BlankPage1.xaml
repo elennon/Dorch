@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="Dorch.View.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Dorch.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Team Name:" VerticalAlignment="Center" Margin= "14,0,0,0" 
+                                    Style="{StaticResource BaseTextBlockStyle}"/>
+        <TextBlock x:Name="txtTeamName" Text="{Binding thisTeam.TeamName}" Grid.Column="1"  
+                                    Style="{StaticResource BaseTextBlockStyle}" VerticalAlignment="Center" Margin="10"/>
+
+        <TextBlock Text="Location:" Grid.Row="1" VerticalAlignment="Center"  Margin= "14,0,0,0" 
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+        <TextBlock x:Name="txtLocation" Text="{Binding thisTeam.Location}" Grid.Column="1" Grid.Row="1"  
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}" VerticalAlignment="Center"  Margin="10"/>
+
+        <TextBlock Text="Players:" Grid.Row="2" VerticalAlignment="Center"  Margin= "14,0,0,0" 
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+        <TextBlock x:Name="txtTeamSize" Text="{Binding thisTeam.PlayerTargetNumber}" Grid.Column="1" Grid.Row="2"  
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}" VerticalAlignment="Center"  Margin="10"/>
+
+        <TextBlock Text="OnTimer:" Grid.Row="3" VerticalAlignment="Center"  Margin= "14,0,0,0" 
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+        <ToggleSwitch Name="tswOnTimer" Grid.Column="1" Grid.Row="3"  
+                                      ></ToggleSwitch>
+
+    </Grid>
+</Page>
+

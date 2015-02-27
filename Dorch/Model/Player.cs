@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using Dorch.Common;
+using SQLite;
 using SQLiteNetExtensions.Attributes;
 using System;
 using System.Collections.Generic;
@@ -15,34 +16,29 @@ namespace Dorch.Model
     {
         public string Id { get; set; }
         public string PlayerName { get; set; }
-        public string PhNumber { get; set; }
-        public string Image { get; set; }
+        public string PhNumber { get; set; }       
         public bool IsPicked { get; set; }
+
+        private byte[] _imgByte;
+        public byte[] Image
+        {
+            get { return _imgByte; }
+            set { _imgByte = value; NotifyPropertyChanged("Image"); }
+        }
+                
         //[Ignore]
         public virtual ICollection<Team> Teams { get; set; }
 
-        ImageSource userImage;
-        public ImageSource ImageSource
+        public ImageSource PlayerImage        
         {
             get
             {
-                return (this.userImage);
+                return ReadImage.GetImage(this.Image);
             }
-            set
-            {
-                SetProperty(ref this.userImage, value);
-            }
+            protected set { NotifyPropertyChanged("PlayerImage"); }
         }
 
-        protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] String propertyName = null)
-        {
-            if (object.Equals(storage, value)) return false;
-
-            storage = value;
-            this.NotifyPropertyChanged(propertyName);
-            return true;
-        }
-
+        
         #region INotifyPropertyChanged Members
 
         public event PropertyChangedEventHandler PropertyChanged;

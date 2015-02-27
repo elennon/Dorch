@@ -27,6 +27,7 @@ namespace TeamManagerService.Models
 
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
+        public DbSet<RequestPending> RequestPendings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -41,10 +42,10 @@ namespace TeamManagerService.Models
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
 
             modelBuilder.Entity<Team>().HasMany(t => t.Players).WithMany(t => t.Teams);
-                        
-                        
-            
+                                                           
         }
+
+        
     }
 
 }
