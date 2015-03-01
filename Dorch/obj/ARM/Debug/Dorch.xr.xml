@@ -10,10 +10,11 @@
     <RootPropertyPathName Name="FilePickerCommand" />
     <RootPropertyPathName Name="Phone" />
     <RootPropertyPathName Name="PlayerName" />
-    <RootPropertyPathName Name="ContactsCommand" />
+    <RootPropertyPathName Name="ContactsListCommand" />
     <RootPropertyPathName Name="ShowAllPlayersCommand" />
     <RootPropertyPathName Name="AddTeamViewModel" />
     <RootPropertyPathName Name="AddTeamCommand" />
+    <RootPropertyPathName Name="ImageNme" />
     <RootPropertyPathName Name="Size" />
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="TeamName" />
@@ -25,7 +26,7 @@
     <RootPropertyPathName Name="DataContext" />
     <RootPropertyPathName Name="IsVisible" />
     <RootPropertyPathName Name="DeleteSelectedCommand" />
-    <RootPropertyPathName Name="ImageSource" />
+    <RootPropertyPathName Name="ImgSource" />
     <RootPropertyPathName Name="Teams" />
     <RootPropertyPathName Name="ItemSelectedCommand" />
     <RootPropertyPathName Name="TextCommand" />
@@ -43,7 +44,6 @@
     <RootPropertyPathName Name="RefreshCommand" />
     <RootPropertyPathName Name="SignUpViewModel" />
     <RootPropertyPathName Name="SetUpCommand" />
-    <RootPropertyPathName Name="ImageNme" />
     <RootPropertyPathName Name="UserName" />
     <RootPropertyPathName Name="ViewTeamViewModel" />
     <RootPropertyPathName Name="InOutImage" />

@@ -103,3 +103,6 @@ C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\QKit
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\QKit.xml
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\QKit.pri
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\QKit.pri.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\Microsoft.WindowsAzure.Messaging.Managed.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\Microsoft.WindowsAzure.Messaging.Managed.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\Microsoft.WindowsAzure.Messaging.Managed.pri.xml

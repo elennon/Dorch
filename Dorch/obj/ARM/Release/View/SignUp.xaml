@@ -11,6 +11,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+    <i:Interaction.Behaviors>
+        <core:EventTriggerBehavior EventName="Loaded">
+            <core:InvokeCommandAction Command="{Binding LoadCommand}" />
+        </core:EventTriggerBehavior>
+    </i:Interaction.Behaviors>
     
     <Grid x:Name="LayoutRoot">
 
@@ -36,6 +41,7 @@
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="19,0,0,0">
             <TextBlock Text="Team Manager" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
+            
         </StackPanel>
 
         <!--TODO: Content should be placed within the following grid-->
@@ -49,10 +55,11 @@
 
 
         <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ImageNme, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
 
         <Button Content="Done" Grid.Row="4" Grid.Column="1" Command="{Binding SetUpCommand}" ></Button>
-
+        <!--<Button Name="ButtonLogin" Click="ButtonLogin_Click"  Grid.Row="5" Grid.Column="1"
+                Visibility="Visible">Sign in</Button>-->
         <Popup VerticalOffset="150" HorizontalOffset="165" x:Name="ppPopup">
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
             Background="ForestGreen"

@@ -78,14 +78,7 @@ namespace Dorch.ViewModel
         private async void OnLoadCommand(RoutedEventArgs obj)
         {
             allTeams = new ObservableCollection<Team>(await repo.GetTeamsAsync());
-            //foreach (Team tm in allTeams)
-            //{
-            //    foreach (Player item in tm.Players)
-            //    {
-            //        item.PlayerImage = ReadImage.GetImage(item.Image);                   
-            //    }
-            //}
-
+           
             var tmms = GetGroups(allTeams);
             PlayersViewSource = new CollectionViewSource();
             PlayersViewSource.IsSourceGrouped = true;
@@ -101,14 +94,7 @@ namespace Dorch.ViewModel
         private async Task LoadTeams()
         {
             allTeams = new ObservableCollection<Team>(await repo.GetTeamsAsync());
-            //foreach (Team tm in allTeams)
-            //{
-            //    foreach (Player item in tm.Players)
-            //    {
-            //        item.PlayerImage = ReadImage.GetImage(item.Image); 
-            //    }
-            //}
-            
+           
             var tmms = GetGroups(allTeams);
             PlayersViewSource = new CollectionViewSource();
             PlayersViewSource.IsSourceGrouped = true;

@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\arm\debug\intermediatexaml\dorch.exe" HashGuid="e6442991-30bd-ed2a-d9f7-6e8e1db13076" />
+    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\arm\debug\intermediatexaml\dorch.exe" HashGuid="5269e955-f64a-516e-e54a-128793f9604b" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
@@ -8,6 +8,7 @@
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="54c1f1ed-b921-337f-8ad6-f2d8c553df06" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\windowsazure.messaging.managed.0.1.7.9\lib\wpa81\microsoft.windowsazure.messaging.managed.dll" HashGuid="a6c77c87-a1d1-2c9f-340a-0958f7d05449" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\windowsazure.mobileservices.1.3.1\lib\wpa81\microsoft.windowsazure.mobile.dll" HashGuid="9ae27956-fc25-6346-a044-affad933acd5" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\windowsazure.mobileservices.1.3.1\lib\wpa81\microsoft.windowsazure.mobile.ext.dll" HashGuid="d14f6c57-ffca-9ad1-126f-ce93487ab524" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\newtonsoft.json.6.0.5\lib\portable-net45+wp80+win8+wpa81\newtonsoft.json.dll" HashGuid="96120131-2625-5747-239a-d2fb6f2e1188" />

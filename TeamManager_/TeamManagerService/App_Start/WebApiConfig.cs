@@ -15,10 +15,13 @@ namespace TeamManagerService
         {
             // Use this class to set configuration options for your mobile service
             ConfigOptions options = new ConfigOptions();
+            //{
+            //    PushAuthorization = Microsoft.WindowsAzure.Mobile.Service.Security.AuthorizationLevel.User
+            //};
 
             // Use this class to set WebAPI configuration options
             HttpConfiguration config = ServiceConfig.Initialize(new ConfigBuilder(options));
-
+            
             Database.SetInitializer(new TeamManagerInitializer());  // DropCreateDatabaseAlways
         }
     }
@@ -39,10 +42,10 @@ namespace TeamManagerService
             }
 
             List<Team> tms = new List<Team>();
-            tms.Add(new Team { Id = "t1", Players = plys, TeamName = "Friday Astro", Location = "Amenities  Centre", Image = "Charlton.png" });
-            tms.Add(new Team { Id = "t2", Players = plys, TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre", Image = "fca.png" });
-            tms.Add(new Team { Id = "t3", Players = plys, TeamName = "Astro Training", Location = "Amenities  Centre", Image = "Carpi.png" });
-            tms.Add(new Team { Id = "t4", Players = plys, TeamName = "Wednesday Celbridge", Location = "Celbridge Astro", Image = "Malaga.png" });
+            tms.Add(new Team { Id = "t1", Players = plys, TeamName = "Friday Astro", Location = "Amenities  Centre" });
+            tms.Add(new Team { Id = "t2", Players = plys, TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre" });
+            tms.Add(new Team { Id = "t3", Players = plys, TeamName = "Astro Training", Location = "Amenities  Centre" });
+            tms.Add(new Team { Id = "t4", Players = plys, TeamName = "Wednesday Celbridge", Location = "Celbridge Astro" });
             foreach (var item in tms)
             {
                 context.Set<Team>().Add(item);

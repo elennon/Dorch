@@ -185,6 +185,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
     <Compile Include="Controllers\RequestPendingController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
@@ -197,6 +198,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\NotificationHandler.cs" />
+    <Compile Include="Utilities\PushRegistrationHandler.cs" />
     <Compile Include="Utilities\QueryableExpand.cs" />
   </ItemGroup>
   <ItemGroup>

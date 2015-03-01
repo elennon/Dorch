@@ -14,7 +14,7 @@ namespace Dorch.DAL
 {
     public class Repository : IRepository, INotifyPropertyChanged
     {
-        MobileServiceClient _client = App.MobileService;
+        MobileServiceClient _client = App.TeamManagerClient;
 
         private MobileServiceCollection<Player, Player> _Players;
         public MobileServiceCollection<Player, Player> Players
@@ -42,9 +42,9 @@ namespace Dorch.DAL
         private MobileServiceCollection<Player, Player> players;
         private MobileServiceCollection<RequestPending, RequestPending> requests;
 
-        private IMobileServiceTable<Team> teamTable = App.MobileService.GetTable<Team>();
-        private IMobileServiceTable<Player> playerTable = App.MobileService.GetTable<Player>();
-        private IMobileServiceTable<RequestPending> requestTable = App.MobileService.GetTable<RequestPending>();
+        private IMobileServiceTable<Team> teamTable = App.TeamManagerClient.GetTable<Team>();
+        private IMobileServiceTable<Player> playerTable = App.TeamManagerClient.GetTable<Player>();
+        private IMobileServiceTable<RequestPending> requestTable = App.TeamManagerClient.GetTable<RequestPending>();
 
         public async Task addNewTeamAsync(Team tm)
         {
@@ -206,6 +206,7 @@ namespace Dorch.DAL
         {
             try
             {
+                var grit = await requestTable.ToCollectionAsync();
                 await requestTable.InsertAsync(rp);
             }
             catch (MobileServiceInvalidOperationException ex)

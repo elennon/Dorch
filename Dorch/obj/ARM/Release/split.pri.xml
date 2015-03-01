@@ -167,6 +167,11 @@
 						<Value>Assets\np58.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="person-icon.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/person-icon.png">
+					<Candidate type="Path">
+						<Value>Assets\person-icon.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="SmallLogo.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/SmallLogo.png">
 					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
 						<Value>Assets\SmallLogo.scale-240.png</Value>
@@ -193,7 +198,26 @@
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
+			<ResourceMapSubtree name="QKit">
+				<NamedResource name="QKit.xr.xml" uri="ms-resource://55082kilmaced.Dorch/Files/QKit/QKit.xr.xml">
+					<Candidate type="Path">
+						<Value>QKit\QKit.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/QKit/Themes/Generic.xbf">
+						<Candidate type="Path">
+							<Value>QKit\Themes\Generic.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
 			<ResourceMapSubtree name="View">
+				<NamedResource name="AddPlayer.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/AddPlayer.xbf">
+					<Candidate type="Path">
+						<Value>View\AddPlayer.xbf</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="AddTeam.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/AddTeam.xbf">
 					<Candidate type="Path">
 						<Value>View\AddTeam.xbf</Value>
@@ -207,6 +231,11 @@
 				<NamedResource name="MainPage.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/MainPage.xbf">
 					<Candidate type="Path">
 						<Value>View\MainPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="ShowAllPlayers.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/ShowAllPlayers.xbf">
+					<Candidate type="Path">
+						<Value>View\ShowAllPlayers.xbf</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="SignUp.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/SignUp.xbf">

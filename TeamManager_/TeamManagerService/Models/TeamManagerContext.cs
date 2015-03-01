@@ -43,9 +43,7 @@ namespace TeamManagerService.Models
 
             modelBuilder.Entity<Team>().HasMany(t => t.Players).WithMany(t => t.Teams);
                                                            
-        }
-
-        
+        }        
     }
 
 }

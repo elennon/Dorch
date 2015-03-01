@@ -8,6 +8,7 @@ using TeamManagerService.DataObjects;
 using TeamManagerService.Models;
 using TeamManagerService.Utilities;
 using System;
+using Microsoft.WindowsAzure.Mobile.Service.Security;
 
 namespace TeamManagerService.Controllers
 {
@@ -69,6 +70,9 @@ namespace TeamManagerService.Controllers
 
         public async Task<IHttpActionResult> PostPlayer(Player item)
         {
+            //var currentUser = User as ServiceUser;
+            //item.UserId = currentUser.Id;
+
             Player current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
