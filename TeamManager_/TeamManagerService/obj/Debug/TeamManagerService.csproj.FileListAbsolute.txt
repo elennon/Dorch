@@ -263,6 +263,6 @@ C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManager
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\ru\System.Spatial.resources.dll
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\bin\zh-Hant\System.Spatial.resources.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Debug\TeamManagerService.csprojResolveAssemblyReference.cache
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Debug\TeamManagerService.dll
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Debug\TeamManagerService.pdb
-C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\TeamManager_\TeamManagerService\obj\Debug\TeamManagerService.csprojResolveAssemblyReference.cache

@@ -49,9 +49,6 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\Newtonsoft.Json.6.0.5\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit.dll">
-      <PackagePath>QKit.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\SQLite.Net-PCL.2.4.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
       <PackagePath>SQLite.Net.dll</PackagePath>
     </AppxPackagedFile>
@@ -64,7 +61,7 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\Microsoft.Net.Http.2.2.28\lib\wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.8.1\Redist\Retail\ARM\sqlite3.dll">
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\WindowsPhoneApp\v8.1\ExtensionSDKs\SQLite.WP81\3.8.7.4\Redist\Retail\ARM\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\BadgeLogo.scale-100.png">
@@ -175,9 +172,6 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\np58.png">
       <PackagePath>Assets\np58.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\person-icon.png">
-      <PackagePath>Assets\person-icon.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -247,9 +241,6 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\AddPlayer.xbf">
-      <PackagePath>View\AddPlayer.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\AddTeam.xbf">
       <PackagePath>View\AddTeam.xbf</PackagePath>
     </AppxPackagedFile>
@@ -259,9 +250,6 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\ShowAllPlayers.xbf">
-      <PackagePath>View\ShowAllPlayers.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\SignUp.xbf">
       <PackagePath>View\SignUp.xbf</PackagePath>
     </AppxPackagedFile>
@@ -270,12 +258,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch.xr.xml">
       <PackagePath>Dorch.xr.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit\QKit.xr.xml">
-      <PackagePath>QKit\QKit.xr.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\QKit.0.4.1\lib\wpa81\QKit\Themes\Generic.xbf">
-      <PackagePath>QKit\Themes\Generic.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>

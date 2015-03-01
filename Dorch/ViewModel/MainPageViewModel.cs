@@ -25,10 +25,10 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace Dorch.ViewModel
-{ 
+{
     public class MainPageViewModel : ViewModelBase, INavigable, INotifyPropertyChanged
     {
-        
+
         private IRepository repo = new Repository();
         private INavigationService _navigationService;
         private bool editMode = false;
@@ -75,7 +75,7 @@ namespace Dorch.ViewModel
         //            // Change 'MobileService' to the name of your MobileServiceClient instance.
         //            // Sign-in using Facebook authentication.
         //            user = await App.MobileService.LoginAsync(MobileServiceAuthenticationProvider.Google);
-                        
+
         //            message =
         //                string.Format("You are now signed in - {0}", user.UserId);
         //        }
@@ -181,8 +181,6 @@ namespace Dorch.ViewModel
         {
             //await AuthenticateAsync();
             //App.InitNotificationsAsync();
-
-
             List<Team> lst = await repo.GetTeamsAsync();
             Teams = new ObservableCollection<Team>(lst);
             StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
@@ -230,7 +228,7 @@ namespace Dorch.ViewModel
             Teams.Remove(obj);
             repo.DeleteTeam(obj);
         }
-       
+
         async Task<ImageSource> MakeImage(string fileName, StorageFolder folder)
         {
             BitmapImage bitmapImage = null;
@@ -251,7 +249,7 @@ namespace Dorch.ViewModel
             catch (Exception ex)
             {
                 return null;
-            }     
+            }
         }
 
         public void Activate(object parameter)

@@ -4,7 +4,6 @@ using Dorch.Model;
 using Dorch.View;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
-using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +15,6 @@ using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.Pickers;
-using Windows.UI.Popups;
 using Windows.UI.Xaml;
 
 namespace Dorch.ViewModel
@@ -58,25 +56,18 @@ namespace Dorch.ViewModel
             set { _image = value; NotifyPropertyChanged("Image"); }
         }
 
-        public GalaSoft.MvvmLight.Command.RelayCommand<RoutedEventArgs> LoadCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand SetUpCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand FilePickerCommand { get; set; }
 
-        
         public SignUpViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;
             UserName = "";
-            PhNumber = "";
-            this.LoadCommand = new GalaSoft.MvvmLight.Command.RelayCommand<RoutedEventArgs>(OnLoadCommand);
+            PhNumber = "";            
             this.SetUpCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSetUpCommand);
             this.FilePickerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnFilePickerCommand);            
         }
 
-        private async void OnLoadCommand(RoutedEventArgs obj)
-        {
-            //await AuthenticateAsync();
-        }
        
         private void OnFilePickerCommand()
         {
@@ -100,14 +91,15 @@ namespace Dorch.ViewModel
             if (UserName == "") { ShowPop(); return; }
             else if (PhNumber == "") { ShowPop(); return; }
             
-            Player pl = new Player { Id = this.PhNumber, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = Image };
+            string id = UserName + "," + PhNumber;
+            Player pl = new Player { Id = id, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = Image };
             await repo.AddNewPlayerOnSignUpAsync(pl);   
 
             ((App)Application.Current).UserName = UserName;
             AppSettings.SaveSettingsValue(Constants.UserName, UserName);
 
-            ((App)Application.Current).UserId = this.PhNumber;
-            AppSettings.SaveSettingsValue(Constants.UserId, this.PhNumber);
+            ((App)Application.Current).UserId = id;
+            AppSettings.SaveSettingsValue(Constants.UserId, id);
             UserName = "";
             PhNumber = "";
             ImageNme = "";            

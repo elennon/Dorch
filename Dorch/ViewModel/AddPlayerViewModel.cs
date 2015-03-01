@@ -71,22 +71,20 @@ namespace Dorch.ViewModel
             this.ContactsListCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnContactsListCommand);
         }
 
-        private async void OnContactsListCommand()
+        private async void OnContactsListCommand()        
         {
             var contactPicker = new Windows.ApplicationModel.Contacts.ContactPicker();
             contactPicker.DesiredFieldsWithContactFieldType.Add(ContactFieldType.PhoneNumber);
             Contact contact = await contactPicker.PickContactAsync();
 
-            if (contact != null)
-            {
-                var pic = await GetThumbNail(contact);
-                var ph = contact.Phones.FirstOrDefault();
-                string id = new String((ph.Number).Where(Char.IsDigit).ToArray());
-                this.PlayerName = contact.DisplayName;
-                this.Phone = ph.Number;
-                ImageBytes = pic;
-                SaveNewPlayer(id);
-            }
+            var pic = await GetThumbNail(contact);
+            var ph = contact.Phones.FirstOrDefault();
+            string id = contact.DisplayName + "," + ph.Number;
+            this.PlayerName = contact.DisplayName;
+            this.Phone = ph.Number;
+            ImageBytes = pic;
+            SaveNewPlayer(id);
+
         }
 
         private void OnAddPlayerCommand()
@@ -95,7 +93,7 @@ namespace Dorch.ViewModel
             else if (Phone == "") { Toast("Fill in Phone No. please."); return; }
             else if (Image == "") { Image = "person-icon.png"; }
 
-            string id = Phone;
+            string id = PlayerName + "," + Phone;
 
             SaveNewPlayer(id);
         }

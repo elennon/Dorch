@@ -48,20 +48,12 @@
         <TextBlock Text="Location:" Grid.Row="2" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
         <TextBox x:Name="txtLocation" Text="{Binding Location, Mode=TwoWay}" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Width="190" Margin="10"/>
 
-        <TextBlock Text="Team Size:" Grid.Row="3" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
-        <TextBox x:Name="txtTeamSize" Text="{Binding Size, Mode=TwoWay}" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Width="190" Margin="10"/>
+        
+        <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Image, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
 
-
-        <StackPanel Grid.Row="4" Margin="14,0,0,0" Grid.ColumnSpan="2" Orientation="Horizontal">
-            <Button Content="Add an image" VerticalAlignment="Center"  Command="{Binding FilePickerCommand}" ></Button>
-            <TextBlock Grid.Row="3" Text="{Binding ImageNme, Mode=TwoWay}" VerticalAlignment="Center" Width="190"
-                       Style="{StaticResource BaseTextBlockStyle}" Margin="20,0,0,0">xxx</TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="5" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center" >
-            <Button Content="Add Team" VerticalAlignment="Top"  Command="{Binding AddTeamCommand}" ></Button>
-        </StackPanel>
-             
+        <Button Content="Add Team" Grid.Row="4" Grid.Column="1" Command="{Binding AddTeamCommand}" ></Button>
+               
         <Popup VerticalOffset="150" HorizontalOffset="165" x:Name="ppPopup">
             <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
                 Background="ForestGreen"
