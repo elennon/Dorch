@@ -30,6 +30,5 @@ namespace Dorch.DAL
         Task<RequestPlay> GetPlayRequestrAsync(string id);
         Task ConfirmPlay(RequestPlay playRequest);
 
-        //void fillDb();
     }
 }

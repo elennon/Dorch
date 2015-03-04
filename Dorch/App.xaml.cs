@@ -112,7 +112,7 @@ namespace Dorch
             {
                 var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
                 channel.PushNotificationReceived += OnPushNotification;     // registers a method to recieve push messages when app is running
-                var tags = new List<string> { "0876493789" };
+                var tags = new List<string> { "0876493789", "t1" };
                 await Hub.RegisterNativeAsync(channel.Uri, tags);                
             }
             catch (System.Exception ex)
@@ -158,77 +158,40 @@ namespace Dorch
                 mContent = t.visual.binding.text.Value;               
             }
             e.Cancel = true;
-            if (requestType == 2)
+            if (requestType == 1)       // 1 is push request to join a team
+            {
+                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                {
+                    //RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(((App)Application.Current).UserId);         // commented for testing
+                    RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(mContent);
+                    Player thisPlayer = await repo.GetThisPlayerAsync("0876493789");
+                    await repo.ConfirmJoinTeam(rjt, thisPlayer);
+                });
+
+            }
+            else if (requestType == 2)      // 2 is a request to play, just want get yes/no 
             {
                 await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
                 {
                     RequestPlay rp = await repo.GetPlayRequestrAsync(mContent);
                     await repo.ConfirmPlay(rp);
-                    Player p = await repo.GetThisPlayerAsync(rp.PlayerId);
-                    if(vtvm != null)
-                    vtvm.StatusPlayers.Add(p);
-                });            
-                
+                    Player p = await repo.GetThisPlayerAsync(rp.PlayerId);                   
+                });                           
             }
-        }
-
-        private void ChangeTile2()
-        {
-            XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150PeekImageAndText01);
-
-            XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
-            tileTextAttributes[0].InnerText = "otification";
-
-            XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
-            ((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/Malaga.png");
-            ((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "red graphic");
-
-            XmlDocument squareTileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text04);
-            XmlNodeList squareTileTextAttributes = squareTileXml.GetElementsByTagName("text");
-            squareTileTextAttributes[0].AppendChild(squareTileXml.CreateTextNode("Hello World! My very own tile notification"));
-            IXmlNode node = tileXml.ImportNode(squareTileXml.GetElementsByTagName("binding").Item(0), true);
-            tileXml.GetElementsByTagName("visual").Item(0).AppendChild(node);
-
-            TileNotification tileNotification = new TileNotification(tileXml);
-
-            tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
-
-            TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
-
-        }
-
-        private void ChangeTile()
-        {
-            //XmlDocument tileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text01);   //TileWide310x150ImageAndText01
-
-            var tileTemplate = TileTemplateType.TileSquare150x150Image;
-            var tileXml = TileUpdateManager.GetTemplateContent(tileTemplate);
-
-            XmlNodeList tileTextAttributes = tileXml.GetElementsByTagName("text");
-            tileTextAttributes[0].InnerText = "Hello World! My very own tile notification";
-
-            XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
-            ((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/logo.png");
-            ((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "red graphic");
-
-            XmlDocument squareTileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Image);
-            XmlNodeList squareTileTextAttributes = squareTileXml.GetElementsByTagName("image");
-            ((XmlElement)squareTileTextAttributes[0]).SetAttribute("src", "ms-appx:///Assets/logo2.png");
-            IXmlNode node = tileXml.ImportNode(squareTileXml.GetElementsByTagName("binding").Item(0), true);
-            tileXml.GetElementsByTagName("visual").Item(0).AppendChild(node);
-
-            //XmlDocument squareTileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text04);
-            //XmlNodeList squareTileTextAttributes = squareTileXml.GetElementsByTagName("text");
-            //squareTileTextAttributes[0].AppendChild(squareTileXml.CreateTextNode("notification recieved !!!"));
-            //IXmlNode node = tileXml.ImportNode(squareTileXml.GetElementsByTagName("binding").Item(0), true);
-            //tileXml.GetElementsByTagName("visual").Item(0).AppendChild(node);
-
-            TileNotification tileNotification = new TileNotification(tileXml);
-
-            tileNotification.ExpirationTime = DateTimeOffset.UtcNow.AddSeconds(10);
-
-            TileUpdateManager.CreateTileUpdaterForApplication().Update(tileNotification);
-            //_navigationService.NavigateTo("AddTeam");         TileWideText02/TileWide310x150Text02
+            else if (requestType == 3)      // 3 is someone on the team responing in/out to play (sent from patch method of requestPlay controller)
+            {
+                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                {
+                    RequestPlay rp = await repo.GetPlayRequestrAsync(mContent);
+                    Player p = await repo.GetThisPlayerAsync(rp.PlayerId);
+                    if (rp.Confirmed)
+                    { p.InOutImage = "ms-appx:///Assets/tickk.png"; }
+                    else if (rp.NotPlaying)
+                    { p.InOutImage = "ms-appx:///Assets/_cross.png"; }
+                    if (vtvm != null)
+                        vtvm.StatusPlayers.Add(p);
+                });
+            }
         }
 
         private void ResetStartTile()
@@ -252,7 +215,6 @@ namespace Dorch
             InitNotificationsAsync();
             await TaskHelper.RegisterTask();
             CheckMessages();
-            var idd = this.UserId;
 
             if(string.IsNullOrEmpty(UserName))
             {
@@ -262,12 +224,8 @@ namespace Dorch
 
             if (rootFrame == null)
             {
-                // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-
-                // TODO: change this value to a cache size that is appropriate for your application
                 rootFrame.CacheSize = 1;
-
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     // TODO: Load state from previously suspended application
@@ -287,17 +245,13 @@ namespace Dorch
                         this.transitions.Add(c);
                     }
                 }
-
                 rootFrame.ContentTransitions = null;
                 rootFrame.Navigated += this.RootFrame_FirstNavigated;
-
                 if (!rootFrame.Navigate(typeof(MainPage), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }
             }
-
-            // Ensure the current window is active
             Window.Current.Activate();
         }
 

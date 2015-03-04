@@ -137,6 +137,11 @@
 						<Value>Assets\Logo.scale-240.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="logo2.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/logo2.png">
+					<Candidate type="Path">
+						<Value>Assets\logo2.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="Malaga.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/Malaga.png">
 					<Candidate type="Path">
 						<Value>Assets\Malaga.png</Value>

@@ -11,5 +11,6 @@ namespace TeamManagerService.DataObjects
         public string PlayerId { get; set; }
         public string TeamId { get; set; }
         public bool Confirmed { get; set; }
+        public bool NotPlaying { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Dorch.Model
         public string PlayerName { get; set; }
         public string PhNumber { get; set; }       
         public bool IsPicked { get; set; }
+        public string InOutImage {  get; set; }
 
         private byte[] _imgByte;
         public byte[] Image

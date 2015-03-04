@@ -26,6 +26,7 @@
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\music3.jpg"			"Assets\music3.jpg"
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\music2.jpg"			"Assets\music2.jpg"
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\Malaga.png"			"Assets\Malaga.png"
+"C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\logo2.png"			"Assets\logo2.png"
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\Logo.scale-240.png"			"Assets\Logo.scale-240.png"
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\grp99.png"			"Assets\grp99.png"
 "C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\PackageLayout\Assets\grp744w.png"			"Assets\grp744w.png"

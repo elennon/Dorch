@@ -346,107 +346,12 @@ namespace Dorch.DAL
                 playRequest.Confirmed = true;
                 await RequestPlayTable.UpdateAsync(playRequest);
             }
+            else
+            {
+                playRequest.NotPlaying = true;
+                await RequestPlayTable.UpdateAsync(playRequest);
+            }
         }
-
-        private async void PaymentCheckCompleted()
-        {
-            MessageDialog dlg = null;
-            
-            dlg = new MessageDialog("Status is UNKNOWN", "SMS Provider");
-        
-            dlg.Commands.Add(new UICommand("OK"));
-            dlg.DefaultCommandIndex = 0;
-            dlg.CancelCommandIndex = 0;
-            dlg.Options = MessageDialogOptions.None;
-
-            CoreDispatcher dispatcher = CoreWindow.GetForCurrentThread().Dispatcher;
-            await dispatcher.RunAsync(CoreDispatcherPriority.Normal, () => { });
-
-//            this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () => dlg.ShowAsync());
-
-        }
-
-
-        //public void fillDb()
-        //{
-            
-        //    //DropDB();
-        //    //List<string> samplePics = new List<string> { "Charlton.png", "fca.png", "Carpi.png", "Malaga.png", "music2.jpg", "music3.jpg" };
-        //    //foreach (var item in samplePics)
-        //    //{
-        //    //    CopyToStorage(item);
-        //    //}
-        //    //using (var db = new SQLite.SQLiteConnection(App.DBPath))
-        //    //{
-        //    //    var cnt = db.Table<Team>().Count();
-        //    //    List<Team> tms = new List<Team>();
-        //    //    tms.Add(new Team { TeamName = "Friday Astro", Location = "Amenities  Centre" });
-        //    //    tms.Add(new Team { TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre" });
-        //    //    tms.Add(new Team { TeamName = "Astro Training", Location = "Amenities  Centre"});
-        //    //    tms.Add(new Team { TeamName = "Wednesday Celbridge", Location = "Celbridge Astro" });
-        //    //    foreach (var item in tms)
-        //    //    {
-        //    //        db.Insert(item);
-        //    //    }
-        //    //    cnt = db.Table<Team>().Count();
-
-        //    //    List<Player> plys = new List<Player>();
-        //    //    plys.Add(new Player { PlayerName = "Mick Keane", PhNumber = "0876493789" });
-        //    //    plys.Add(new Player { PlayerName = "Paddy Whelan", PhNumber = "0876493789" });
-        //    //    plys.Add(new Player { PlayerName = "Liam Dempsey", PhNumber = "0876493789" });
-        //    //    plys.Add(new Player { PlayerName = "Mark Brennan", PhNumber = "0876493789" });
-        //    //    plys.Add(new Player { PlayerName = "John Dowling", PhNumber = "0876493789" });
-        //    //    foreach (var item in plys)
-        //    //    {
-        //    //        db.Insert(item);
-        //    //    }
-        //    //}
-        //}
-
-        //private async void CopyToStorage(string item)
-        //{
-        //    try
-        //    {
-        //        string uri = "ms-appx:///Assets/" + item;
-        //        var urii = new System.Uri(uri);
-        //        StorageFile file = await Windows.Storage.StorageFile.GetFileFromApplicationUriAsync(urii);
-        //        StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-        //        var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
-        //        try
-        //        {
-        //            StorageFile t = await dataFolder.GetFileAsync(item);                    
-        //        }
-        //        catch (FileNotFoundException ex)
-        //        {
-        //            CopyFile(file, dataFolder);
-        //        }    
-        //    }             
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }            
-        //}
-
-        //public async void CopyFile(StorageFile stfile, StorageFolder dest)
-        //{
-        //    await stfile.CopyAsync(dest);
-        //}
-
-        //private void DropDB()
-        //{
-        //    //try
-        //    //{
-        //    //    using (var db = new SQLite.SQLiteConnection(App.DBPath))
-        //    //    {
-        //    //        db.DeleteAll<Team>();
-
-        //    //    }
-        //    //}
-        //    //catch (Exception ex)
-        //    //{
-        //    //    string g = ex.InnerException.Message;
-        //    //}
-        //}
 
         #region INotifyPropertyChanged Members
 

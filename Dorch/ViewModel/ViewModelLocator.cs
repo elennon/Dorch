@@ -28,8 +28,6 @@ namespace Dorch.ViewModel
             SimpleIoc.Default.Register<AllPlayersViewModel>();
                 
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
-
         }
 
         private INavigationService CreateNavigationService()
