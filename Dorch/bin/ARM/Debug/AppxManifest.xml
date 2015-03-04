@@ -7,7 +7,7 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="55082kilmaced.Dorch" Publisher="CN=ECD8EF8E-3045-48FE-9EA8-1993C0944C53" Version="1.1.0.17" ProcessorArchitecture="arm" />
+  <Identity Name="55082kilmaced.Dorch" Publisher="CN=ECD8EF8E-3045-48FE-9EA8-1993C0944C53" Version="1.1.0.18" ProcessorArchitecture="arm" />
   <mp:PhoneIdentity PhoneProductId="476f9dd3-f701-42c0-b0a5-28579114eb20" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Dorch</DisplayName>
@@ -32,6 +32,13 @@
         </m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="white" />
       </m3:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="BackgroundUpdateTile.UpdateTile">
+          <BackgroundTasks>
+            <Task Type="pushNotification" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>
@@ -42,6 +49,18 @@
   <Dependencies>
     <PackageDependency Name="Microsoft.VCLibs.120.00.Phone.Debug" MinVersion="12.0.30113.0" />
   </Dependencies>
+  <Extensions>
+    <Extension Category="windows.activatableClass.inProcessServer">
+      <InProcessServer>
+        <Path>CLRHost.dll</Path>
+        <ActivatableClass ActivatableClassId="BackgroundUpdateTile.UpdateTile" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="BackgroundUpdateTile.toastVisualBinding" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="BackgroundUpdateTile.toast" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="BackgroundUpdateTile.toastVisual" ThreadingModel="both" />
+        <ActivatableClass ActivatableClassId="BackgroundUpdateTile.toastVisualBindingText" ThreadingModel="both" />
+      </InProcessServer>
+    </Extension>
+  </Extensions>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="12.0" />
@@ -51,7 +70,6 @@
     <build:Item Name="ProjectGUID" Value="{8BC9C0B8-069C-45E4-A110-10C635FC8C50}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
     <build:Item Name="BehaviorsXamlSDKManaged" Version="12.0" />
-    <build:Item Name="SQLite.WP81" Version="3.8.8.1" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17298 (winblue.141024-1500)" />
   </build:Metadata>
 </Package>

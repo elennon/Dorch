@@ -1,6 +1,7 @@
 ﻿using Dorch.Common;
 using Dorch.DAL;
 using Dorch.Model;
+using Dorch.Utilities;
 using Dorch.View;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
@@ -91,15 +92,14 @@ namespace Dorch.ViewModel
             if (UserName == "") { ShowPop(); return; }
             else if (PhNumber == "") { ShowPop(); return; }
             
-            string id = UserName + "," + PhNumber;
-            Player pl = new Player { Id = id, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = Image };
+            Player pl = new Player { Id = PhNumber, PlayerName = this.UserName, PhNumber = this.PhNumber, Image = Image };
             await repo.AddNewPlayerOnSignUpAsync(pl);   
 
             ((App)Application.Current).UserName = UserName;
             AppSettings.SaveSettingsValue(Constants.UserName, UserName);
 
-            ((App)Application.Current).UserId = id;
-            AppSettings.SaveSettingsValue(Constants.UserId, id);
+            ((App)Application.Current).UserId = PhNumber;
+            AppSettings.SaveSettingsValue(Constants.UserId, PhNumber);
             UserName = "";
             PhNumber = "";
             ImageNme = "";            

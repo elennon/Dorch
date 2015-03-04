@@ -47,9 +47,11 @@
         <TextBlock Text="Ph Number:" Grid.Row="2" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
         <TextBox x:Name="txtNumber" Text="{Binding PhNumber, Mode=TwoWay}" Grid.Column="1" Grid.Row="2"  VerticalAlignment="Center" Width="190" Margin="10"/>
 
-
-        <Button Content="Add an image" Grid.Row="3"  Command="{Binding FilePickerCommand}" ></Button>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding ImageNme, Mode=TwoWay}" VerticalAlignment="Center" Width="190" Margin="10"></TextBlock>
+        <StackPanel Grid.Row="3" Margin="14,0,0,0" Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Content="Add an image" VerticalAlignment="Center"  Command="{Binding FilePickerCommand}" ></Button>
+            <TextBlock Text="{Binding ImageNme, Mode=TwoWay}" VerticalAlignment="Center" Width="190"
+                       Style="{StaticResource BaseTextBlockStyle}" Margin="20,0,0,0"></TextBlock>
+        </StackPanel>
 
         <Button Content="Done" Grid.Row="4" Grid.Column="1" Command="{Binding SetUpCommand}" ></Button>
 

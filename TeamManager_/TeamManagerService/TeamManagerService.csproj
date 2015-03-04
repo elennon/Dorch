@@ -187,10 +187,12 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\NotificationsController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="Controllers\RequestPendingController.cs" />
+    <Compile Include="Controllers\RequestJoinTeamController.cs" />
+    <Compile Include="Controllers\RequestPlayController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="DataObjects\Player.cs" />
-    <Compile Include="DataObjects\RequestPending.cs" />
+    <Compile Include="DataObjects\RequestJoinTeam.cs" />
+    <Compile Include="DataObjects\RequestPlay.cs" />
     <Compile Include="DataObjects\Team.cs" />
     <Compile Include="Models\TeamManagerContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />

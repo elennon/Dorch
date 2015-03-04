@@ -35,7 +35,7 @@ namespace TeamManagerService
             plys.Add(new Player { Id = "p2", PlayerName = "Paddy Whelan", PhNumber = "0876493789" });
             plys.Add(new Player { Id = "p3", PlayerName = "Liam Dempsey", PhNumber = "0876493789" });
             plys.Add(new Player { Id = "p4", PlayerName = "Mark Brennan", PhNumber = "0876493789" });
-            plys.Add(new Player { Id = "p5", PlayerName = "John Dowling", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "0876493789", PlayerName = "Carl Marx", PhNumber = "0876493789" });
             foreach (var item in plys)
             {
                 context.Set<Player>().Add(item);
@@ -51,8 +51,9 @@ namespace TeamManagerService
                 context.Set<Team>().Add(item);
             }
 
-            RequestPending rp = new RequestPending { Id = "rp1", TeamId = "t1", PlayerId = "p1" };
-          
+            RequestJoinTeam rp = new RequestJoinTeam { Id = "666", TeamId = "t1", PlayerId = "0876493789", RequestedBy = "Hitler", Confirmed=false };
+            context.Set<RequestJoinTeam>().Add(rp);
+
             base.Seed(context);
         }
 

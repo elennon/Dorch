@@ -88,6 +88,7 @@ namespace Dorch.ViewModel
 
         public ViewTeamViewModel(INavigationService navigationService)
         {
+            ((App)Application.Current).vtvm = this;
             _navigationService = navigationService;
             this.LoadCommand = new RelayCommand<RoutedEventArgs>(OnLoadCommand);
             this.ItemSelectedCommand = new RelayCommand<object>(OnItemSelectedCommand);
@@ -105,11 +106,11 @@ namespace Dorch.ViewModel
 
         private async void OnStartCommand()
         {
-            Windows.ApplicationModel.Chat.ChatMessage msg = new Windows.ApplicationModel.Chat.ChatMessage();
-            msg.Body = "This is body of demo message.";
-            msg.Recipients.Add("0876493789");
-            
-            await Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(msg);
+            foreach (var item in ChosenPlayers)
+            {
+                RequestPlay rp = new RequestPlay{ PlayerId = item.Id, TeamId = thisTeam.Id, Confirmed = false};
+                await repo.SendPlayRequest(rp);
+            }
         }
 
         private void OnPlayerSelectedCommand(Player obj)
@@ -165,7 +166,7 @@ namespace Dorch.ViewModel
 
         public void Deactivate(object parameter)
         {
-            
+            ChosenPlayers.Clear();
         }
 
         

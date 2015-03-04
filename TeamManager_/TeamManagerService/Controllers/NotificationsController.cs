@@ -7,6 +7,7 @@ using System.Web.Http;
 using Microsoft.WindowsAzure.Mobile.Service;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using Microsoft.ServiceBus.Notifications;
 
 namespace TeamManagerService.Controllers
 {
@@ -29,8 +30,18 @@ namespace TeamManagerService.Controllers
             
             try
             {
+                //string rawNotification = string.Format("<?xml version=\"1.0\" encoding=\"utf-8\"?><toast><visual><binding template=\"ToastText01\"><text id=\"1\">{0}</text></binding></visual></toast>", data.GetValue("toast").Value<string>());              
+                //Notification notification = new Microsoft.ServiceBus.Notifications.WindowsNotification(rawNotification);
+                //notification.Headers.Add("X-WNS-Cache-Policy", "cache");             
+                //notification.Headers.Add("X-WNS-Type", "wns/raw");
+                //notification.ContentType = "application/octet-stream";
+
+           //     var outcome = await hub.SendNotificationAsync(notification);
+
+
                 IEnumerable<string> tags = new List<string> { "eel" };
                 string wnsToast = string.Format("<?xml version=\"1.0\" encoding=\"utf-8\"?><toast><visual><binding template=\"ToastText01\"><text id=\"1\">{0}</text></binding></visual></toast>", data.GetValue("toast").Value<string>());
+                
                 WindowsPushMessage message = new WindowsPushMessage();
                 message.XmlPayload = wnsToast;
         //        Services.Push.EnableTestSend = true;

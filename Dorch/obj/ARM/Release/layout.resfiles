@@ -34,6 +34,7 @@ Assets\music3.jpg
 Assets\np24.png
 Assets\np33.png
 Assets\np58.png
+Assets\person-icon.png
 Assets\SmallLogo.scale-100.png
 Assets\SmallLogo.scale-140.png
 Assets\SmallLogo.scale-240.png
@@ -51,8 +52,10 @@ Assets\WideLogo.scale-140.png
 Assets\WideLogo.scale-240.png
 App.xbf
 Dorch.xr.xml
+View\AddPlayer.xbf
 View\AddTeam.xbf
 View\BlankPage1.xbf
 View\MainPage.xbf
+View\ShowAllPlayers.xbf
 View\SignUp.xbf
 View\ViewTeam.xbf

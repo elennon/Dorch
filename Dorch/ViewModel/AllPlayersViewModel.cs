@@ -78,14 +78,7 @@ namespace Dorch.ViewModel
         private async void OnLoadCommand(RoutedEventArgs obj)
         {
             allTeams = new ObservableCollection<Team>(await repo.GetTeamsAsync());
-            //foreach (Team tm in allTeams)
-            //{
-            //    foreach (Player item in tm.Players)
-            //    {
-            //        item.PlayerImage = ReadImage.GetImage(item.Image);                   
-            //    }
-            //}
-
+      
             var tmms = GetGroups(allTeams);
             PlayersViewSource = new CollectionViewSource();
             PlayersViewSource.IsSourceGrouped = true;
@@ -101,14 +94,7 @@ namespace Dorch.ViewModel
         private async Task LoadTeams()
         {
             allTeams = new ObservableCollection<Team>(await repo.GetTeamsAsync());
-            //foreach (Team tm in allTeams)
-            //{
-            //    foreach (Player item in tm.Players)
-            //    {
-            //        item.PlayerImage = ReadImage.GetImage(item.Image); 
-            //    }
-            //}
-            
+  
             var tmms = GetGroups(allTeams);
             PlayersViewSource = new CollectionViewSource();
             PlayersViewSource.IsSourceGrouped = true;
@@ -134,7 +120,8 @@ namespace Dorch.ViewModel
             var u = thisTeam.Players.Where(a => a.Id == player.Id).Count();
             if (u < 1)
             {
-                RequestPending rp = new RequestPending { TeamId = thisTeam.Id, PlayerId = player.Id, Confirmed = false };
+                RequestJoinTeam rp = new RequestJoinTeam { TeamId = thisTeam.Id, PlayerId = player.Id, 
+                    Confirmed = false, RequestedBy = ((App)Application.Current).UserName };
                 await repo.SendRequest(rp);               
                 _navigationService.NavigateTo("ViewTeam", thisTeam);
             }

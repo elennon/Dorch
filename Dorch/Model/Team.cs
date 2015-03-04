@@ -1,5 +1,4 @@
 ﻿using Dorch.Common;
-using SQLite;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

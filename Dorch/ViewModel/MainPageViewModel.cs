@@ -10,11 +10,13 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.ApplicationModel.Background;
 using Windows.ApplicationModel.Contacts;
 using Windows.Phone.PersonalInformation;
 using Windows.Security.Credentials;
@@ -176,9 +178,39 @@ namespace Dorch.ViewModel
             this.ItemSelectedCommand = new RelayCommand<Team>(OnItemSelectedCommand);
             this.TextCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnTextCommand);
         }
+        private async void regClick()
+        {
+            Debug.WriteLine("Registering task");
+            var taskRegistered = false;
+            var exampleTaskName = "UpdateTile";
 
+            foreach (var task in BackgroundTaskRegistration.AllTasks)
+            {
+                if (task.Value.Name == exampleTaskName)
+                {
+                    //taskRegistered = true;
+                    task.Value.Unregister(true);
+                    break;
+                }
+            }
+
+            await BackgroundExecutionManager.RequestAccessAsync();
+            if (!taskRegistered)
+            {
+                Debug.WriteLine("Registering task inside");
+                var builder = new BackgroundTaskBuilder();
+                builder.Name = exampleTaskName;
+                builder.TaskEntryPoint = "BackgroundUpdateTile.UpdateTile";
+                builder.SetTrigger(new PushNotificationTrigger());
+                //builder.SetTrigger(new SystemTrigger(SystemTriggerType.TimeZoneChange, false));
+                //builder.SetTrigger(new SystemTrigger(SystemTriggerType.NetworkStateChange, false));
+                BackgroundTaskRegistration task = builder.Register();
+                await new MessageDialog("Task registered!").ShowAsync();
+            }
+        }
         private async void OnLoadCommand(RoutedEventArgs obj)
         {
+            //regClick();
             //await AuthenticateAsync();
             //App.InitNotificationsAsync();
             List<Team> lst = await repo.GetTeamsAsync();
@@ -194,7 +226,7 @@ namespace Dorch.ViewModel
 
         private async void OnTextCommand()
         {
-            RequestPending rp = new RequestPending { PlayerId = "croc", TeamId = "fish" };
+            RequestJoinTeam rp = new RequestJoinTeam { PlayerId = "0876493789", TeamId = "t3" };
             await repo.SendRequest(rp);
             //_navigationService.NavigateTo("ShowAllPlayers");
         }
@@ -212,15 +244,13 @@ namespace Dorch.ViewModel
 
         private void OnFillDbCommand()
         {
-            repo.fillDb();
+            //repo.fillDb();
         }
 
         private void OnEditCommand(Team obj)
         {
             editMode = !editMode;               // switch edit mode
             IsVisible = !IsVisible;
-            //if (IsVisible) _isVisible = false;
-            //else IsVisible = true;
         }
 
         private void OnDeleteSelectedCommand(Team obj)

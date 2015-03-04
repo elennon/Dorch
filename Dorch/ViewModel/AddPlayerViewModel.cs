@@ -111,7 +111,7 @@ namespace Dorch.ViewModel
                     Image = ImageBytes,                    
                 };
 
-                bool isNew = await repo.AddNewPlayerAsync(pl, thisTeam);          // isNew true if player is new to db and not in any other teams
+                bool isNew = await repo.AddNewPlayerAsync(pl, thisTeam, ((App)Application.Current).UserName);          // isNew true if player is new to db and not in any other teams
                 
                 if (isNew)
                 {

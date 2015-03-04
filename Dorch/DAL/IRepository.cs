@@ -16,11 +16,20 @@ namespace Dorch.DAL
         void DeleteTeam(Team tm);
 
         Task<List<Player>> GetPlayersAsync();
-        Task<bool> AddNewPlayerAsync(Player pl, Team tm);
+        Task<Player> GetThisPlayerAsync(string id);
+
+        Task<bool> AddNewPlayerAsync(Player pl, Team tm, string requestedBy);
         Task AddNewPlayerOnSignUpAsync(Player pl);
 
-        Task SendRequest(RequestPending rp);
+        Task ConfirmJoinTeam(RequestJoinTeam checkRequest, Player playerToAdd);
 
-        void fillDb();
+        Task SendRequest(RequestJoinTeam rp);
+        Task<RequestJoinTeam> GetJoinTeamRequestrAsync(string id);
+
+        Task SendPlayRequest(RequestPlay rp);
+        Task<RequestPlay> GetPlayRequestrAsync(string id);
+        Task ConfirmPlay(RequestPlay playRequest);
+
+        //void fillDb();
     }
 }

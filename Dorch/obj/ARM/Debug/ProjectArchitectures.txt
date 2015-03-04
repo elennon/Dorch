@@ -1,1 +1,2 @@
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\BackgroundUpdateTile.csproj;neutral
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Dorch.csproj;arm

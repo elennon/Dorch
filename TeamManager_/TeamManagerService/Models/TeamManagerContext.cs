@@ -27,7 +27,7 @@ namespace TeamManagerService.Models
 
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }
-        public DbSet<RequestPending> RequestPendings { get; set; }
+        public DbSet<RequestJoinTeam> RequestPendings { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -43,7 +43,9 @@ namespace TeamManagerService.Models
 
             modelBuilder.Entity<Team>().HasMany(t => t.Players).WithMany(t => t.Teams);
                                                            
-        }        
+        }
+
+        public System.Data.Entity.DbSet<TeamManagerService.DataObjects.RequestPlay> RequestPlays { get; set; }        
     }
 
 }
