@@ -1,4 +1,4 @@
-MainPackage=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.19_Bundle\Dorch_1.1.0.19_ARM.appx
-SymbolPackage=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\AppPackages\Dorch_1.1.0.19_Test\Dorch_1.1.0.19_ARM.appxsym
-ResourcePack=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.19_Bundle\Dorch_1.1.0.19_scale-100.appx
-ResourcePack=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.19_Bundle\Dorch_1.1.0.19_scale-140.appx
+MainPackage=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.27_Bundle\Dorch_1.1.0.27_ARM.appx
+SymbolPackage=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\AppPackages\Dorch_1.1.0.27_Test\Dorch_1.1.0.27_ARM.appxsym
+ResourcePack=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.27_Bundle\Dorch_1.1.0.27_scale-100.appx
+ResourcePack=C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\Dorch_1.1.0.27_Bundle\Dorch_1.1.0.27_scale-140.appx

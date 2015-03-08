@@ -148,7 +148,7 @@ namespace Dorch.Dorch_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[37];
+            _typeNameTable = new string[39];
             _typeNameTable[0] = "Dorch.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Dorch.ViewModel.MainPageViewModel";
@@ -159,35 +159,37 @@ namespace Dorch.Dorch_XamlTypeInfo
             _typeNameTable[7] = "Dorch.ViewModel.SignUpViewModel";
             _typeNameTable[8] = "Dorch.ViewModel.AddPlayerViewModel";
             _typeNameTable[9] = "Dorch.ViewModel.AllPlayersViewModel";
-            _typeNameTable[10] = "Dorch.Common.BindablePage";
-            _typeNameTable[11] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[13] = "Dorch.View.AddPlayer";
-            _typeNameTable[14] = "Dorch.Common.NavigationHelper";
-            _typeNameTable[15] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[16] = "Dorch.View.AddTeam";
-            _typeNameTable[17] = "Dorch.View.BlankPage1";
-            _typeNameTable[18] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[19] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[20] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[21] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[22] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[23] = "String";
-            _typeNameTable[24] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[25] = "System.Windows.Input.ICommand";
-            _typeNameTable[26] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[27] = "Dorch.Converters.ItemClickedConverter";
-            _typeNameTable[28] = "Dorch.Converters.BooleanToVisibilityConverter";
-            _typeNameTable[29] = "Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior";
-            _typeNameTable[30] = "Int32";
-            _typeNameTable[31] = "Dorch.View.MainPage";
-            _typeNameTable[32] = "Windows.UI.Xaml.Media.ImageSource";
-            _typeNameTable[33] = "Dorch.Common.ObservableDictionary";
-            _typeNameTable[34] = "Dorch.View.ShowAllPlayers";
-            _typeNameTable[35] = "Dorch.View.SignUp";
-            _typeNameTable[36] = "Dorch.View.ViewTeam";
+            _typeNameTable[10] = "Dorch.ViewModel.SetTimerViewModel";
+            _typeNameTable[11] = "Dorch.Common.BindablePage";
+            _typeNameTable[12] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[13] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[14] = "Dorch.View.AddPlayer";
+            _typeNameTable[15] = "Dorch.Common.NavigationHelper";
+            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[17] = "Dorch.View.AddTeam";
+            _typeNameTable[18] = "Dorch.View.BlankPage1";
+            _typeNameTable[19] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[20] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[21] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[22] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[23] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[24] = "String";
+            _typeNameTable[25] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[26] = "System.Windows.Input.ICommand";
+            _typeNameTable[27] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[28] = "Dorch.Converters.ItemClickedConverter";
+            _typeNameTable[29] = "Dorch.Converters.BooleanToVisibilityConverter";
+            _typeNameTable[30] = "Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior";
+            _typeNameTable[31] = "Int32";
+            _typeNameTable[32] = "Dorch.View.MainPage";
+            _typeNameTable[33] = "Windows.UI.Xaml.Media.ImageSource";
+            _typeNameTable[34] = "Dorch.Common.ObservableDictionary";
+            _typeNameTable[35] = "Dorch.View.SetTimer";
+            _typeNameTable[36] = "Dorch.View.ShowAllPlayers";
+            _typeNameTable[37] = "Dorch.View.SignUp";
+            _typeNameTable[38] = "Dorch.View.ViewTeam";
 
-            _typeTable = new global::System.Type[37];
+            _typeTable = new global::System.Type[39];
             _typeTable[0] = typeof(global::Dorch.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Dorch.ViewModel.MainPageViewModel);
@@ -198,33 +200,35 @@ namespace Dorch.Dorch_XamlTypeInfo
             _typeTable[7] = typeof(global::Dorch.ViewModel.SignUpViewModel);
             _typeTable[8] = typeof(global::Dorch.ViewModel.AddPlayerViewModel);
             _typeTable[9] = typeof(global::Dorch.ViewModel.AllPlayersViewModel);
-            _typeTable[10] = typeof(global::Dorch.Common.BindablePage);
-            _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[13] = typeof(global::Dorch.View.AddPlayer);
-            _typeTable[14] = typeof(global::Dorch.Common.NavigationHelper);
-            _typeTable[15] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[16] = typeof(global::Dorch.View.AddTeam);
-            _typeTable[17] = typeof(global::Dorch.View.BlankPage1);
-            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[20] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[23] = typeof(global::System.String);
-            _typeTable[24] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[25] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[26] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[27] = typeof(global::Dorch.Converters.ItemClickedConverter);
-            _typeTable[28] = typeof(global::Dorch.Converters.BooleanToVisibilityConverter);
-            _typeTable[29] = typeof(global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior);
-            _typeTable[30] = typeof(global::System.Int32);
-            _typeTable[31] = typeof(global::Dorch.View.MainPage);
-            _typeTable[32] = typeof(global::Windows.UI.Xaml.Media.ImageSource);
-            _typeTable[33] = typeof(global::Dorch.Common.ObservableDictionary);
-            _typeTable[34] = typeof(global::Dorch.View.ShowAllPlayers);
-            _typeTable[35] = typeof(global::Dorch.View.SignUp);
-            _typeTable[36] = typeof(global::Dorch.View.ViewTeam);
+            _typeTable[10] = typeof(global::Dorch.ViewModel.SetTimerViewModel);
+            _typeTable[11] = typeof(global::Dorch.Common.BindablePage);
+            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[14] = typeof(global::Dorch.View.AddPlayer);
+            _typeTable[15] = typeof(global::Dorch.Common.NavigationHelper);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[17] = typeof(global::Dorch.View.AddTeam);
+            _typeTable[18] = typeof(global::Dorch.View.BlankPage1);
+            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[21] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[23] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[24] = typeof(global::System.String);
+            _typeTable[25] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[26] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[27] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[28] = typeof(global::Dorch.Converters.ItemClickedConverter);
+            _typeTable[29] = typeof(global::Dorch.Converters.BooleanToVisibilityConverter);
+            _typeTable[30] = typeof(global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior);
+            _typeTable[31] = typeof(global::System.Int32);
+            _typeTable[32] = typeof(global::Dorch.View.MainPage);
+            _typeTable[33] = typeof(global::Windows.UI.Xaml.Media.ImageSource);
+            _typeTable[34] = typeof(global::Dorch.Common.ObservableDictionary);
+            _typeTable[35] = typeof(global::Dorch.View.SetTimer);
+            _typeTable[36] = typeof(global::Dorch.View.ShowAllPlayers);
+            _typeTable[37] = typeof(global::Dorch.View.SignUp);
+            _typeTable[38] = typeof(global::Dorch.View.ViewTeam);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -261,35 +265,36 @@ namespace Dorch.Dorch_XamlTypeInfo
 
         private object Activate_0_ViewModelLocator() { return new global::Dorch.ViewModel.ViewModelLocator(); }
         private object Activate_4_ObservableObject() { return new global::GalaSoft.MvvmLight.ObservableObject(); }
-        private object Activate_10_BindablePage() { return new global::Dorch.Common.BindablePage(); }
-        private object Activate_13_AddPlayer() { return new global::Dorch.View.AddPlayer(); }
-        private object Activate_16_AddTeam() { return new global::Dorch.View.AddTeam(); }
-        private object Activate_17_BlankPage1() { return new global::Dorch.View.BlankPage1(); }
-        private object Activate_19_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_21_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_22_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_24_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_27_ItemClickedConverter() { return new global::Dorch.Converters.ItemClickedConverter(); }
-        private object Activate_28_BooleanToVisibilityConverter() { return new global::Dorch.Converters.BooleanToVisibilityConverter(); }
-        private object Activate_29_IncrementalUpdateBehavior() { return new global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior(); }
-        private object Activate_31_MainPage() { return new global::Dorch.View.MainPage(); }
-        private object Activate_33_ObservableDictionary() { return new global::Dorch.Common.ObservableDictionary(); }
-        private object Activate_34_ShowAllPlayers() { return new global::Dorch.View.ShowAllPlayers(); }
-        private object Activate_35_SignUp() { return new global::Dorch.View.SignUp(); }
-        private object Activate_36_ViewTeam() { return new global::Dorch.View.ViewTeam(); }
-        private void VectorAdd_19_BehaviorCollection(object instance, object item)
+        private object Activate_11_BindablePage() { return new global::Dorch.Common.BindablePage(); }
+        private object Activate_14_AddPlayer() { return new global::Dorch.View.AddPlayer(); }
+        private object Activate_17_AddTeam() { return new global::Dorch.View.AddTeam(); }
+        private object Activate_18_BlankPage1() { return new global::Dorch.View.BlankPage1(); }
+        private object Activate_20_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_22_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_23_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_25_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_28_ItemClickedConverter() { return new global::Dorch.Converters.ItemClickedConverter(); }
+        private object Activate_29_BooleanToVisibilityConverter() { return new global::Dorch.Converters.BooleanToVisibilityConverter(); }
+        private object Activate_30_IncrementalUpdateBehavior() { return new global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior(); }
+        private object Activate_32_MainPage() { return new global::Dorch.View.MainPage(); }
+        private object Activate_34_ObservableDictionary() { return new global::Dorch.Common.ObservableDictionary(); }
+        private object Activate_35_SetTimer() { return new global::Dorch.View.SetTimer(); }
+        private object Activate_36_ShowAllPlayers() { return new global::Dorch.View.ShowAllPlayers(); }
+        private object Activate_37_SignUp() { return new global::Dorch.View.SignUp(); }
+        private object Activate_38_ViewTeam() { return new global::Dorch.View.ViewTeam(); }
+        private void VectorAdd_20_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_22_ActionCollection(object instance, object item)
+        private void VectorAdd_23_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void MapAdd_33_ObservableDictionary(object instance, object key, object item)
+        private void MapAdd_34_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -316,6 +321,7 @@ namespace Dorch.Dorch_XamlTypeInfo
                 userType.AddMemberName("SignUpViewModel");
                 userType.AddMemberName("AddPlayerViewModel");
                 userType.AddMemberName("AllPlayersViewModel");
+                userType.AddMemberName("SetTimerViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -377,75 +383,82 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Dorch.Common.BindablePage
-                userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_BindablePage;
+            case 10:   //  Dorch.ViewModel.SetTimerViewModel
+                userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  Windows.UI.Xaml.Controls.Page
+            case 11:   //  Dorch.Common.BindablePage
+                userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_11_BindablePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 12:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.UserControl
+            case 13:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  Dorch.View.AddPlayer
+            case 14:   //  Dorch.View.AddPlayer
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_13_AddPlayer;
+                userType.Activator = Activate_14_AddPlayer;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  Dorch.Common.NavigationHelper
+            case 15:   //  Dorch.Common.NavigationHelper
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Windows.UI.Xaml.DependencyObject
+            case 16:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 16:   //  Dorch.View.AddTeam
+            case 17:   //  Dorch.View.AddTeam
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_16_AddTeam;
+                userType.Activator = Activate_17_AddTeam;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Dorch.View.BlankPage1
+            case 18:   //  Dorch.View.BlankPage1
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_17_BlankPage1;
+                userType.Activator = Activate_18_BlankPage1;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 19:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 20:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_19_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_20_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 21:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 22:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_21_EventTriggerBehavior;
+                userType.Activator = Activate_22_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -454,20 +467,20 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 22:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 23:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_22_ActionCollection;
+                userType.CollectionAdd = VectorAdd_23_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 23:   //  String
+            case 24:   //  String
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 24:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 25:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_24_InvokeCommandAction;
+                userType.Activator = Activate_25_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -476,45 +489,45 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 25:   //  System.Windows.Input.ICommand
+            case 26:   //  System.Windows.Input.ICommand
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 27:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 27:   //  Dorch.Converters.ItemClickedConverter
+            case 28:   //  Dorch.Converters.ItemClickedConverter
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_27_ItemClickedConverter;
+                userType.Activator = Activate_28_ItemClickedConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 28:   //  Dorch.Converters.BooleanToVisibilityConverter
+            case 29:   //  Dorch.Converters.BooleanToVisibilityConverter
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_28_BooleanToVisibilityConverter;
+                userType.Activator = Activate_29_BooleanToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior
+            case 30:   //  Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_29_IncrementalUpdateBehavior;
+                userType.Activator = Activate_30_IncrementalUpdateBehavior;
                 userType.AddMemberName("Phase");
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 30:   //  Int32
+            case 31:   //  Int32
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 31:   //  Dorch.View.MainPage
+            case 32:   //  Dorch.View.MainPage
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_31_MainPage;
+                userType.Activator = Activate_32_MainPage;
                 userType.AddMemberName("UserImage");
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
@@ -522,37 +535,45 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 32:   //  Windows.UI.Xaml.Media.ImageSource
+            case 33:   //  Windows.UI.Xaml.Media.ImageSource
                 xamlType = new global::Dorch.Dorch_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  Dorch.Common.ObservableDictionary
+            case 34:   //  Dorch.Common.ObservableDictionary
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_33_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_34_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 34:   //  Dorch.View.ShowAllPlayers
+            case 35:   //  Dorch.View.SetTimer
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_34_ShowAllPlayers;
+                userType.Activator = Activate_35_SetTimer;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 35:   //  Dorch.View.SignUp
+            case 36:   //  Dorch.View.ShowAllPlayers
+                userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
+                userType.Activator = Activate_36_ShowAllPlayers;
+                userType.AddMemberName("NavigationHelper");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 37:   //  Dorch.View.SignUp
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_35_SignUp;
+                userType.Activator = Activate_37_SignUp;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 36:   //  Dorch.View.ViewTeam
+            case 38:   //  Dorch.View.ViewTeam
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_36_ViewTeam;
+                userType.Activator = Activate_38_ViewTeam;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -645,145 +666,155 @@ namespace Dorch.Dorch_XamlTypeInfo
             var that = (global::Dorch.ViewModel.ViewModelLocator)instance;
             return that.AllPlayersViewModel;
         }
-        private object get_6_AddPlayer_NavigationHelper(object instance)
+        private object get_6_ViewModelLocator_SetTimerViewModel(object instance)
+        {
+            var that = (global::Dorch.ViewModel.ViewModelLocator)instance;
+            return that.SetTimerViewModel;
+        }
+        private object get_7_AddPlayer_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.AddPlayer)instance;
             return that.NavigationHelper;
         }
-        private object get_7_AddTeam_NavigationHelper(object instance)
+        private object get_8_AddTeam_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.AddTeam)instance;
             return that.NavigationHelper;
         }
-        private object get_8_Interaction_Behaviors(object instance)
+        private object get_9_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_8_Interaction_Behaviors(object instance, object Value)
+        private void set_9_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_9_EventTriggerBehavior_Actions(object instance)
+        private object get_10_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_10_EventTriggerBehavior_EventName(object instance)
+        private object get_11_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_10_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_11_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_11_EventTriggerBehavior_SourceObject(object instance)
+        private object get_12_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_11_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_12_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_12_EventTriggerBehavior_AssociatedObject(object instance)
+        private object get_13_EventTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_13_InvokeCommandAction_Command(object instance)
+        private object get_14_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_13_InvokeCommandAction_Command(object instance, object Value)
+        private void set_14_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_14_InvokeCommandAction_CommandParameter(object instance)
+        private object get_15_InvokeCommandAction_CommandParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.CommandParameter;
         }
-        private void set_14_InvokeCommandAction_CommandParameter(object instance, object Value)
+        private void set_15_InvokeCommandAction_CommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_15_InvokeCommandAction_InputConverter(object instance)
+        private object get_16_InvokeCommandAction_InputConverter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverter;
         }
-        private void set_15_InvokeCommandAction_InputConverter(object instance, object Value)
+        private void set_16_InvokeCommandAction_InputConverter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverter = (global::Windows.UI.Xaml.Data.IValueConverter)Value;
         }
-        private object get_16_InvokeCommandAction_InputConverterParameter(object instance)
+        private object get_17_InvokeCommandAction_InputConverterParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterParameter;
         }
-        private void set_16_InvokeCommandAction_InputConverterParameter(object instance, object Value)
+        private void set_17_InvokeCommandAction_InputConverterParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterParameter = (global::System.Object)Value;
         }
-        private object get_17_InvokeCommandAction_InputConverterLanguage(object instance)
+        private object get_18_InvokeCommandAction_InputConverterLanguage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterLanguage;
         }
-        private void set_17_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
+        private void set_18_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
         }
-        private object get_18_IncrementalUpdateBehavior_Phase(object instance)
+        private object get_19_IncrementalUpdateBehavior_Phase(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior)instance;
             return that.Phase;
         }
-        private void set_18_IncrementalUpdateBehavior_Phase(object instance, object Value)
+        private void set_19_IncrementalUpdateBehavior_Phase(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior)instance;
             that.Phase = (global::System.Int32)Value;
         }
-        private object get_19_IncrementalUpdateBehavior_AssociatedObject(object instance)
+        private object get_20_IncrementalUpdateBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_20_MainPage_UserImage(object instance)
+        private object get_21_MainPage_UserImage(object instance)
         {
             var that = (global::Dorch.View.MainPage)instance;
             return that.UserImage;
         }
-        private object get_21_MainPage_NavigationHelper(object instance)
+        private object get_22_MainPage_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.MainPage)instance;
             return that.NavigationHelper;
         }
-        private object get_22_MainPage_DefaultViewModel(object instance)
+        private object get_23_MainPage_DefaultViewModel(object instance)
         {
             var that = (global::Dorch.View.MainPage)instance;
             return that.DefaultViewModel;
         }
-        private object get_23_ShowAllPlayers_NavigationHelper(object instance)
+        private object get_24_SetTimer_NavigationHelper(object instance)
+        {
+            var that = (global::Dorch.View.SetTimer)instance;
+            return that.NavigationHelper;
+        }
+        private object get_25_ShowAllPlayers_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.ShowAllPlayers)instance;
             return that.NavigationHelper;
         }
-        private object get_24_SignUp_NavigationHelper(object instance)
+        private object get_26_SignUp_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.SignUp)instance;
             return that.NavigationHelper;
         }
-        private object get_25_ViewTeam_NavigationHelper(object instance)
+        private object get_27_ViewTeam_NavigationHelper(object instance)
         {
             var that = (global::Dorch.View.ViewTeam)instance;
             return that.NavigationHelper;
@@ -832,16 +863,22 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlMember.Getter = get_5_ViewModelLocator_AllPlayersViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Dorch.ViewModel.ViewModelLocator.SetTimerViewModel":
+                userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.ViewModel.ViewModelLocator");
+                xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "SetTimerViewModel", "Dorch.ViewModel.SetTimerViewModel");
+                xamlMember.Getter = get_6_ViewModelLocator_SetTimerViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Dorch.View.AddPlayer.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.AddPlayer");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_6_AddPlayer_NavigationHelper;
+                xamlMember.Getter = get_7_AddPlayer_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.AddTeam.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.AddTeam");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_7_AddTeam_NavigationHelper;
+                xamlMember.Getter = get_8_AddTeam_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
@@ -849,118 +886,124 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_8_Interaction_Behaviors;
-                xamlMember.Setter = set_8_Interaction_Behaviors;
+                xamlMember.Getter = get_9_Interaction_Behaviors;
+                xamlMember.Setter = set_9_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_10_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_10_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_11_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_11_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_11_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_12_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_12_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_12_EventTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_13_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_InvokeCommandAction_Command;
-                xamlMember.Setter = set_13_InvokeCommandAction_Command;
+                xamlMember.Getter = get_14_InvokeCommandAction_Command;
+                xamlMember.Setter = set_14_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_14_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_14_InvokeCommandAction_CommandParameter;
+                xamlMember.Getter = get_15_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_15_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_InvokeCommandAction_InputConverter;
-                xamlMember.Setter = set_15_InvokeCommandAction_InputConverter;
+                xamlMember.Getter = get_16_InvokeCommandAction_InputConverter;
+                xamlMember.Setter = set_16_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_InvokeCommandAction_InputConverterParameter;
-                xamlMember.Setter = set_16_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Getter = get_17_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Setter = set_17_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_InvokeCommandAction_InputConverterLanguage;
-                xamlMember.Setter = set_17_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Getter = get_18_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Setter = set_18_InvokeCommandAction_InputConverterLanguage;
                 break;
             case "Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior.Phase":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "Phase", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_IncrementalUpdateBehavior_Phase;
-                xamlMember.Setter = set_18_IncrementalUpdateBehavior_Phase;
+                xamlMember.Getter = get_19_IncrementalUpdateBehavior_Phase;
+                xamlMember.Setter = set_19_IncrementalUpdateBehavior_Phase;
                 break;
             case "Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior.AssociatedObject":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_19_IncrementalUpdateBehavior_AssociatedObject;
+                xamlMember.Getter = get_20_IncrementalUpdateBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.MainPage.UserImage":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.MainPage");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "UserImage", "Windows.UI.Xaml.Media.ImageSource");
-                xamlMember.Getter = get_20_MainPage_UserImage;
+                xamlMember.Getter = get_21_MainPage_UserImage;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.MainPage.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.MainPage");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_21_MainPage_NavigationHelper;
+                xamlMember.Getter = get_22_MainPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.MainPage.DefaultViewModel":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.MainPage");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "Dorch.Common.ObservableDictionary");
-                xamlMember.Getter = get_22_MainPage_DefaultViewModel;
+                xamlMember.Getter = get_23_MainPage_DefaultViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "Dorch.View.SetTimer.NavigationHelper":
+                userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.SetTimer");
+                xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
+                xamlMember.Getter = get_24_SetTimer_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.ShowAllPlayers.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.ShowAllPlayers");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_23_ShowAllPlayers_NavigationHelper;
+                xamlMember.Getter = get_25_ShowAllPlayers_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.SignUp.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.SignUp");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_24_SignUp_NavigationHelper;
+                xamlMember.Getter = get_26_SignUp_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Dorch.View.ViewTeam.NavigationHelper":
                 userType = (global::Dorch.Dorch_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Dorch.View.ViewTeam");
                 xamlMember = new global::Dorch.Dorch_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Dorch.Common.NavigationHelper");
-                xamlMember.Getter = get_25_ViewTeam_NavigationHelper;
+                xamlMember.Getter = get_27_ViewTeam_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             }
@@ -1288,7 +1331,6 @@ namespace Dorch.Dorch_XamlTypeInfo
         }
     }
 }
-
 
 
 

@@ -1,3 +1,4 @@
+Assets\_cross.png
 Assets\BadgeLogo.scale-100.png
 Assets\BadgeLogo.scale-140.png
 Assets\BadgeLogo.scale-240.png
@@ -30,6 +31,7 @@ Assets\Logo.scale-140.png
 Assets\Logo.scale-240.png
 Assets\logo2.png
 Assets\Malaga.png
+Assets\messa150.png
 Assets\music2.jpg
 Assets\music3.jpg
 Assets\np24.png
@@ -48,6 +50,7 @@ Assets\Square71x71Logo.scale-240.png
 Assets\StoreLogo.scale-100.png
 Assets\StoreLogo.scale-140.png
 Assets\StoreLogo.scale-240.png
+Assets\tickk.png
 Assets\WideLogo.scale-100.png
 Assets\WideLogo.scale-140.png
 Assets\WideLogo.scale-240.png
@@ -57,6 +60,7 @@ View\AddPlayer.xbf
 View\AddTeam.xbf
 View\BlankPage1.xbf
 View\MainPage.xbf
+View\SetTimer.xbf
 View\ShowAllPlayers.xbf
 View\SignUp.xbf
 View\ViewTeam.xbf

@@ -166,6 +166,9 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Malaga.png">
       <PackagePath>Assets\Malaga.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\messa150.png">
+      <PackagePath>Assets\messa150.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\np24.png">
       <PackagePath>Assets\np24.png</PackagePath>
     </AppxPackagedFile>
@@ -264,6 +267,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\SetTimer.xbf">
+      <PackagePath>View\SetTimer.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\ShowAllPlayers.xbf">
       <PackagePath>View\ShowAllPlayers.xbf</PackagePath>

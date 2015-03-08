@@ -99,6 +99,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\SetTimer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ShowAllPlayers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,6 +122,7 @@
     </Compile>
     <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Common\BindablePage.cs" />
+    <Compile Include="Model\Message.cs" />
     <Compile Include="Utilities\ReadImage.cs" />
     <Compile Include="Common\INavigable.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
@@ -140,6 +145,7 @@
     <Compile Include="ViewModel\AddTeamViewModel.cs" />
     <Compile Include="ViewModel\AllPlayersViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
+    <Compile Include="ViewModel\SetTimerViewModel.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Compile Include="ViewModel\ViewTeamViewModel.cs" />
@@ -154,6 +160,9 @@
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SetTimer.xaml.cs">
+      <DependentUpon>SetTimer.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ShowAllPlayers.xaml.cs">
       <DependentUpon>ShowAllPlayers.xaml</DependentUpon>
@@ -205,6 +214,7 @@
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\logo2.png" />
     <Content Include="Assets\Malaga.png" />
+    <Content Include="Assets\messa150.png" />
     <Content Include="Assets\music2.jpg" />
     <Content Include="Assets\music3.jpg" />
     <Content Include="Assets\np24.png" />

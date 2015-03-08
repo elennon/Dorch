@@ -14,7 +14,6 @@
 
 
     <Grid x:Name="LayoutRoot">
-
         <Grid.ChildrenTransitions>
             <TransitionCollection>
                 <EntranceThemeTransition/>
@@ -39,9 +38,6 @@
             <TextBlock Text="Team Manager" Margin="0,-6.5,0,26.5" Style="{ThemeResource HeaderTextBlockStyle}" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}"/>
         </StackPanel>
 
-        <!--TODO: Content should be placed within the following grid-->
-
-
         <TextBlock Text="Team Name:" Grid.Row="1" VerticalAlignment="Center" Margin= "14,0,0,0" Style="{StaticResource BaseTextBlockStyle}"/>
         <TextBox x:Name="txtTeamName" Text="{Binding TeamName, Mode=TwoWay}" Grid.Column="1" Grid.Row="1"  VerticalAlignment="Center" Width="190" Margin="10"/>
 
@@ -50,7 +46,6 @@
 
         <TextBlock Text="Team Size:" Grid.Row="3" VerticalAlignment="Center"  Margin= "14,0,0,0" Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
         <TextBox x:Name="txtTeamSize" Text="{Binding Size, Mode=TwoWay}" Grid.Column="1" Grid.Row="3"  VerticalAlignment="Center" Width="190" Margin="10"/>
-
 
         <StackPanel Grid.Row="4" Margin="14,0,0,0" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Button Content="Add an image" VerticalAlignment="Center"  Command="{Binding FilePickerCommand}" ></Button>
@@ -77,10 +72,8 @@
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.PrimaryCommands>
-                <AppBarButton  Icon="Edit"  Label="Toast" Command="{Binding ToastCommand}"  />  
-                
-            </CommandBar.PrimaryCommands>
-            
+                <AppBarButton  Icon="Edit"  Label="Toast" Command="{Binding ToastCommand}"  />                  
+            </CommandBar.PrimaryCommands>            
         </CommandBar>
     </Page.BottomAppBar>
 </common:BindablePage>

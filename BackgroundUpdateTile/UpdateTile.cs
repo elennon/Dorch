@@ -51,7 +51,7 @@ namespace BackgroundUpdateTile
             tileTextAttributes[0].InnerText = "otification";
 
             XmlNodeList tileImageAttributes = tileXml.GetElementsByTagName("image");
-            ((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/Malaga.png");
+            ((XmlElement)tileImageAttributes[0]).SetAttribute("src", "ms-appx:///Assets/messa150.png");
             ((XmlElement)tileImageAttributes[0]).SetAttribute("alt", "message recieved");
 
             //XmlDocument squareTileXml = TileUpdateManager.GetTemplateContent(TileTemplateType.TileSquare150x150Text04);

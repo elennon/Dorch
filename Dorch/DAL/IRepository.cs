@@ -30,5 +30,7 @@ namespace Dorch.DAL
         Task<RequestPlay> GetPlayRequestrAsync(string id);
         Task ConfirmPlay(RequestPlay playRequest);
 
+        Task SendMessage(Message message);
+        Task<Message> GetMessage(string id);
     }
 }

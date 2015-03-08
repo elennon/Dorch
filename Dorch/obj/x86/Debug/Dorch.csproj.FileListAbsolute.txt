@@ -107,3 +107,8 @@ C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\Micr
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\BackgroundUpdateTile.winmd
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\BackgroundUpdateTile.pdb
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\BackgroundUpdateTile.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\View\SetTimer.xbf
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\View\SetTimer.g.i.cs
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\View\SetTimer.g.cs
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\View\SetTimer.xaml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\x86\Debug\View\SetTimer.xbf

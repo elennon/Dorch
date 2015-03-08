@@ -78,13 +78,11 @@ namespace Dorch.ViewModel
             Contact contact = await contactPicker.PickContactAsync();
 
             var pic = await GetThumbNail(contact);
-            var ph = contact.Phones.FirstOrDefault();
-            string id = contact.DisplayName + "," + ph.Number;
+            var ph = contact.Phones.FirstOrDefault();           
             this.PlayerName = contact.DisplayName;
             this.Phone = ph.Number;
             ImageBytes = pic;
-            SaveNewPlayer(id);
-
+            SaveNewPlayer(ph.Number);
         }
 
         private void OnAddPlayerCommand()
@@ -92,10 +90,7 @@ namespace Dorch.ViewModel
             if (PlayerName == "") { Toast("Fill in name please."); return; }
             else if (Phone == "") { Toast("Fill in Phone No. please."); return; }
             else if (Image == "") { Image = "person-icon.png"; }
-
-            string id = PlayerName + "," + Phone;
-
-            SaveNewPlayer(id);
+            SaveNewPlayer(Phone);
         }
 
         private async void SaveNewPlayer(string id)
@@ -118,7 +113,7 @@ namespace Dorch.ViewModel
                     Windows.ApplicationModel.Chat.ChatMessage msg = new Windows.ApplicationModel.Chat.ChatMessage();
                     msg.Body = "Hi " + PlayerName + ". " + ((App)Application.Current).UserName + " sent this request to join "
                         + thisTeam.TeamName + ". You can download the app here to get started. http://itsligo.ie/ ";
-                    msg.Recipients.Add("0892392943");
+                    msg.Recipients.Add(Phone);
 
                     await Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(msg);
                 }

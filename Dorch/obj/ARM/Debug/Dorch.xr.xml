@@ -19,8 +19,8 @@
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="TeamName" />
     <RootPropertyPathName Name="ToastCommand" />
-    <RootPropertyPathName Name="thisTeam" />
-    <RootPropertyPathName Name="PlayerTargetNumber" />
+    <RootPropertyPathName Name="Messages" />
+    <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="MainPageViewModel" />
     <RootPropertyPathName Name="LoadCommand" />
     <RootPropertyPathName Name="DataContext" />
@@ -32,6 +32,10 @@
     <RootPropertyPathName Name="TextCommand" />
     <RootPropertyPathName Name="EditCommand" />
     <RootPropertyPathName Name="FillDbCommand" />
+    <RootPropertyPathName Name="SetTimerViewModel" />
+    <RootPropertyPathName Name="DoneCommand" />
+    <RootPropertyPathName Name="SetTime" />
+    <RootPropertyPathName Name="Days" />
     <RootPropertyPathName Name="AllPlayersViewModel" />
     <RootPropertyPathName Name="Group" />
     <RootPropertyPathName Name="BackgroundColour" />
@@ -41,6 +45,7 @@
     <RootPropertyPathName Name="PlayersViewSource" />
     <RootPropertyPathName Name="View" />
     <RootPropertyPathName Name="CollectionGroups" />
+    <RootPropertyPathName Name="thisTeam" />
     <RootPropertyPathName Name="RefreshCommand" />
     <RootPropertyPathName Name="SignUpViewModel" />
     <RootPropertyPathName Name="SetUpCommand" />
@@ -48,11 +53,15 @@
     <RootPropertyPathName Name="ViewTeamViewModel" />
     <RootPropertyPathName Name="InOutImage" />
     <RootPropertyPathName Name="PlayerSelectedCommand" />
+    <RootPropertyPathName Name="MessageToSend" />
+    <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="StatusPlayers" />
     <RootPropertyPathName Name="StartCommand" />
     <RootPropertyPathName Name="ChosenSubs" />
     <RootPropertyPathName Name="ChosenPlayers" />
     <RootPropertyPathName Name="Players" />
+    <RootPropertyPathName Name="SendMessageCommand" />
+    <RootPropertyPathName Name="SetTimerCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -129,6 +138,11 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="AcceptsReturn" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="IsReadOnly" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
       <RootProperty Name="VerticalOffset" />
@@ -152,6 +166,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Command" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RichTextBlock">
@@ -193,8 +208,22 @@
       <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="IsSwipeEnabled" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="GroupStyle" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
+      <RootMethod Name="GetExitElementContainer" />
+      <RootMethod Name="SetExitElementContainer" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
     <RootType FullName="Dorch.View.BlankPage1" />
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
@@ -212,9 +241,6 @@
     </RootType>
     <RootType FullName="Dorch.Converters.ItemClickedConverter" />
     <RootType FullName="Dorch.Converters.BooleanToVisibilityConverter" />
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Width" />
@@ -229,17 +255,8 @@
     <RootType FullName="Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior">
       <RootProperty Name="Phase" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="IsSwipeEnabled" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="SelectionMode" />
-      <RootProperty Name="GroupStyle" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Content" />
       <RootProperty Name="Height" />
       <RootProperty Name="HorizontalScrollMode" />
       <RootProperty Name="IsHoldingEnabled" />
@@ -248,7 +265,6 @@
       <RootProperty Name="VerticalScrollMode" />
       <RootProperty Name="AllowDrop" />
       <RootProperty Name="BringIntoViewOnFocusChange" />
-      <RootProperty Name="Content" />
       <RootMethod Name="GetHorizontalScrollMode" />
       <RootMethod Name="SetHorizontalScrollMode" />
       <RootMethod Name="GetIsHorizontalScrollChainingEnabled" />
@@ -261,6 +277,22 @@
       <RootMethod Name="SetHorizontalScrollBarVisibility" />
     </RootType>
     <RootType FullName="Dorch.View.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TimePicker">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Time" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="ClockIdentifier" />
+      <RootProperty Name="MinuteIncrement" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Header" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ToggleSwitch">
+      <RootProperty Name="Header" />
+    </RootType>
+    <RootType FullName="Dorch.View.SetTimer" />
     <RootType FullName="Windows.UI.Xaml.Controls.SemanticZoom">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="HorizontalContentAlignment" />
@@ -291,10 +323,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HeaderTemplate" />
       <RootProperty Name="ContentTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
-      <RootMethod Name="GetExitElementContainer" />
-      <RootMethod Name="SetExitElementContainer" />
     </RootType>
     <RootType FullName="Dorch.View.ViewTeam" />
   </Roots.RootTypes>

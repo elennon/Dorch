@@ -105,14 +105,26 @@ namespace Dorch
             this.Suspending += this.OnSuspending;            
         }
 
-        private async void InitNotificationsAsync()
+        public async void InitNotificationsAsync()
         {
             System.Exception exception = null;
             try
             {
                 var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
                 channel.PushNotificationReceived += OnPushNotification;     // registers a method to recieve push messages when app is running
-                var tags = new List<string> { "0876493789", "t1" };
+                //var tags = new List<string> { "0876493789", "t1" };
+                string id = ((App)Application.Current).UserId;
+                var tags = new List<string> { id};
+                object value = ApplicationSettingsHelper.ReadResetSettingsValue(Constants.TeamTags);
+                if (value != null)
+                {
+                    var teams = (List<Team>)value;
+                    foreach (var item in teams)
+                    {
+                        tags.Add(item.Id);
+                    }
+                }
+               
                 await Hub.RegisterNativeAsync(channel.Uri, tags);                
             }
             catch (System.Exception ex)
@@ -126,7 +138,7 @@ namespace Dorch
                 await dialog.ShowAsync();
             }
         }
-        string content = null;
+       
         private async void OnPushNotification(PushNotificationChannel sender, PushNotificationReceivedEventArgs e)
         {
             string notificationContent = String.Empty;
@@ -164,10 +176,10 @@ namespace Dorch
                 {
                     //RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(((App)Application.Current).UserId);         // commented for testing
                     RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(mContent);
-                    Player thisPlayer = await repo.GetThisPlayerAsync("0876493789");
+                    //Player thisPlayer = await repo.GetThisPlayerAsync("0876493789");
+                    Player thisPlayer = await repo.GetThisPlayerAsync(((App)Application.Current).UserId);
                     await repo.ConfirmJoinTeam(rjt, thisPlayer);
                 });
-
             }
             else if (requestType == 2)      // 2 is a request to play, just want get yes/no 
             {
@@ -192,6 +204,15 @@ namespace Dorch
                         vtvm.StatusPlayers.Add(p);
                 });
             }
+            else if (requestType == 4)      // 4 is a team group message
+            {
+                await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                {
+                    Dorch.Model.Message ms = await repo.GetMessage(mContent);
+                    if (vtvm != null)
+                    vtvm.Messages.Add(ms);
+                });
+            }
         }
 
         private void ResetStartTile()
@@ -210,16 +231,17 @@ namespace Dorch
                 this.DebugSettings.EnableFrameRateCounter = true;
             }
 #endif
-         
+            if (string.IsNullOrEmpty(UserName))
+            {
+                GoToSingIn(e);
+                return;
+            }
+            SetTags();
             ResetStartTile();
             InitNotificationsAsync();
             await TaskHelper.RegisterTask();
             CheckMessages();
-
-            if(string.IsNullOrEmpty(UserName))
-            {
-                GoToSingIn(e);
-            }
+      
             Frame rootFrame = Window.Current.Content as Frame;
 
             if (rootFrame == null)
@@ -255,6 +277,21 @@ namespace Dorch
             Window.Current.Activate();
         }
 
+        private async void SetTags()
+        {
+            string teams = "";
+            Player pl = await repo.GetThisPlayerAsync(((App)Application.Current).UserId);
+            if (pl.Teams.Count > 0)
+            {
+                teams= pl.Teams[0].Id;
+                foreach (var item in pl.Teams)
+                {
+                    teams = item.Id
+                }
+                ApplicationSettingsHelper.SaveSettingsValue(Constants.TeamTags, "plop"); 
+            }
+        }
+
         private async void CheckMessages()      // todo replace hard coded values
         {
             object value = ApplicationSettingsHelper.ReadResetSettingsValue(Constants.JoinTeamRequest);
@@ -269,7 +306,7 @@ namespace Dorch
                         string rjtId = ((string)mContent).Split(',')[1];
                         //RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(((App)Application.Current).UserId);         // commented for testing
                         RequestJoinTeam rjt = await repo.GetJoinTeamRequestrAsync(rjtId);
-                        Player thisPlayer = await repo.GetThisPlayerAsync("0876493789");
+                        Player thisPlayer = await repo.GetThisPlayerAsync(((App)Application.Current).UserId);
                         await repo.ConfirmJoinTeam(rjt, thisPlayer);
                     }
                 }
@@ -292,10 +329,11 @@ namespace Dorch
             }
         }
 
-        private void GoToSingIn(LaunchActivatedEventArgs e)
+        private async void GoToSingIn(LaunchActivatedEventArgs e)
         {
-            Frame rootFrame = Window.Current.Content as Frame;
+            await TaskHelper.RegisterTask();
 
+            Frame rootFrame = Window.Current.Content as Frame;            
             if (rootFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page

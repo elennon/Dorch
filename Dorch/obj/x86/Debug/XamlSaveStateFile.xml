@@ -1,10 +1,10 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\x86\debug\intermediatexaml\dorch.exe" HashGuid="7c70cbc3-9385-8f3e-5f9e-0d8afadc284f" />
+    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\x86\debug\intermediatexaml\dorch.exe" HashGuid="a66d946a-ac11-6880-8084-e275d5618203" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
-    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\backgroundupdatetile\bin\debug\backgroundupdatetile.winmd" HashGuid="b512bbee-edc4-6d8d-347c-4ba8af47dc90" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\backgroundupdatetile\bin\debug\backgroundupdatetile.winmd" HashGuid="5ea9e42e-58ac-bb37-3c73-976b00a68696" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.dll" HashGuid="da07be64-1093-25cd-c992-377d44b6dd02" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="54c1f1ed-b921-337f-8ad6-f2d8c553df06" />

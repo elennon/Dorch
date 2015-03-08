@@ -124,7 +124,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Margin="0,20,0,30" >
+        <StackPanel Margin="0,20,0,20" >
             <StackPanel Orientation="Horizontal">
                 <TextBlock FontSize="38" FontFamily="Segoe WP Semibold" FontWeight="Bold" Text="{Binding thisTeam.TeamName}" />
             </StackPanel>
@@ -221,20 +221,19 @@
                                     </core:EventTriggerBehavior>
                                 </i:Interaction.Behaviors>
                             </ListView>
-                            
-                            <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,30,0,50">                                
-                                <Button Margin="12,0,0,0" Content="Go Go Go" Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
+                            <StackPanel Grid.Row="4" Orientation="Vertical" HorizontalAlignment="Center" Margin="0,15,0,15" >
+                                <Button Margin="12,12,0,40" HorizontalAlignment="Center"  Content="Start Sending" 
+                                        Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
                             </StackPanel>
-                            <Border Grid.Row="5" Height="65"  ></Border>
-
                         </Grid>
                     </ScrollViewer>
+                    
                 </DataTemplate>
             </HubSection>
 
             <HubSection Name="StatusSection" Header="Status" Width="Auto"
                          HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
-                <DataTemplate>
+                <DataTemplate>                    
                     <ScrollViewer Height="500"
                                   HorizontalScrollMode="Disabled" 
                                   IsHoldingEnabled="True"
@@ -244,7 +243,14 @@
                                   AllowDrop="False" 
                                   BringIntoViewOnFocusChange="True"
                               >
-                        <ListView 
+                        <Grid >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                
+                            </Grid.RowDefinitions>
+                           
+                            <ListView 
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
                                 ScrollViewer.IsVerticalScrollChainingEnabled="True"
@@ -256,13 +262,43 @@
                                 ItemsSource="{Binding StatusPlayers}"
                                 ItemTemplate="{StaticResource InOutTemplate}"                       
                                 ContinuumNavigationTransitionInfo.ExitElementContainer="True">
-                            <i:Interaction.Behaviors>
-                                <core:EventTriggerBehavior EventName="ItemClick">
-                                    <core:InvokeCommandAction Command="{Binding ItemSelectedCommand}" InputConverter="{StaticResource ItemClickedConverter}" />
-                                </core:EventTriggerBehavior>
-                            </i:Interaction.Behaviors>
-                        </ListView>
+                                <i:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="ItemClick">
+                                        <core:InvokeCommandAction Command="{Binding ItemSelectedCommand}" InputConverter="{StaticResource ItemClickedConverter}" />
+                                    </core:EventTriggerBehavior>
+                                </i:Interaction.Behaviors>
+                            </ListView>
+
+                        </Grid>                        
                     </ScrollViewer>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="Messages" Width="Auto"
+                         HeaderTemplate="{ThemeResource HubSectionHeaderTemplate}">
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ScrollViewer>
+                            <ListView ItemsSource="{Binding Messages, Mode=TwoWay}"                                                                       
+                                >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="0,0,0,0">
+                                            <TextBox  Header="a person" TextWrapping="Wrap" AcceptsReturn="True" Width="280" 
+                                                       Margin="30,0,0,0" IsReadOnly="True" Text="{Binding Content}"  />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollViewer>
+                        <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,0" 
+                                 Text="{Binding MessageToSend, Mode=TwoWay}" />
+                    </Grid>
+                   
                 </DataTemplate>
             </HubSection>
 
@@ -271,10 +307,62 @@
     <Page.BottomAppBar>
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.PrimaryCommands>
-                <AppBarButton Icon="Setting" Label="Setting" Command="{Binding StartCommand}"  />
+                <AppBarButton Icon="Setting" Label="Setting" Command="{Binding SetTimerCommand}"  />
                 <AppBarButton Icon="Add" Label="Add Player" Command="{Binding AddPlayerCommand}"  />
+                <AppBarButton Icon="Send" Label="Send" Command="{Binding SendMessageCommand}"  />
             </CommandBar.PrimaryCommands>         
         </CommandBar>
     </Page.BottomAppBar>
 </common:BindablePage>
+
+
+<!--<DatePicker x:Name="DemoDatePicker" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+    <Border BorderBrush="AntiqueWhite" Grid.Row="4" BorderThickness="2" Margin="0,30,0,150">
+                            <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="0,15,0,15" >
+                                <StackPanel Orientation="Horizontal"  >
+                                    <TextBlock Text="Set Time:" VerticalAlignment="Center" FontSize="24" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                    <TimePicker  Margin="40,0,0,0" HorizontalAlignment="Right" Time="{Binding SetTime, Mode=TwoWay}" 
+                                                     ClockIdentifier="12HourClock" MinuteIncrement="15">
+
+                                    </TimePicker>
+                                </StackPanel>
+                                <Button Margin="12,12,0,0" HorizontalAlignment="Center"  Content="Go Go Go" Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
+                            </StackPanel>
+                        </Border>
+    
+     <Border BorderBrush="AntiqueWhite" Grid.Row="4" BorderThickness="2" Margin="0,30,0,150">
+                                <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="0,15,0,15" >             
+                                    <StackPanel Orientation="Horizontal"  >
+                                        <TextBlock Text="Set Time:" VerticalAlignment="Center" FontSize="24" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                        <TimePicker  Margin="40,0,0,0" HorizontalAlignment="Right" Time="{Binding SetTime, Mode=TwoWay}" 
+                                                     ClockIdentifier="12HourClock" MinuteIncrement="15">
+                                        
+                                        </TimePicker>
+                                    </StackPanel>
+                                    <Button Margin="12,12,0,0" HorizontalAlignment="Center"  Content="Go Go Go" Padding="20,0,20,0" Command="{Binding StartCommand}" ></Button>
+                                </StackPanel>
+                            </Border>
+
+    
+    
+    <Border BorderBrush="AntiqueWhite" Grid.Row="4" BorderThickness="2" Margin="0,6,0,50">
+                                <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="0,15,0,15" >
+                                    <StackPanel Orientation="Horizontal"  >
+                                        <TextBlock Text="Set Started:" VerticalAlignment="Center" FontSize="16" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                        <TextBlock Text="2 o clock" VerticalAlignment="Center" FontSize="16" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal"  >
+                                        <TextBlock Text="Set Time:" VerticalAlignment="Center" FontSize="16" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                        <TextBlock Text="6 o clock" VerticalAlignment="Center" FontSize="16" Margin= "14,0,50,0" HorizontalAlignment="Left"
+                                                   Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+    
+                                             />-->
 

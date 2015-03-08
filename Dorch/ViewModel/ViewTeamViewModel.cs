@@ -21,12 +21,23 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace Dorch.ViewModel
 {
+    
     public class ViewTeamViewModel : ViewModelBase, INavigable, INotifyPropertyChanged
     {
-
         private IRepository repo = new Repository();
         private INavigationService _navigationService;
+        
+        private ObservableCollection<Message> _messages; //= new List<Message> 
+        //{
+        //    new Message{Content= "papion for a peeon "}           
+        //};
 
+        public ObservableCollection<Message> Messages
+        {
+            get { return _messages; }
+            set { _messages = value; NotifyPropertyChanged("Messages"); }
+        }
+        
         private ObservableCollection<Player> _chosenPlayers;
         public ObservableCollection<Player> ChosenPlayers
         {
@@ -78,13 +89,26 @@ namespace Dorch.ViewModel
             }
         }
 
+        private string _messageToSend;
+
+        public string MessageToSend
+        {
+            get { return _messageToSend; }
+            set { _messageToSend = value; NotifyPropertyChanged("MessageToSend"); }
+        }
+        
+
         public Team thisTeam { get; set; }
+        public TimeSpan SetTime { get; set; }
 
         public RelayCommand<RoutedEventArgs> LoadCommand { get; set; }
         public RelayCommand<Object> ItemSelectedCommand { get; set; }
         public RelayCommand<Player> PlayerSelectedCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand StartCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand AddPlayerCommand { get; set; }
+        public GalaSoft.MvvmLight.Command.RelayCommand TimeChangedCommand { get; set; }
+        public GalaSoft.MvvmLight.Command.RelayCommand SendMessageCommand { get; set; }
+        public GalaSoft.MvvmLight.Command.RelayCommand SetTimerCommand { get; set; }
 
         public ViewTeamViewModel(INavigationService navigationService)
         {
@@ -95,8 +119,32 @@ namespace Dorch.ViewModel
             this.PlayerSelectedCommand = new RelayCommand<Player>(OnPlayerSelectedCommand);
             this.StartCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnStartCommand);
             this.AddPlayerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnAddPlayerCommand);
+            this.TimeChangedCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnTimeChangedCommand);
+            this.SendMessageCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSendMessageCommand);
+            this.SetTimerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSetTimerCommand);
             ChosenPlayers = new ObservableCollection<Player>();
             StatusPlayers = new ObservableCollection<Player>();
+            Messages = new ObservableCollection<Message>();
+            SetTime = new TimeSpan(18, 0, 0);
+        }
+
+        private void OnSetTimerCommand()
+        {
+            _navigationService.NavigateTo("SetTimer", thisTeam);
+        }
+
+        private async void OnSendMessageCommand()
+        {
+            Message ms = new Message{ Content = MessageToSend, TeamId = thisTeam.Id, Sender = ((App)Application.Current).UserName, 
+                            SenderId = ((App)Application.Current).UserId};
+            await repo.SendMessage(ms);
+           // Messages.Add(ms);
+            MessageToSend = "";
+        }
+
+        private void OnTimeChangedCommand()
+        {
+            var time = SetTime;
         }
 
         private void OnAddPlayerCommand()
@@ -106,6 +154,7 @@ namespace Dorch.ViewModel
 
         private async void OnStartCommand()
         {
+            var time = SetTime;
             foreach (var item in ChosenPlayers)
             {
                 RequestPlay rp = new RequestPlay{ PlayerId = item.Id, TeamId = thisTeam.Id, Confirmed = false};

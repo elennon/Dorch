@@ -45,11 +45,13 @@ namespace Dorch.DAL
         private MobileServiceCollection<Player, Player> players;
         private MobileServiceCollection<RequestJoinTeam, RequestJoinTeam> requests;
         private MobileServiceCollection<RequestPlay, RequestPlay> playRequests;
+        private MobileServiceCollection<Message, Message> messages;
 
         private IMobileServiceTable<Team> teamTable = App.MobileService.GetTable<Team>();
         private IMobileServiceTable<Player> playerTable = App.MobileService.GetTable<Player>();
         private IMobileServiceTable<RequestJoinTeam> RequestJoinTeamTable = App.MobileService.GetTable<RequestJoinTeam>();
         private IMobileServiceTable<RequestPlay> RequestPlayTable = App.MobileService.GetTable<RequestPlay>();
+        private IMobileServiceTable<Message> MessageTable = App.MobileService.GetTable<Message>();
 
         public async Task addNewTeamAsync(Team tm)
         {
@@ -112,7 +114,6 @@ namespace Dorch.DAL
             await teamTable.DeleteAsync(tm);
         }
 
-
         public async Task<List<Player>> GetPlayersAsync()
         {
             var pls = new List<Player>();
@@ -142,8 +143,9 @@ namespace Dorch.DAL
             ErrorMessage = null;
             try
             {
-                players = await playerTable.ToCollectionAsync();
-                ply = players.Where(a => a.Id == id).FirstOrDefault();
+                //players = await playerTable.ToCollectionAsync();
+                //ply = players.Where(a => a.Id == id).FirstOrDefault();
+                ply = await App.MobileService.GetTable<Player>().LookupAsync(id); 
             }
             catch (MobileServiceInvalidOperationException ex)
             {
@@ -210,7 +212,11 @@ namespace Dorch.DAL
                     var checkRequest = requests.Where(a => a.PlayerId == pl.Id && a.Confirmed == false).FirstOrDefault();
                     if (checkRequest != null)
                     {
-                        await ConfirmJoinTeam(checkRequest,  plCheck);
+                        await CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, async () =>
+                        {
+                            await ConfirmJoinTeam(checkRequest, plCheck);
+                        });
+                        
                     }
                 }
             }
@@ -251,21 +257,24 @@ namespace Dorch.DAL
 
             var res = await msgbox.ShowAsync();
 
-            if ((int)res.Id == 0)
+            if (res != null)
             {
-                result = true;
+                if ((int)res.Id == 0)
+                {
+                    result = true;
+                }
+                if ((int)res.Id == 1)
+                {
+                    result = false;
+                }
             }
-            if ((int)res.Id == 1)
-            {
-                result = false;
-            }       
             return result;
         }
 
         public async Task SendRequest(RequestJoinTeam rp)
         {
-            rp.RequestedBy = "the pope";
-            rp.PlayerId = "0876493789";
+            //rp.RequestedBy = "the pope";
+            //rp.TeamId = "t3";
             try
             {
                 await RequestJoinTeamTable.InsertAsync(rp);
@@ -286,8 +295,9 @@ namespace Dorch.DAL
             ErrorMessage = null;
             try
             {
-                requests = await RequestJoinTeamTable.ToCollectionAsync();
-                rjt = requests.Where(a => a.Id == id).FirstOrDefault();
+                //requests = await RequestJoinTeamTable.ToCollectionAsync();
+                rjt = await App.MobileService.GetTable<RequestJoinTeam>().LookupAsync(id);
+                //rjt = requests.Where(a => a.Id == id).FirstOrDefault();
             }
             catch (MobileServiceInvalidOperationException ex)
             {
@@ -322,8 +332,9 @@ namespace Dorch.DAL
             ErrorMessage = null;
             try
             {
-                playRequests = await RequestPlayTable.ToCollectionAsync();
-                rp = playRequests.Where(a => a.Id == id).FirstOrDefault();
+                //playRequests = await RequestPlayTable.ToCollectionAsync();
+                rp = await App.MobileService.GetTable<RequestPlay>().LookupAsync(id);
+                //rp = playRequests.Where(a => a.Id == id).FirstOrDefault();
             }
             catch (MobileServiceInvalidOperationException ex)
             {
@@ -352,6 +363,42 @@ namespace Dorch.DAL
                 await RequestPlayTable.UpdateAsync(playRequest);
             }
         }
+
+        public async Task SendMessage(Message message)
+        {
+            try
+            {
+                await MessageTable.InsertAsync(message);
+            }
+            catch (MobileServiceInvalidOperationException ex)
+            {
+                ErrorMessage = ex.Message;
+            }
+            catch (HttpRequestException ex2)
+            {
+                ErrorMessage = ex2.Message;
+            }
+        }
+
+        public async Task<Message> GetMessage(string id)
+        {
+            Message ms = new Message();
+            ErrorMessage = null;
+            try
+            {
+                ms = await App.MobileService.GetTable<Message>().LookupAsync(id); 
+            }
+            catch (MobileServiceInvalidOperationException ex)
+            {
+                ErrorMessage = ex.Message;
+            }
+            catch (HttpRequestException ex2)
+            {
+                ErrorMessage = ex2.Message;
+            }
+            return ms;
+        }
+
 
         #region INotifyPropertyChanged Members
 

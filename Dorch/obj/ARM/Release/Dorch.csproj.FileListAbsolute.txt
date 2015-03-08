@@ -107,3 +107,8 @@ C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\QK
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\BackgroundUpdateTile.winmd
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\BackgroundUpdateTile.pdb
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\BackgroundUpdateTile.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Release\View\SetTimer.xbf
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\View\SetTimer.g.i.cs
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\View\SetTimer.g.cs
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\View\SetTimer.xaml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Release\View\SetTimer.xbf

@@ -147,6 +147,11 @@
 						<Value>Assets\Malaga.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="messa150.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/messa150.png">
+					<Candidate type="Path">
+						<Value>Assets\messa150.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="music2.jpg" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/music2.jpg">
 					<Candidate type="Path">
 						<Value>Assets\music2.jpg</Value>
@@ -197,9 +202,19 @@
 						<Value>Assets\StoreLogo.scale-240.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="tickk.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/tickk.png">
+					<Candidate type="Path">
+						<Value>Assets\tickk.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="WideLogo.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/WideLogo.png">
 					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
 						<Value>Assets\WideLogo.scale-240.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="_cross.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/_cross.png">
+					<Candidate type="Path">
+						<Value>Assets\_cross.png</Value>
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
@@ -236,6 +251,11 @@
 				<NamedResource name="MainPage.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/MainPage.xbf">
 					<Candidate type="Path">
 						<Value>View\MainPage.xbf</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="SetTimer.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/SetTimer.xbf">
+					<Candidate type="Path">
+						<Value>View\SetTimer.xbf</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="ShowAllPlayers.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/ShowAllPlayers.xbf">

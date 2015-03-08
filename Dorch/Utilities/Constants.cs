@@ -14,6 +14,8 @@ namespace Dorch.Utilities
         public const string JoinTeamRequestContent = "JoinTeamRequestContent";
 
         public const string PlayRequest = "PlayRequest";
-        public const string PlayRequestContent = "PlayRequestContent";  
+        public const string PlayRequestContent = "PlayRequestContent";
+
+        public const string TeamTags = "TeamTags";
     }
 }

@@ -102,7 +102,8 @@ namespace Dorch.ViewModel
             AppSettings.SaveSettingsValue(Constants.UserId, PhNumber);
             UserName = "";
             PhNumber = "";
-            ImageNme = "";            
+            ImageNme = "";
+            ((App)Application.Current).InitNotificationsAsync();
             _navigationService.NavigateTo("MainPage");
         }
 
