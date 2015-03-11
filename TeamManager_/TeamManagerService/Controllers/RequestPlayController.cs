@@ -45,7 +45,7 @@ namespace TeamManagerService.Controllers
                                 @"</binding></visual></toast>";
             message.Headers.Add("X-WNS-Cache-Policy", "cache");
             message.Headers.Add("X-WNS-Type", "wns/raw");
-            var tags = new List<string> { current.PlayerId, "t1" };
+            var tags = new List<string> { current.PlayerId, current.TeamId };
             try
             {
                 var result = await Services.Push.SendAsync(message, tags);

@@ -95,14 +95,14 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="56" Width="41" Margin="0,9.5,0,0" 
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="46" Width="46" Margin="0,9.5,16,0" 
                         Grid.Column="0" HorizontalAlignment="Left">
-                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <Image Source="{Binding InOutImage}" Stretch="UniformToFill" Height="46" Width="46"/>
+                    <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Image Source="{Binding InOutImage}" Stretch="UniformToFill" Height="46" Width="46" />
                     </StackPanel>
                 </Border>
 
-                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,0,0" Grid.Column="1" HorizontalAlignment="Left">
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Margin="7,0,7,0" Grid.Column="1" HorizontalAlignment="Left">
                     <Image Source="{Binding PlayerImage}" Stretch="UniformToFill" Height="56" Width="56"/>
                 </Border>
 
@@ -288,14 +288,14 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Margin="0,0,0,0">
-                                            <TextBox  Header="a person" TextWrapping="Wrap" AcceptsReturn="True" Width="280" 
-                                                       Margin="30,0,0,0" IsReadOnly="True" Text="{Binding Content}"  />
+                                            <TextBox  Header="{Binding Sender}"  TextWrapping="Wrap" AcceptsReturn="True" Width="280" 
+                                                       Margin="30,0,0,10" IsReadOnly="True" Text="{Binding Content}"  />
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
                         </ScrollViewer>
-                        <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,0" 
+                        <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
                                  Text="{Binding MessageToSend, Mode=TwoWay}" />
                     </Grid>
                    

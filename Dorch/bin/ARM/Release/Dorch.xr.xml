@@ -54,6 +54,7 @@
     <RootPropertyPathName Name="InOutImage" />
     <RootPropertyPathName Name="PlayerSelectedCommand" />
     <RootPropertyPathName Name="MessageToSend" />
+    <RootPropertyPathName Name="Sender" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="StatusPlayers" />
     <RootPropertyPathName Name="StartCommand" />

@@ -122,6 +122,7 @@
     </Compile>
     <Compile Include="Common\AppSettings.cs" />
     <Compile Include="Common\BindablePage.cs" />
+    <Compile Include="Converters\MessageBKConverter.cs" />
     <Compile Include="Model\Message.cs" />
     <Compile Include="Utilities\ReadImage.cs" />
     <Compile Include="Common\INavigable.cs" />
@@ -249,6 +250,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Coding4Fun.Toolkit.Audio">
+      <HintPath>Coding4Fun.Toolkit (Windows Store)\Coding4Fun.Toolkit.Audio.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Controls">
+      <HintPath>Coding4Fun.Toolkit (Windows Store)\Coding4Fun.Toolkit.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Net">
+      <HintPath>Coding4Fun.Toolkit (Windows Store)\Coding4Fun.Toolkit.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Coding4Fun.Toolkit.Storage">
+      <HintPath>Coding4Fun.Toolkit (Windows Store)\Coding4Fun.Toolkit.Storage.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\packages\MvvmLightLibs.5.0.2.0\lib\wpa81\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>

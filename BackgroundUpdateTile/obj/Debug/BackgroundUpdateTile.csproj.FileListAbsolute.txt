@@ -1,10 +1,10 @@
-C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.winmd
-C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.winmdobj
-C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.compile.pdb
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\bin\Debug\BackgroundUpdateTile.winmd
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\bin\Debug\BackgroundUpdateTile.pdb
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\bin\Debug\BackgroundUpdateTile.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.winmd
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.pdb
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.winmdobj
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\BackgroundUpdateTile.compile.pdb
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\priconfig.xml
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\priconfig.xml.intermediate
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\obj\Debug\layout.resfiles

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="55082kilmaced.Dorch" Publisher="CN=ECD8EF8E-3045-48FE-9EA8-1993C0944C53" Version="1.1.0.27" />
+  <Identity Name="55082kilmaced.Dorch" Publisher="CN=ECD8EF8E-3045-48FE-9EA8-1993C0944C53" Version="1.1.0.30" />
   <mp:PhoneIdentity PhoneProductId="476f9dd3-f701-42c0-b0a5-28579114eb20" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Dorch</DisplayName>

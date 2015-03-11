@@ -136,7 +136,7 @@ namespace Dorch.ViewModel
         private async void OnSendMessageCommand()
         {
             Message ms = new Message{ Content = MessageToSend, TeamId = thisTeam.Id, Sender = ((App)Application.Current).UserName, 
-                            SenderId = ((App)Application.Current).UserId};
+                            SendingDate = DateTime.Now.ToLocalTime().ToString(), SenderId = ((App)Application.Current).UserId};
             await repo.SendMessage(ms);
            // Messages.Add(ms);
             MessageToSend = "";
@@ -154,6 +154,7 @@ namespace Dorch.ViewModel
 
         private async void OnStartCommand()
         {
+            StatusPlayers.Clear();
             var time = SetTime;
             foreach (var item in ChosenPlayers)
             {

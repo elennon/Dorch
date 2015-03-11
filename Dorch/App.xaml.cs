@@ -114,17 +114,17 @@ namespace Dorch
                 channel.PushNotificationReceived += OnPushNotification;     // registers a method to recieve push messages when app is running
                 //var tags = new List<string> { "0876493789", "t1" };
                 string id = ((App)Application.Current).UserId;
-                var tags = new List<string> { id};
-                object value = ApplicationSettingsHelper.ReadResetSettingsValue(Constants.TeamTags);
-                if (value != null)
-                {
-                    var teams = (List<Team>)value;
-                    foreach (var item in teams)
+                var tags = new List<string> { id };
+                object teams = ApplicationSettingsHelper.ReadResetSettingsValue(Constants.TeamTags);
+                if (teams != null)
+                {                    
+                    foreach (var item in ((string)teams).Split(','))
                     {
-                        tags.Add(item.Id);
+                        if(string.IsNullOrEmpty(item) != true)
+                        tags.Add(item);
                     }
                 }
-               
+                            
                 await Hub.RegisterNativeAsync(channel.Uri, tags);                
             }
             catch (System.Exception ex)
@@ -236,7 +236,7 @@ namespace Dorch
                 GoToSingIn(e);
                 return;
             }
-            SetTags();
+            await SetTags();
             ResetStartTile();
             InitNotificationsAsync();
             await TaskHelper.RegisterTask();
@@ -277,18 +277,17 @@ namespace Dorch
             Window.Current.Activate();
         }
 
-        private async void SetTags()
+        private async Task SetTags()
         {
             string teams = "";
             Player pl = await repo.GetThisPlayerAsync(((App)Application.Current).UserId);
             if (pl.Teams.Count > 0)
-            {
-                teams= pl.Teams[0].Id;
+            {                
                 foreach (var item in pl.Teams)
                 {
-                    teams = item.Id
+                    teams += item.Id + ",";
                 }
-                ApplicationSettingsHelper.SaveSettingsValue(Constants.TeamTags, "plop"); 
+                ApplicationSettingsHelper.SaveSettingsValue(Constants.TeamTags, teams); 
             }
         }
 

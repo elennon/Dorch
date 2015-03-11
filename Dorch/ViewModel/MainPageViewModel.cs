@@ -224,11 +224,11 @@ namespace Dorch.ViewModel
             }
         }
 
-        private async void OnTextCommand()
+        private void OnTextCommand()
         {
-            RequestJoinTeam rp = new RequestJoinTeam { PlayerId = "0876493789", TeamId = "t3" };
-            await repo.SendRequest(rp);
-            //_navigationService.NavigateTo("ShowAllPlayers");
+            //RequestJoinTeam rp = new RequestJoinTeam { PlayerId = "0876493789", TeamId = "t3" };
+            //await repo.SendRequest(rp);
+            _navigationService.NavigateTo("BlankPage1");
         }
 
         private void OnItemSelectedCommand(Team obj)
