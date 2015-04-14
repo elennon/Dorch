@@ -190,15 +190,18 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\fca.png" />
+    <Content Include="Assets\grp1.png" />
     <Content Include="Assets\grp106.png" />
     <Content Include="Assets\grp1152splash.png" />
     <Content Include="Assets\grp120.png" />
     <Content Include="Assets\grp170.png" />
+    <Content Include="Assets\grp2.png" />
     <Content Include="Assets\grp24.scale-100.png" />
     <Content Include="Assets\grp24.scale-140.png" />
     <Content Include="Assets\grp24.scale-240.png" />
     <Content Include="Assets\grp310w.png" />
     <Content Include="Assets\grp33.png" />
+    <Content Include="Assets\grp4.png" />
     <Content Include="Assets\grp434w.png" />
     <Content Include="Assets\grp44.png" />
     <Content Include="Assets\grp480splash.png" />
@@ -210,6 +213,8 @@
     <Content Include="Assets\grp71.png" />
     <Content Include="Assets\grp744w.png" />
     <Content Include="Assets\grp99.png" />
+    <Content Include="Assets\grpp2.png" />
+    <Content Include="Assets\grup33.png" />
     <Content Include="Assets\Logo.scale-100.png" />
     <Content Include="Assets\Logo.scale-140.png" />
     <Content Include="Assets\Logo.scale-240.png" />

@@ -19,7 +19,9 @@
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="TeamName" />
     <RootPropertyPathName Name="ToastCommand" />
+    <RootPropertyPathName Name="Instance" />
     <RootPropertyPathName Name="Messages" />
+    <RootPropertyPathName Name="SendingDate" />
     <RootPropertyPathName Name="Text" />
     <RootPropertyPathName Name="MainPageViewModel" />
     <RootPropertyPathName Name="LoadCommand" />
@@ -54,7 +56,6 @@
     <RootPropertyPathName Name="InOutImage" />
     <RootPropertyPathName Name="PlayerSelectedCommand" />
     <RootPropertyPathName Name="MessageToSend" />
-    <RootPropertyPathName Name="Sender" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="StatusPlayers" />
     <RootPropertyPathName Name="StartCommand" />
@@ -80,8 +81,9 @@
       <RootProperty Name="Source" />
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
-      <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
+      <RootProperty Name="ConverterParameter" />
+      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
@@ -90,6 +92,7 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
+      <RootProperty Name="Background" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootMethod Name="GetRow" />
@@ -126,8 +129,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="CharacterSpacing" />
-      <RootProperty Name="LineStackingStrategy" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="LineStackingStrategy" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Padding" />
@@ -139,11 +142,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="AcceptsReturn" />
-      <RootProperty Name="Header" />
-      <RootProperty Name="IsReadOnly" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
       <RootProperty Name="VerticalOffset" />
@@ -209,22 +207,30 @@
       <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Name" />
-      <RootProperty Name="HorizontalContentAlignment" />
-      <RootProperty Name="IsSwipeEnabled" />
-      <RootProperty Name="SelectionMode" />
-      <RootProperty Name="GroupStyle" />
+    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubbleTextBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ChatBubbleDirection" />
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="AcceptsReturn" />
+      <RootProperty Name="Text" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
-      <RootMethod Name="GetExitElementContainer" />
-      <RootMethod Name="SetExitElementContainer" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubble">
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="ChatBubbleDirection" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="Dorch.View.BlankPage1" />
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
@@ -255,6 +261,16 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactions.Core.IncrementalUpdateBehavior">
       <RootProperty Name="Phase" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="Name" />
+      <RootProperty Name="HorizontalContentAlignment" />
+      <RootProperty Name="IsSwipeEnabled" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="SelectionMode" />
+      <RootProperty Name="GroupStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
@@ -314,6 +330,7 @@
     </RootType>
     <RootType FullName="Dorch.View.ShowAllPlayers" />
     <RootType FullName="Dorch.View.SignUp" />
+    <RootType FullName="Dorch.Converters.MessageTypeConverter" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox" />
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Sections" />
@@ -324,6 +341,10 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HeaderTemplate" />
       <RootProperty Name="ContentTemplate" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
+      <RootMethod Name="GetExitElementContainer" />
+      <RootMethod Name="SetExitElementContainer" />
     </RootType>
     <RootType FullName="Dorch.View.ViewTeam" />
   </Roots.RootTypes>

@@ -11,7 +11,7 @@ namespace TeamManagerService.DataObjects
     {
         public string TeamName { get; set; }
         public string Location { get; set; }
-        public byte[] Image { get; set; }
+        public byte[] TeamImage { get; set; }
 
         //[JsonIgnore]
         public virtual ICollection<Player> Players { get; set; }

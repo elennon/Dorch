@@ -1,4 +1,5 @@
-﻿using Dorch.Model;
+﻿using Dorch.Common;
+using Dorch.Model;
 using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;

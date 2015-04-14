@@ -218,6 +218,15 @@
 					</Candidate>
 				</NamedResource>
 			</ResourceMapSubtree>
+			<ResourceMapSubtree name="Coding4Fun.Toolkit.Controls">
+				<ResourceMapSubtree name="Themes">
+					<NamedResource name="Generic.xaml" uri="ms-resource://55082kilmaced.Dorch/Files/Coding4Fun.Toolkit.Controls/Themes/Generic.xaml">
+						<Candidate type="Path">
+							<Value>Coding4Fun.Toolkit.Controls\Themes\Generic.xaml</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
 			<ResourceMapSubtree name="QKit">
 				<NamedResource name="QKit.xr.xml" uri="ms-resource://55082kilmaced.Dorch/Files/QKit/QKit.xr.xml">
 					<Candidate type="Path">

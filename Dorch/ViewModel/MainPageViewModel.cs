@@ -215,12 +215,9 @@ namespace Dorch.ViewModel
             //App.InitNotificationsAsync();
             List<Team> lst = await repo.GetTeamsAsync();
             Teams = new ObservableCollection<Team>(lst);
-            StorageFolder local = Windows.Storage.ApplicationData.Current.LocalFolder;
-            var dataFolder = await local.CreateFolderAsync("Assets", CreationCollisionOption.OpenIfExists);
             foreach (var item in Teams)
-            {
-                //     item.ImageSource = await ReadImage.MakeImage(item.Image, dataFolder);
-                //item.ImageSource = await MakeImage(item.Image, dataFolder);
+            {                
+                item.ImgSource = ReadImage.GetTeamImage(item.TeamImage);
             }
         }
 
@@ -257,29 +254,6 @@ namespace Dorch.ViewModel
         {
             Teams.Remove(obj);
             repo.DeleteTeam(obj);
-        }
-
-        async Task<ImageSource> MakeImage(string fileName, StorageFolder folder)
-        {
-            BitmapImage bitmapImage = null;
-            try
-            {
-                StorageFile file = await folder.GetFileAsync(fileName);
-                if (file != null)
-                {
-                    bitmapImage = new BitmapImage();
-
-                    using (var stream = await file.OpenReadAsync())
-                    {
-                        await bitmapImage.SetSourceAsync(stream);
-                    }
-                }
-                return (bitmapImage);
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
         }
 
         public void Activate(object parameter)

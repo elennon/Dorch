@@ -11,6 +11,7 @@
     xmlns:cmds="using:Dorch.Converters"
     DataContext="{Binding Source={StaticResource Locator}, Path=ViewTeamViewModel}"
     mc:Ignorable="d"
+    xmlns:cc="using:Coding4Fun.Toolkit.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <i:Interaction.Behaviors>
@@ -22,6 +23,8 @@
     <Page.Resources>
 
         <cmds:ItemClickedConverter x:Name="ItemClickedConverter" />
+        <cmds:MessageTypeConverter x:Name="MessageTypeConverter" />
+        <cmds:EmptyListLabelConverter x:Name="EmptyListLabelConverter" />
 
         <DataTemplate x:Key="HubSectionHeaderTemplate">
             <TextBlock Margin="0,0,0,-9.5" FontSize="27" Text="{Binding}"/>
@@ -179,10 +182,12 @@
                             </Grid.RowDefinitions>
                             
                             <StackPanel Grid.Row="0" Margin="0,12,0,0">
-                                <TextBlock Text="Regulars" Margin="0,0,0,6.5" FontSize="26"  />
+                                <TextBlock Text="No one picked yet!" Margin="0,0,0,6.5" FontSize="26" 
+                                        Visibility="{Binding ChosenPlayers.Count, 
+                                        Converter={StaticResource EmptyListLabelConverter}}" />
                             </StackPanel>
 
-                            <ListView Grid.Row="1"
+                            <ListView Grid.Row="1"                                      
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
                                 ScrollViewer.IsVerticalScrollChainingEnabled="True"
@@ -200,9 +205,9 @@
                                     </core:EventTriggerBehavior>
                                 </i:Interaction.Behaviors>
                             </ListView>
-                            <StackPanel Grid.Row="2" Margin="0,12,0,0">
+                            <!--<StackPanel Grid.Row="2" Margin="0,12,0,0">
                                 <TextBlock Text="Subs" Margin="0,0,0,6.5" FontSize="26"  />
-                            </StackPanel>
+                            </StackPanel>-->
                             <ListView Grid.Row="3"
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
@@ -249,8 +254,14 @@
                                 <RowDefinition Height="Auto"/>
                                 
                             </Grid.RowDefinitions>
-                           
-                            <ListView 
+
+                            <StackPanel Grid.Row="0" Margin="0,12,0,0">
+                                <TextBlock Text="No one's answered yet!" Margin="0,0,0,6.5" FontSize="26" 
+                                        Visibility="{Binding ChosenPlayers.Count, 
+                                        Converter={StaticResource EmptyListLabelConverter}}" />
+                            </StackPanel>
+                            
+                            <ListView Grid.Row="1"
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
                                 ScrollViewer.IsVerticalScrollChainingEnabled="True"
@@ -287,18 +298,28 @@
                                 >
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <StackPanel Margin="0,0,0,0">
-                                            <TextBox  Header="{Binding Sender}"  TextWrapping="Wrap" AcceptsReturn="True" Width="280" 
-                                                       Margin="30,0,0,10" IsReadOnly="True" Text="{Binding Content}"  />
+                                        <StackPanel Orientation="Vertical">
+                                            <cc:ChatBubble 
+                                                    HorizontalAlignment="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=align}"  
+                                                    Opacity="{Binding Converter={StaticResource MessageTypeConverter}}" 
+                                                    ChatBubbleDirection="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=direction}"
+                                                    Background="Gray"
+                                                    BorderBrush="Beige"                                                              
+                                                    Margin="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=align}">
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Width="300"></TextBlock>
+
+                                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                                </StackPanel>
+                                            </cc:ChatBubble>
                                         </StackPanel>
                                     </DataTemplate>
                                 </ListView.ItemTemplate>
                             </ListView>
                         </ScrollViewer>
-                        <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
-                                 Text="{Binding MessageToSend, Mode=TwoWay}" />
+                        <cc:ChatBubbleTextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
+                                ChatBubbleDirection="LowerRight" Text="{Binding MessageToSend, Mode=TwoWay}" />
                     </Grid>
-                   
                 </DataTemplate>
             </HubSection>
 
@@ -316,7 +337,123 @@
 </common:BindablePage>
 
 
-<!--<DatePicker x:Name="DemoDatePicker" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
+<!--
+    <cc:ChatBubble Width="300"  
+                                                               Opacity="0.8" 
+                                                               ChatBubbleDirection="LowerRight"
+                                                               Margin="0,0,0,0">
+                                            <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Width="300"></TextBlock>
+
+                                                <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                            </StackPanel>
+                                        </cc:ChatBubble>
+    
+    <Grid Background="Transparent" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ScrollViewer Background="Transparent">
+                                <ListBox ItemsSource="{Binding Messages, Mode=TwoWay}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <cc:ChatBubble Width="300"  
+                                                               Opacity="0.8" 
+                                                               ChatBubbleDirection="LowerRight"
+                                                               Margin="0,0,0,0">
+                                                <StackPanel Margin="0,0,0,0" Orientation="Vertical">
+                                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Width="300"></TextBlock>
+
+                                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                                </StackPanel>
+                                            </cc:ChatBubble>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </ScrollViewer>
+                      
+
+                        <StackPanel Margin="12,0,12,12" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                            <cc:ChatBubbleTextBox Margin="0,6,0,0" ChatBubbleDirection="LowerRight" TextWrapping="Wrap"
+                                                    Text="{Binding MessageToSend, Mode=TwoWay}" Width="280"></cc:ChatBubbleTextBox>
+
+                        </StackPanel>
+                    </Grid>
+    
+    
+    
+    
+    
+    
+    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <ScrollViewer>
+                            <ListView ItemsSource="{Binding Messages, Mode=TwoWay}"                                                                       
+                                >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="0,0,0,0">
+                                            <TextBox  Header="{Binding Sender}"  TextWrapping="Wrap" AcceptsReturn="True" Width="280" 
+                                                       Margin="30,0,0,10" IsReadOnly="True" Text="{Binding Content}"  />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollViewer>
+                        <TextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
+                                 Text="{Binding MessageToSend, Mode=TwoWay}" />
+                    </Grid>
+    
+    
+   
+    
+     <Grid Background="Transparent">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="550"></RowDefinition>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+                            <ListBox ItemsSource="{Binding Messages}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Grid Width="456">
+                                            
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                        <RowDefinition Height="40"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Width="430"></TextBlock>
+
+                                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                                </Grid>
+                                         
+                                        </Grid>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+
+                        <StackPanel Margin="12,0,12,12" Grid.Row="2" Orientation="Horizontal">
+                            <TextBox Margin="0,6,0,0"  TextWrapping="Wrap" Width="340"
+                                                  Text="{Binding MessageToSend, Mode=TwoWay}" ></TextBox>                            
+                        </StackPanel>
+                    </Grid>  
+    
+    
+    
+    
+    
+    
+    
+    
+    <DatePicker x:Name="DemoDatePicker" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" 
     <Border BorderBrush="AntiqueWhite" Grid.Row="4" BorderThickness="2" Margin="0,30,0,150">
                             <StackPanel  Orientation="Vertical" HorizontalAlignment="Center" Margin="0,15,0,15" >
                                 <StackPanel Orientation="Horizontal"  >

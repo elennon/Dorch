@@ -6,24 +6,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:cc="using:Coding4Fun.Toolkit.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid >
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="550"></RowDefinition>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
-        <ListView
-                        ItemsSource="{Binding Messages, Mode=TwoWay}"
-                        IsItemClickEnabled="True"
-                        ContinuumNavigationTransitionInfo.ExitElementContainer="True"
-                        >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="0,0,0,27.5">
-                        <TextBox Text="{Binding Text}" Style="{ThemeResource ListViewItemTextBlockStyle}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="PageTitle" Text="den d." Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <StackPanel x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <ListBox ItemsSource="{Binding Path=Instance.Messages,Source={StaticResource Binder}}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Width="456">
+                            <cc:ChatBubble Width="340" HorizontalAlignment="{Binding Converter={StaticResource MType},ConverterParameter=align}"  Opacity="{Binding Converter={StaticResource MType}}" ChatBubbleDirection="{Binding Converter={StaticResource MType},ConverterParameter=direction}" Margin="0,0,0,20">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="40"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="{Binding Text}" TextWrapping="Wrap" Width="430"></TextBlock>
+
+                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                </Grid>
+                            </cc:ChatBubble>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </StackPanel>
+
+        <StackPanel Margin="12,0,12,12" Grid.Row="2" Orientation="Horizontal">
+            <cc:ChatBubbleTextBox x:Name="txtMessage" Margin="0,6,0,0" ChatBubbleDirection="LowerRight" TextWrapping="Wrap" Width="340"></cc:ChatBubbleTextBox>
             
-        </ListView>
+        </StackPanel>
     </Grid>
 </Page>
 

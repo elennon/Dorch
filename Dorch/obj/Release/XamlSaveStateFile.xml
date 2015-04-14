@@ -2,6 +2,10 @@
   <ReferenceAssemblyList>
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.audio.dll" HashGuid="84dafd40-75ce-409a-2d01-d18008d0916c" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.controls.dll" HashGuid="130201a2-c8a1-1ba1-bd40-eb94fe3e66a2" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.net.dll" HashGuid="a4bcaf6e-68d0-dd35-856d-7058f550a15a" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.storage.dll" HashGuid="2ace4e16-5aa8-b1ba-4e2c-df4600fc1913" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.dll" HashGuid="da07be64-1093-25cd-c992-377d44b6dd02" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\packages\mvvmlightlibs.5.0.2.0\lib\wpa81\galasoft.mvvmlight.platform.dll" HashGuid="54c1f1ed-b921-337f-8ad6-f2d8c553df06" />

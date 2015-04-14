@@ -19,19 +19,14 @@ namespace Dorch.Model
         public string PlayerTargetNumber { get; set; }
         public ICollection<Player> Players { get; set; }
 
-
+        private ImageSource _imgSource;
         public ImageSource ImgSource        // returns TeamImage byte[] as image source or default if null
         {
-            get
-            {
-                return ReadImage.GetTeamImage(this.TeamImage);
-            }
-            protected set { }
+            get { return _imgSource; }
+            //set { _imgSource = value; }    
+            set { _imgSource = value ?? ReadImage.GetTeamImage(this.TeamImage); }                             
         }
-
-
-
-
+        
         //ImageSource _ImgSource;
         //[Ignore]
         //public ImageSource ImgSource

@@ -112,3 +112,15 @@ C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\View
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\View\SetTimer.g.cs
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\View\SetTimer.xaml
 C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\View\SetTimer.xbf
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Audio.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Controls.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Net.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Storage.dll
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Audio.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Controls.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Net.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\Coding4Fun.Toolkit.Storage.pri
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\Coding4Fun.Toolkit.Audio.pri.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\Coding4Fun.Toolkit.Controls.pri.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\Coding4Fun.Toolkit.Net.pri.xml
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\obj\ARM\Debug\Coding4Fun.Toolkit.Storage.pri.xml

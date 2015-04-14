@@ -139,15 +139,18 @@ namespace Dorch.ViewModel
         public async Task<byte[]> GetThumbNail(Contact contact)
         {
             byte[] buffer = null;
-            if (contact.Thumbnail != null)
+            if(contact != null)
             {
-                IRandomAccessStreamWithContentType stream = await contact.Thumbnail.OpenReadAsync();
-                if (stream != null && stream.Size > 0)
+                if (contact.Thumbnail != null)
                 {
-                    buffer = new byte[stream.Size];
-                    int bytRead = 0;
-                    bytRead = await (stream.AsStreamForRead()).ReadAsync(buffer, 0, buffer.Length);
-                }               
+                    IRandomAccessStreamWithContentType stream = await contact.Thumbnail.OpenReadAsync();
+                    if (stream != null && stream.Size > 0)
+                    {
+                        buffer = new byte[stream.Size];
+                        int bytRead = 0;
+                        bytRead = await (stream.AsStreamForRead()).ReadAsync(buffer, 0, buffer.Length);
+                    }               
+                }
             }
             return buffer;
         }

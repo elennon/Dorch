@@ -36,14 +36,12 @@
                     <ColumnDefinition Width="auto" />
                     <ColumnDefinition  />
                 </Grid.ColumnDefinitions>
-
-                <Image Source="{Binding ImgSource}" Width="76" Height="76" Grid.RowSpan="2"
-                           Stretch="Fill" 
-                           VerticalAlignment="Top">
-                    <i:Interaction.Behaviors>
-                        <core:IncrementalUpdateBehavior Phase="2"/>
-                    </i:Interaction.Behaviors>
-                </Image>
+                <Border CornerRadius="10" Height="72" Width="72" Margin="0,0,12,0" Grid.RowSpan="2" Padding="10" >
+                    <Border.Background>
+                        <ImageBrush ImageSource="{Binding ImgSource}" />
+                    </Border.Background>
+                </Border>
+                
                 <Border  Margin="6,0,0,0"  Grid.Column="1"  >
                     <TextBlock x:Name="txtName"                              
                                 Text="{Binding TeamName}"                                   
