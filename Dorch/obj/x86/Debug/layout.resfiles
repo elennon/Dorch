@@ -3,9 +3,6 @@ Assets\BadgeLogo.scale-100.png
 Assets\BadgeLogo.scale-140.png
 Assets\BadgeLogo.scale-240.png
 Assets\bin.png
-Assets\Carpi.png
-Assets\Charlton.png
-Assets\fca.png
 Assets\grp1.png
 Assets\grp106.png
 Assets\grp1152splash.png
@@ -63,7 +60,7 @@ App.xbf
 Dorch.xr.xml
 View\AddPlayer.xbf
 View\AddTeam.xbf
-View\BlankPage1.xbf
+View\Info.xbf
 View\MainPage.xbf
 View\SetTimer.xbf
 View\ShowAllPlayers.xbf

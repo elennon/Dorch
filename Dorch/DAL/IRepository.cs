@@ -32,5 +32,6 @@ namespace Dorch.DAL
 
         Task SendMessage(Message message);
         Task<Message> GetMessage(string id);
+        Task<List<Message>> GetMessages(string id);
     }
 }

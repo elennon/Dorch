@@ -1,1 +1,1 @@
-C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\AppPackages\Dorch_1.1.0.32_Test\Dorch_1.1.0.32_arm.appxbundle
+C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\AppPackages\Dorch_1.1.0.35_Test\Dorch_1.1.0.35_arm.appxbundle

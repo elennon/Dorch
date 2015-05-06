@@ -148,7 +148,7 @@ namespace Dorch.Dorch_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[49];
+            _typeNameTable = new string[50];
             _typeNameTable[0] = "Dorch.ViewModel.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Dorch.ViewModel.MainPageViewModel";
@@ -197,9 +197,10 @@ namespace Dorch.Dorch_XamlTypeInfo
             _typeNameTable[45] = "Dorch.View.ShowAllPlayers";
             _typeNameTable[46] = "Dorch.View.SignUp";
             _typeNameTable[47] = "Dorch.Converters.MessageTypeConverter";
-            _typeNameTable[48] = "Dorch.View.ViewTeam";
+            _typeNameTable[48] = "Dorch.Converters.EmptyListLabelConverter";
+            _typeNameTable[49] = "Dorch.View.ViewTeam";
 
-            _typeTable = new global::System.Type[49];
+            _typeTable = new global::System.Type[50];
             _typeTable[0] = typeof(global::Dorch.ViewModel.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Dorch.ViewModel.MainPageViewModel);
@@ -248,7 +249,8 @@ namespace Dorch.Dorch_XamlTypeInfo
             _typeTable[45] = typeof(global::Dorch.View.ShowAllPlayers);
             _typeTable[46] = typeof(global::Dorch.View.SignUp);
             _typeTable[47] = typeof(global::Dorch.Converters.MessageTypeConverter);
-            _typeTable[48] = typeof(global::Dorch.View.ViewTeam);
+            _typeTable[48] = typeof(global::Dorch.Converters.EmptyListLabelConverter);
+            _typeTable[49] = typeof(global::Dorch.View.ViewTeam);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -304,7 +306,8 @@ namespace Dorch.Dorch_XamlTypeInfo
         private object Activate_45_ShowAllPlayers() { return new global::Dorch.View.ShowAllPlayers(); }
         private object Activate_46_SignUp() { return new global::Dorch.View.SignUp(); }
         private object Activate_47_MessageTypeConverter() { return new global::Dorch.Converters.MessageTypeConverter(); }
-        private object Activate_48_ViewTeam() { return new global::Dorch.View.ViewTeam(); }
+        private object Activate_48_EmptyListLabelConverter() { return new global::Dorch.Converters.EmptyListLabelConverter(); }
+        private object Activate_49_ViewTeam() { return new global::Dorch.View.ViewTeam(); }
         private void VectorAdd_30_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
@@ -654,9 +657,16 @@ namespace Dorch.Dorch_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 48:   //  Dorch.View.ViewTeam
+            case 48:   //  Dorch.Converters.EmptyListLabelConverter
+                userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_48_EmptyListLabelConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 49:   //  Dorch.View.ViewTeam
                 userType = new global::Dorch.Dorch_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Dorch.Common.BindablePage"));
-                userType.Activator = Activate_48_ViewTeam;
+                userType.Activator = Activate_49_ViewTeam;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -1518,5 +1528,6 @@ namespace Dorch.Dorch_XamlTypeInfo
         }
     }
 }
+
 
 

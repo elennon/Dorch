@@ -41,13 +41,14 @@ namespace Dorch.Common
         {
             //List<string> defaultTeamPics = new List<string> { "ms-appx:///Assets/Charlton.png", "ms-appx:///Assets/fca.png", 
             //                "ms-appx:///Assets/Carpi.png", "ms-appx:///Assets/Malaga.png" };
-            List<string> defaultTeamPics = new List<string> { "ms-appx:///Assets/grpp2.png", "ms-appx:///Assets/grup33.png",
-                                  };
+            //List<string> defaultTeamPics = new List<string> { "ms-appx:///Assets/grpp2.png", "ms-appx:///Assets/grup33.png",
+                                  //};
+            //Random rnd = new Random();
+            //int rdN = rnd.Next(0, defaultTeamPics.Count);
             if (pic == null)
             {
-                Random rnd = new Random();
-                int rdN = rnd.Next(0, defaultTeamPics.Count);
-                return new BitmapImage(new Uri(defaultTeamPics[rdN]));
+
+                return new BitmapImage(new Uri("ms-appx:///Assets/grpp2.png"));
                 //return new BitmapImage(new Uri("ms-appx:///Assets/grp2.png"));
             }
             else

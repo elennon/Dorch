@@ -73,7 +73,7 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\packages\Microsoft.Net.Http.2.2.28\lib\wpa81\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\bin\Debug\BackgroundUpdateTile.winmd">
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\BackgroundUpdateTile\bin\ARM\Debug\BackgroundUpdateTile.winmd">
       <PackagePath>BackgroundUpdateTile.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\BadgeLogo.scale-100.png">
@@ -90,15 +90,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\bin.png">
       <PackagePath>Assets\bin.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Carpi.png">
-      <PackagePath>Assets\Carpi.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Charlton.png">
-      <PackagePath>Assets\Charlton.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\fca.png">
-      <PackagePath>Assets\fca.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp1.png">
       <PackagePath>Assets\grp1.png</PackagePath>
@@ -289,8 +280,8 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\AddTeam.xbf">
       <PackagePath>View\AddTeam.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\BlankPage1.xbf">
-      <PackagePath>View\BlankPage1.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\Info.xbf">
+      <PackagePath>View\Info.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\ARM\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>

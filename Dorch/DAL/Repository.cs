@@ -13,6 +13,7 @@ using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.UI.Core;
 using Windows.UI.Popups;
+using Windows.UI.Xaml;
 
 namespace Dorch.DAL
 {
@@ -56,19 +57,35 @@ namespace Dorch.DAL
 
         public async Task addNewTeamAsync(Team tm)
         {
+            
             await teamTable.InsertAsync(tm);
+            Player me = await GetThisPlayerAsync(((App)Application.Current).UserId);
+            tm.Players = new List<Player>();
+            tm.Players.Add(me);
+            await UpdateTeamAsync(tm);
         }
 
         public async Task<List<Team>> GetTeamsAsync()
         {
+            Player me = await GetThisPlayerAsync(((App)Application.Current).UserId);
             var tms = new List<Team>();
+            //tms = me.Teams.ToList();
             ErrorMessage = null;
             try
             {                
+                bool isInTeam = false;
+                bool noTeam = false;
                 teams = await teamTable.ToCollectionAsync();
                 foreach (var item in teams)
-                {                    
-                    tms.Add(item);
+                {
+                    
+                    foreach (var pl in item.Players)
+                    {
+                        if (pl.Id == me.Id)
+                            isInTeam = true;
+                    }
+                    if (isInTeam)
+                        tms.Add(item);
                 }
             }
             catch (MobileServiceInvalidOperationException ex)
@@ -110,9 +127,19 @@ namespace Dorch.DAL
             await teamTable.UpdateAsync(tm);
         }
 
-        public async void DeleteTeam(Team tm)
+        public async void DeleteTeam(Team tm)   // removes this player from this team
         {
-            await teamTable.DeleteAsync(tm);
+            Player me = await GetThisPlayerAsync(((App)Application.Current).UserId);
+            Player pl = tm.Players.Where(a => a.Id == me.Id).FirstOrDefault();
+            if(pl != null)
+            {
+                tm.Players.Remove(pl);
+            }            
+            await teamTable.UpdateAsync(tm);
+            if(tm.Players.Count == 0)
+            {
+                await teamTable.DeleteAsync(tm);
+            }
         }
 
         public async Task<List<Player>> GetPlayersAsync()
@@ -241,10 +268,10 @@ namespace Dorch.DAL
                 checkRequest.Confirmed = true;
                 await RequestJoinTeamTable.UpdateAsync(checkRequest);
 
-                var tms = await GetTeamsAsync();
-                Team tm2Update = tms.Where(a => a.Id == checkRequest.TeamId).FirstOrDefault();
-                tm2Update.Players.Add(playerToAdd);
-                await UpdateTeamAsync(tm2Update);
+                //var tms = await GetTeamsAsync();
+                //Team tm2Update = tms.Where(a => a.Id == checkRequest.TeamId).FirstOrDefault();
+                team.Players.Add(playerToAdd);
+                await UpdateTeamAsync(team);
             }
         }
 
@@ -398,6 +425,25 @@ namespace Dorch.DAL
                 ErrorMessage = ex2.Message;
             }
             return ms;
+        }
+
+        public async Task<List<Message>> GetMessages(string id)
+        {
+            List<Message> ms = new List<Message>();
+            ErrorMessage = null;
+            try
+            {
+                ms = await App.MobileService.GetTable<Message>().ToListAsync();
+            }
+            catch (MobileServiceInvalidOperationException ex)
+            {
+                ErrorMessage = ex.Message;
+            }
+            catch (HttpRequestException ex2)
+            {
+                ErrorMessage = ex2.Message;
+            }
+            return ms.Where(a => a.TeamId == id).OrderBy(n => n.SendingDate).ToList();
         }
 
 

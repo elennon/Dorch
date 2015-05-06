@@ -21,10 +21,7 @@
     <Page.Resources>
         <cmds:ItemClickedConverter x:Name="ItemClickedConverter" />
         <cmds:BooleanToVisibilityConverter x:Name="BooleanToVisibilityConverter" />
-        <DataTemplate x:Key="HubSectionHeaderTemplate">
-            <TextBlock Margin="0,0,0,-19.5" FontSize="34" Text="{Binding}"/>
-        </DataTemplate>
-
+       
         <DataTemplate x:Key="TeamsTemplate">
 
             <Grid Width="400" Margin="0,0,0,20" >
@@ -143,14 +140,14 @@
         <CommandBar IsSticky="True" x:Name="appBar">
             <CommandBar.PrimaryCommands>
                 <AppBarButton Icon="Edit"  Label="Edit" Command="{Binding EditCommand}"  />
-                <AppBarButton Icon="Add"  Label="Add To Picks" Command="{Binding AddTeamCommand}"  />
+                <AppBarButton Icon="Add"  Label="Add" Command="{Binding AddTeamCommand}"  />
                 <AppBarButton Icon="Refresh"  Label="Refresh" Command="{Binding LoadCommand}"  />
-                <AppBarButton Icon="Admin"  Label="SMS" Command="{Binding TextCommand}"  />
+                <AppBarButton Icon="Help"  Label="Info" Command="{Binding InfoCommand}"  />
             </CommandBar.PrimaryCommands>
-            <CommandBar.SecondaryCommands>
+            <!--<CommandBar.SecondaryCommands>
                 <AppBarButton Label="Fill DataBase" Icon="Admin" Command="{Binding FillDbCommand}" />
                 <AppBarButton Label="Test button"   />
-            </CommandBar.SecondaryCommands>
+            </CommandBar.SecondaryCommands>-->
         </CommandBar>
     </Page.BottomAppBar>
 </common:BindablePage>

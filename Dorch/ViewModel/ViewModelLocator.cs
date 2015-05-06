@@ -27,6 +27,7 @@ namespace Dorch.ViewModel
             SimpleIoc.Default.Register<AddPlayerViewModel>();
             SimpleIoc.Default.Register<AllPlayersViewModel>();
             SimpleIoc.Default.Register<SetTimerViewModel>();
+            SimpleIoc.Default.Register<InfoViewModel>();
                 
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
         }
@@ -41,6 +42,7 @@ namespace Dorch.ViewModel
             navigationService.Configure("AddPlayer", typeof(AddPlayer));
             navigationService.Configure("ShowAllPlayers", typeof(ShowAllPlayers));
             navigationService.Configure("SetTimer", typeof(SetTimer));
+            navigationService.Configure("Info", typeof(Info));
             return navigationService;
         }
 
@@ -51,6 +53,7 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<MainPageViewModel>();
             }
         }
+
         public AddTeamViewModel AddTeamViewModel
         {
             get
@@ -58,6 +61,7 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<AddTeamViewModel>();
             }
         }
+
         public ViewTeamViewModel ViewTeamViewModel
         {
             get
@@ -65,6 +69,7 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<ViewTeamViewModel>();
             }
         }
+
         public SignUpViewModel SignUpViewModel
         {
             get
@@ -72,6 +77,7 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<SignUpViewModel>();
             }
         }
+
         public AddPlayerViewModel AddPlayerViewModel
         {
             get
@@ -79,6 +85,7 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<AddPlayerViewModel>();
             }
         }
+
         public AllPlayersViewModel AllPlayersViewModel
         {
             get
@@ -86,11 +93,20 @@ namespace Dorch.ViewModel
                 return ServiceLocator.Current.GetInstance<AllPlayersViewModel>();
             }
         }
+
         public SetTimerViewModel SetTimerViewModel
         {
             get
             {
                 return ServiceLocator.Current.GetInstance<SetTimerViewModel>();
+            }
+        }
+
+        public InfoViewModel InfoViewModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<InfoViewModel>();
             }
         }   
     }

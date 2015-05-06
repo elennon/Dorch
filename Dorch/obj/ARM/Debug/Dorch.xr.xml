@@ -19,10 +19,9 @@
     <RootPropertyPathName Name="Location" />
     <RootPropertyPathName Name="TeamName" />
     <RootPropertyPathName Name="ToastCommand" />
-    <RootPropertyPathName Name="Instance" />
-    <RootPropertyPathName Name="Messages" />
-    <RootPropertyPathName Name="SendingDate" />
-    <RootPropertyPathName Name="Text" />
+    <RootPropertyPathName Name="InfoViewModel" />
+    <RootPropertyPathName Name="MoreInfo" />
+    <RootPropertyPathName Name="Info" />
     <RootPropertyPathName Name="MainPageViewModel" />
     <RootPropertyPathName Name="LoadCommand" />
     <RootPropertyPathName Name="DataContext" />
@@ -31,9 +30,8 @@
     <RootPropertyPathName Name="ImgSource" />
     <RootPropertyPathName Name="Teams" />
     <RootPropertyPathName Name="ItemSelectedCommand" />
-    <RootPropertyPathName Name="TextCommand" />
+    <RootPropertyPathName Name="InfoCommand" />
     <RootPropertyPathName Name="EditCommand" />
-    <RootPropertyPathName Name="FillDbCommand" />
     <RootPropertyPathName Name="SetTimerViewModel" />
     <RootPropertyPathName Name="DoneCommand" />
     <RootPropertyPathName Name="SetTime" />
@@ -56,6 +54,10 @@
     <RootPropertyPathName Name="InOutImage" />
     <RootPropertyPathName Name="PlayerSelectedCommand" />
     <RootPropertyPathName Name="MessageToSend" />
+    <RootPropertyPathName Name="Messages" />
+    <RootPropertyPathName Name="BottomMessageIndex" />
+    <RootPropertyPathName Name="MessageChangeCommand" />
+    <RootPropertyPathName Name="SendingDate" />
     <RootPropertyPathName Name="Content" />
     <RootPropertyPathName Name="StatusPlayers" />
     <RootPropertyPathName Name="ChosenPlayers" />
@@ -82,9 +84,9 @@
       <RootProperty Name="Source" />
       <RootProperty Name="Path" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
       <RootProperty Name="ConverterParameter" />
-      <RootProperty Name="ElementName" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
@@ -93,9 +95,8 @@
       <RootProperty Name="RowDefinitions" />
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumnSpan" />
@@ -130,8 +131,8 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="CharacterSpacing" />
-      <RootProperty Name="TextWrapping" />
       <RootProperty Name="LineStackingStrategy" />
+      <RootProperty Name="TextWrapping" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Padding" />
@@ -157,9 +158,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Child" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="CornerRadius" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Padding" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
@@ -175,13 +176,18 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="LineHeight" />
       <RootProperty Name="Blocks" />
+      <RootProperty Name="TextWrapping" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Paragraph">
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Inlines" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="FontSize" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Documents.Run" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.InlineUIContainer">
       <RootProperty Name="Child" />
     </RootType>
@@ -196,7 +202,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="IsSticky" />
       <RootProperty Name="PrimaryCommands" />
-      <RootProperty Name="SecondaryCommands" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarButton">
       <RootProperty Name="Icon" />
@@ -207,35 +212,13 @@
     <RootType FullName="Dorch.View.AddTeam" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
-      <RootProperty Name="Content" />
       <RootProperty Name="DataContext" />
-    </RootType>
-    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubbleTextBox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="ChatBubbleDirection" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="AcceptsReturn" />
-      <RootProperty Name="Text" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="ItemTemplate" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
-    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubble">
-      <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="ChatBubbleDirection" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="BorderBrush" />
     </RootType>
-    <RootType FullName="Dorch.View.BlankPage1" />
+    <RootType FullName="Windows.UI.Xaml.Documents.Italic">
+      <RootProperty Name="Inlines" />
+    </RootType>
+    <RootType FullName="Dorch.View.Info" />
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
       <RootMethod Name="GetBehaviors" />
       <RootMethod Name="SetBehaviors" />
@@ -251,6 +234,9 @@
     </RootType>
     <RootType FullName="Dorch.Converters.ItemClickedConverter" />
     <RootType FullName="Dorch.Converters.BooleanToVisibilityConverter" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Name" />
       <RootProperty Name="Source" />
@@ -277,6 +263,7 @@
       <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="GroupStyle" />
+      <RootProperty Name="SelectedIndex" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
@@ -348,6 +335,24 @@
       <RootProperty Name="Width" />
       <RootProperty Name="HeaderTemplate" />
       <RootProperty Name="ContentTemplate" />
+    </RootType>
+    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubbleTextBox">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="AcceptsReturn" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ChatBubbleDirection" />
+      <RootProperty Name="Text" />
+    </RootType>
+    <RootType FullName="Coding4Fun.Toolkit.Controls.ChatBubble">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="ChatBubbleDirection" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
       <RootMethod Name="GetExitElementContainer" />

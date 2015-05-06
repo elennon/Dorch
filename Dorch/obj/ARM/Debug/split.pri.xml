@@ -27,21 +27,6 @@
 						<Value>Assets\bin.png</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="Carpi.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/Carpi.png">
-					<Candidate type="Path">
-						<Value>Assets\Carpi.png</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="Charlton.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/Charlton.png">
-					<Candidate type="Path">
-						<Value>Assets\Charlton.png</Value>
-					</Candidate>
-				</NamedResource>
-				<NamedResource name="fca.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/fca.png">
-					<Candidate type="Path">
-						<Value>Assets\fca.png</Value>
-					</Candidate>
-				</NamedResource>
 				<NamedResource name="grp1.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp1.png">
 					<Candidate type="Path">
 						<Value>Assets\grp1.png</Value>
@@ -277,9 +262,9 @@
 						<Value>View\AddTeam.xbf</Value>
 					</Candidate>
 				</NamedResource>
-				<NamedResource name="BlankPage1.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/BlankPage1.xbf">
+				<NamedResource name="Info.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/Info.xbf">
 					<Candidate type="Path">
-						<Value>View\BlankPage1.xbf</Value>
+						<Value>View\Info.xbf</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="MainPage.xbf" uri="ms-resource://55082kilmaced.Dorch/Files/View/MainPage.xbf">

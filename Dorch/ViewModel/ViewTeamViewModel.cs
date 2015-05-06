@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -90,14 +91,19 @@ namespace Dorch.ViewModel
         }
 
         private string _messageToSend;
-
         public string MessageToSend
         {
             get { return _messageToSend; }
             set { _messageToSend = value; NotifyPropertyChanged("MessageToSend"); }
         }
-        
 
+        private int _bMessIndex;
+        public int BottomMessageIndex
+        {
+            get { return _bMessIndex; }
+            set { _bMessIndex = value; NotifyPropertyChanged("BottomMessageIndex"); }
+        }
+        
         public Team thisTeam { get; set; }
         public TimeSpan SetTime { get; set; }
 
@@ -109,6 +115,7 @@ namespace Dorch.ViewModel
         public GalaSoft.MvvmLight.Command.RelayCommand TimeChangedCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand SendMessageCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand SetTimerCommand { get; set; }
+        public GalaSoft.MvvmLight.Command.RelayCommand MessageChangeCommand { get; set; }
 
         public ViewTeamViewModel(INavigationService navigationService)
         {
@@ -122,10 +129,25 @@ namespace Dorch.ViewModel
             this.TimeChangedCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnTimeChangedCommand);
             this.SendMessageCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSendMessageCommand);
             this.SetTimerCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnSetTimerCommand);
+            this.MessageChangeCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnMessageChangeCommand);
             ChosenPlayers = new ObservableCollection<Player>();
             StatusPlayers = new ObservableCollection<Player>();
             Messages = new ObservableCollection<Message>();
             SetTime = new TimeSpan(18, 0, 0);
+        }
+
+        private void OnMessageChangeCommand()
+        {
+            BottomMessageIndex = Messages.Count - 1;
+            //var selectedIndex = Messages.Count - 1;
+            //if (selectedIndex < 0)
+            //    return;
+            //var ft = ((App)Application.Current).vtvm.
+
+            //MyListView.SelectedIndex = selectedIndex;
+            //MyListView.UpdateLayout();
+
+            //MyListView.ScrollIntoView(MyListView.SelectedItem); 
         }
 
         private void OnSetTimerCommand()
@@ -135,8 +157,11 @@ namespace Dorch.ViewModel
 
         private async void OnSendMessageCommand()
         {
+            var df = DateTime.Now.ToString("ddd").Substring(0, 3);
+
+            string date = df + ", " + (DateTime.Now).ToString("HH:mm");
             Message ms = new Message{ Content = MessageToSend, TeamId = thisTeam.Id, Sender = ((App)Application.Current).UserName, 
-                            SendingDate = DateTime.Now.ToLocalTime().ToString(), SenderId = ((App)Application.Current).UserId};
+                            SendingDate = date , SenderId = ((App)Application.Current).UserId};
             await repo.SendMessage(ms);
            // Messages.Add(ms);
             MessageToSend = "";
@@ -182,12 +207,10 @@ namespace Dorch.ViewModel
             //throw new NotImplementedException();
         }
 
-        private void OnLoadCommand(RoutedEventArgs obj)
+        private async void OnLoadCommand(RoutedEventArgs obj)
         {
-            //foreach (var item in Players)
-            //{
-            //    item.PlayerImage = ReadImage.GetImage(item.Image);
-            //}
+            Messages = new ObservableCollection<Message>(await repo.GetMessages(thisTeam.Id));
+            BottomMessageIndex = Messages.Count() -1;
         }
 
         #region INotifyPropertyChanged Members
@@ -211,6 +234,7 @@ namespace Dorch.ViewModel
                 var plyrs = ((Team)parameter).Players;
                 Players = new ObservableCollection<Player>(plyrs);
                 thisTeam = ((Team)parameter);
+
             }
         }
 

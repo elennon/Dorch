@@ -24,6 +24,7 @@
 
         <cmds:ItemClickedConverter x:Name="ItemClickedConverter" />
         <cmds:MessageTypeConverter x:Name="MessageTypeConverter" />
+        <cmds:EmptyListLabelConverter x:Name="EmptyListLabelConverter" />
 
         <DataTemplate x:Key="HubSectionHeaderTemplate">
             <TextBlock Margin="0,0,0,-9.5" FontSize="27" Text="{Binding}"/>
@@ -181,10 +182,12 @@
                             </Grid.RowDefinitions>
                             
                             <StackPanel Grid.Row="0" Margin="0,12,0,0">
-                                <TextBlock Text="Regulars" Margin="0,0,0,6.5" FontSize="26"  />
+                                <TextBlock Text="No one picked yet!" Margin="0,0,0,6.5" FontSize="26" 
+                                        Visibility="{Binding ChosenPlayers.Count, 
+                                        Converter={StaticResource EmptyListLabelConverter}}" />
                             </StackPanel>
 
-                            <ListView Grid.Row="1"
+                            <ListView Grid.Row="1"                                      
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
                                 ScrollViewer.IsVerticalScrollChainingEnabled="True"
@@ -202,9 +205,9 @@
                                     </core:EventTriggerBehavior>
                                 </i:Interaction.Behaviors>
                             </ListView>
-                            <StackPanel Grid.Row="2" Margin="0,12,0,0">
+                            <!--<StackPanel Grid.Row="2" Margin="0,12,0,0">
                                 <TextBlock Text="Subs" Margin="0,0,0,6.5" FontSize="26"  />
-                            </StackPanel>
+                            </StackPanel>-->
                             <ListView Grid.Row="3"
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
@@ -251,8 +254,14 @@
                                 <RowDefinition Height="Auto"/>
                                 
                             </Grid.RowDefinitions>
-                           
-                            <ListView 
+
+                            <StackPanel Grid.Row="0" Margin="0,12,0,0">
+                                <TextBlock Text="No one's answered yet!" Margin="0,0,0,6.5" FontSize="26" 
+                                        Visibility="{Binding ChosenPlayers.Count, 
+                                        Converter={StaticResource EmptyListLabelConverter}}" />
+                            </StackPanel>
+                            
+                            <ListView Grid.Row="1"
                                 ScrollViewer.HorizontalScrollMode="Disabled" 
                                 ScrollViewer.IsHorizontalScrollChainingEnabled="True"
                                 ScrollViewer.IsVerticalScrollChainingEnabled="True"

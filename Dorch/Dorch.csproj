@@ -91,7 +91,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\BlankPage1.xaml">
+    <Page Include="View\Info.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,6 +145,7 @@
     <Compile Include="ViewModel\AddPlayerViewModel.cs" />
     <Compile Include="ViewModel\AddTeamViewModel.cs" />
     <Compile Include="ViewModel\AllPlayersViewModel.cs" />
+    <Compile Include="ViewModel\InfoViewModel.cs" />
     <Compile Include="ViewModel\MainPageViewModel.cs" />
     <Compile Include="ViewModel\SetTimerViewModel.cs" />
     <Compile Include="ViewModel\SignUpViewModel.cs" />
@@ -156,8 +157,8 @@
     <Compile Include="View\AddTeam.xaml.cs">
       <DependentUpon>AddTeam.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
+    <Compile Include="View\Info.xaml.cs">
+      <DependentUpon>Info.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -185,11 +186,6 @@
     <Content Include="Assets\BadgeLogo.scale-140.png" />
     <Content Include="Assets\BadgeLogo.scale-240.png" />
     <Content Include="Assets\bin.png" />
-    <Content Include="Assets\Carpi.png" />
-    <Content Include="Assets\Charlton.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Assets\fca.png" />
     <Content Include="Assets\grp1.png" />
     <Content Include="Assets\grp106.png" />
     <Content Include="Assets\grp1152splash.png" />

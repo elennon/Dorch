@@ -118,9 +118,7 @@
         </DataTemplate>
 
     </Page.Resources>
-    
-   
-    
+       
     <Grid x:Name="LayoutRoot" Margin="0,19.5,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -294,22 +292,27 @@
                             <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
                         <ScrollViewer>
-                            <ListView ItemsSource="{Binding Messages, Mode=TwoWay}"                                                                       
+                            <ListView Name="lstMessages" ItemsSource="{Binding Messages, Mode=TwoWay}" SelectedIndex="{Binding BottomMessageIndex, Mode=TwoWay}"                                                                    
                                 >
+                                <i:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="SelectionChanged">
+                                        <core:InvokeCommandAction Command="{Binding MessageChangeCommand}"  />
+                                    </core:EventTriggerBehavior>
+                                </i:Interaction.Behaviors>
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <StackPanel Orientation="Vertical">
                                             <cc:ChatBubble 
-                                                    HorizontalAlignment="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=align}"  
+                                                    HorizontalAlignment="{Binding Converter={StaticResource MessageTypeConverter}, ConverterParameter=align}"  
                                                     Opacity="{Binding Converter={StaticResource MessageTypeConverter}}" 
                                                     ChatBubbleDirection="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=direction}"
                                                     Background="Gray"
                                                     BorderBrush="Beige"                                                              
                                                     Margin="{Binding Converter={StaticResource MessageTypeConverter},ConverterParameter=align}">
                                                 <StackPanel Margin="0,0,0,0" Orientation="Vertical">
-                                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" Width="300"></TextBlock>
+                                                    <TextBlock Text="{Binding Content}" TextWrapping="Wrap" FontSize="20" Width="300"></TextBlock>
 
-                                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" Text="{Binding SendingDate}"></TextBlock>
+                                                    <TextBlock Grid.Row="1" HorizontalAlignment="Right" FontSize="13"  Text="{Binding SendingDate}"></TextBlock>
                                                 </StackPanel>
                                             </cc:ChatBubble>
                                         </StackPanel>
@@ -317,7 +320,7 @@
                                 </ListView.ItemTemplate>
                             </ListView>
                         </ScrollViewer>
-                        <cc:ChatBubbleTextBox Grid.Row="1" TextWrapping="Wrap" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
+                        <cc:ChatBubbleTextBox Grid.Row="1" TextWrapping="Wrap" FontSize="20" AcceptsReturn="True" Width="300" Margin="60,0,0,14" 
                                 ChatBubbleDirection="LowerRight" Text="{Binding MessageToSend, Mode=TwoWay}" />
                     </Grid>
                 </DataTemplate>

@@ -112,7 +112,7 @@ namespace Dorch.ViewModel
                 {
                     Windows.ApplicationModel.Chat.ChatMessage msg = new Windows.ApplicationModel.Chat.ChatMessage();
                     msg.Body = "Hi " + PlayerName + ". " + ((App)Application.Current).UserName + " sent this request to join "
-                        + thisTeam.TeamName + ". You can download the app here to get started. http://itsligo.ie/ ";
+                        + thisTeam.TeamName + ". You can download the app here to get started. https://www.windowsphone.com/en-ie/store/app/dorch/d78df815-2948-4492-89ad-c7d050d8bc85";
                     msg.Recipients.Add(Phone);
 
                     await Windows.ApplicationModel.Chat.ChatMessageManager.ShowComposeSmsMessageAsync(msg);

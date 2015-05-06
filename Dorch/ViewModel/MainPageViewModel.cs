@@ -64,7 +64,7 @@ namespace Dorch.ViewModel
         public RelayCommand<Team> DeleteSelectedCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand FillDbCommand { get; set; }
         public GalaSoft.MvvmLight.Command.RelayCommand AddTeamCommand { get; set; }
-        public GalaSoft.MvvmLight.Command.RelayCommand TextCommand { get; set; }
+        public GalaSoft.MvvmLight.Command.RelayCommand InfoCommand { get; set; }
 
         //private MobileServiceUser user;
         //private async System.Threading.Tasks.Task AuthenticateAsync()
@@ -176,8 +176,9 @@ namespace Dorch.ViewModel
             this.FillDbCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnFillDbCommand);
             this.AddTeamCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnAddTeamCommand);
             this.ItemSelectedCommand = new RelayCommand<Team>(OnItemSelectedCommand);
-            this.TextCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnTextCommand);
+            this.InfoCommand = new GalaSoft.MvvmLight.Command.RelayCommand(OnInfoCommand);
         }
+
         private async void regClick()
         {
             Debug.WriteLine("Registering task");
@@ -208,6 +209,7 @@ namespace Dorch.ViewModel
                 await new MessageDialog("Task registered!").ShowAsync();
             }
         }
+
         private async void OnLoadCommand(RoutedEventArgs obj)
         {
             //regClick();
@@ -221,11 +223,11 @@ namespace Dorch.ViewModel
             }
         }
 
-        private void OnTextCommand()
+        private void OnInfoCommand()
         {
             //RequestJoinTeam rp = new RequestJoinTeam { PlayerId = "0876493789", TeamId = "t3" };
             //await repo.SendRequest(rp);
-            _navigationService.NavigateTo("BlankPage1");
+            _navigationService.NavigateTo("Info");
         }
 
         private void OnItemSelectedCommand(Team obj)
@@ -252,18 +254,19 @@ namespace Dorch.ViewModel
 
         private void OnDeleteSelectedCommand(Team obj)
         {
+
             Teams.Remove(obj);
             repo.DeleteTeam(obj);
         }
 
         public void Activate(object parameter)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public void Deactivate(object parameter)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         #region INotifyPropertyChanged Members

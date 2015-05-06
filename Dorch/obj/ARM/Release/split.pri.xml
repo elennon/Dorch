@@ -42,6 +42,11 @@
 						<Value>Assets\fca.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="grp1.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp1.png">
+					<Candidate type="Path">
+						<Value>Assets\grp1.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="grp106.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp106.png">
 					<Candidate type="Path">
 						<Value>Assets\grp106.png</Value>
@@ -62,6 +67,11 @@
 						<Value>Assets\grp170.png</Value>
 					</Candidate>
 				</NamedResource>
+				<NamedResource name="grp2.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp2.png">
+					<Candidate type="Path">
+						<Value>Assets\grp2.png</Value>
+					</Candidate>
+				</NamedResource>
 				<NamedResource name="grp24.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp24.png">
 					<Candidate qualifiers="Scale-240" isDefault="true" type="Path">
 						<Value>Assets\grp24.scale-240.png</Value>
@@ -75,6 +85,11 @@
 				<NamedResource name="grp33.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp33.png">
 					<Candidate type="Path">
 						<Value>Assets\grp33.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="grp4.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp4.png">
+					<Candidate type="Path">
+						<Value>Assets\grp4.png</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="grp434w.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp434w.png">
@@ -130,6 +145,16 @@
 				<NamedResource name="grp99.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grp99.png">
 					<Candidate type="Path">
 						<Value>Assets\grp99.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="grpp2.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grpp2.png">
+					<Candidate type="Path">
+						<Value>Assets\grpp2.png</Value>
+					</Candidate>
+				</NamedResource>
+				<NamedResource name="grup33.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/grup33.png">
+					<Candidate type="Path">
+						<Value>Assets\grup33.png</Value>
 					</Candidate>
 				</NamedResource>
 				<NamedResource name="Logo.png" uri="ms-resource://55082kilmaced.Dorch/Files/Assets/Logo.png">

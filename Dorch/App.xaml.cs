@@ -281,13 +281,16 @@ namespace Dorch
         {
             string teams = "";
             Player pl = await repo.GetThisPlayerAsync(((App)Application.Current).UserId);
-            if (pl.Teams.Count > 0)
-            {                
-                foreach (var item in pl.Teams)
+            if (pl.Teams != null)
+            {
+                if (pl.Teams.Count > 0)
                 {
-                    teams += item.Id + ",";
+                    foreach (var item in pl.Teams)
+                    {
+                        teams += item.Id + ",";
+                    }
+                    ApplicationSettingsHelper.SaveSettingsValue(Constants.TeamTags, teams);
                 }
-                ApplicationSettingsHelper.SaveSettingsValue(Constants.TeamTags, teams); 
             }
         }
 

@@ -1,10 +1,10 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\arm\debug\intermediatexaml\dorch.exe" HashGuid="049310be-b6ba-0c34-e3d6-7ba6632dab7b" />
+    <LocalAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\obj\arm\debug\intermediatexaml\dorch.exe" HashGuid="6e67d5c4-bf9e-5053-0b6c-7b91dcd0d038" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windowsphoneapp\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
-    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\backgroundupdatetile\bin\debug\backgroundupdatetile.winmd" HashGuid="5ea9e42e-58ac-bb37-3c73-976b00a68696" />
+    <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\backgroundupdatetile\bin\arm\debug\backgroundupdatetile.winmd" HashGuid="5ea9e42e-58ac-bb37-3c73-976b00a68696" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.audio.dll" HashGuid="84dafd40-75ce-409a-2d01-d18008d0916c" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.controls.dll" HashGuid="130201a2-c8a1-1ba1-bd40-eb94fe3e66a2" />
     <ReferenceAssembly PathName="c:\users\ed\documents\visual studio 2013\projects\dorch\dorch\coding4fun.toolkit (windows store)\coding4fun.toolkit.net.dll" HashGuid="a4bcaf6e-68d0-dd35-856d-7058f550a15a" />

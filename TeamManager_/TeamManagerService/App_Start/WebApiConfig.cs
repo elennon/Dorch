@@ -31,27 +31,27 @@ namespace TeamManagerService
         protected override void Seed(TeamManagerContext context)
         {
             List<Player> plys = new List<Player>();
-            plys.Add(new Player { Id = "p1", PlayerName = "Mick Keane", PhNumber = "0876493789" });
-            plys.Add(new Player { Id = "p2", PlayerName = "Paddy Whelan", PhNumber = "0876493789" });
-            plys.Add(new Player { Id = "p3", PlayerName = "Liam Dempsey", PhNumber = "0876493789" });
-            plys.Add(new Player { Id = "p4", PlayerName = "Mark Brennan", PhNumber = "0876493789" });
-            plys.Add(new Player { Id = "0876493789", PlayerName = "Carl Marx", PhNumber = "0876493789" });
+            plys.Add(new Player { Id = "p1", PlayerName = "Mick Keane", PhNumber = "1245" });
+            plys.Add(new Player { Id = "p2", PlayerName = "Paddy Whelan", PhNumber = "123456" });
+            plys.Add(new Player { Id = "p3", PlayerName = "Liam Dempsey", PhNumber = "1234567" });
+            plys.Add(new Player { Id = "p4", PlayerName = "Mark Brennan", PhNumber = "87654321" });
+            
             foreach (var item in plys)
             {
                 context.Set<Player>().Add(item);
-            }
+            }        
 
             List<Team> tms = new List<Team>();
             tms.Add(new Team { Id = "t1", Players = plys, TeamName = "Friday Astro", Location = "Amenities  Centre" });
             tms.Add(new Team { Id = "t2", Players = plys, TeamName = "Sunday Morning 5 Aside", Location = "Amenities  Centre" });
-            tms.Add(new Team { Id = "t3", Players = plys, TeamName = "Astro Training", Location = "Amenities  Centre" });
+            tms.Add(new Team { Id = "t3", Players = plys, TeamName = "Friday Night Poker", Location = "Joe's" });
             tms.Add(new Team { Id = "t4", Players = plys, TeamName = "Wednesday Celbridge", Location = "Celbridge Astro" });
             foreach (var item in tms)
             {
                 context.Set<Team>().Add(item);
             }
 
-            RequestJoinTeam rp = new RequestJoinTeam { Id = "666", TeamId = "t1", PlayerId = "0876493789", RequestedBy = "Hitler", Confirmed=false };
+            RequestJoinTeam rp = new RequestJoinTeam { Id = "666", TeamId = "t1", PlayerId = "555", RequestedBy = "Castro", Confirmed = false };
             context.Set<RequestJoinTeam>().Add(rp);
 
             base.Seed(context);

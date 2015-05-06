@@ -190,6 +190,7 @@
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
+    <MainPackageIdentityName>55082kilmaced.dmusic</MainPackageIdentityName>
     <MainPackageIdentityName>55082kilmaced.TMDemoPush</MainPackageIdentityName>
   </AccountPackageIdentityNames>
   <PackageInfoList LandingUrl="https://dev.windowsphone.com/AppSubmission/AssociationLanding?windowsProductId=c4daafd9-06fe-4092-a1ff-8ae5a8b70cdf">

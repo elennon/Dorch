@@ -91,15 +91,6 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\bin.png">
       <PackagePath>Assets\bin.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Carpi.png">
-      <PackagePath>Assets\Carpi.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\Charlton.png">
-      <PackagePath>Assets\Charlton.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\fca.png">
-      <PackagePath>Assets\fca.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\Assets\grp1.png">
       <PackagePath>Assets\grp1.png</PackagePath>
     </AppxPackagedFile>
@@ -289,8 +280,8 @@
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\View\AddTeam.xbf">
       <PackagePath>View\AddTeam.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\View\BlankPage1.xbf">
-      <PackagePath>View\BlankPage1.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\View\Info.xbf">
+      <PackagePath>View\Info.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ed\Documents\Visual Studio 2013\Projects\Dorch\Dorch\bin\x86\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
